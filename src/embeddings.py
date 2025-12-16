@@ -42,7 +42,6 @@ class EmbeddingsClient:
             except Exception:
                 detail = response.text
 
-            print(detail)
             response.raise_for_status()
         data = response.json()
         if isinstance(data, dict):

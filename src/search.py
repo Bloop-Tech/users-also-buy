@@ -88,7 +88,7 @@ class SearchService(ABC):
             csv_embeddings=csv_embeddings,
             search_query=search_query,
         )
-        print(search_parameters)
+
         results = self.typesense_connector.get_search_results_parsed_with_groupby(
             collection_name=self.collection_name,
             search_parameters=search_parameters,

@@ -85,7 +85,7 @@ class ProductsFetcher:
         """Yield products between the given dates in batches."""
         created_since = self._normalise_date(min_date)
         created_until = self._normalise_date(max_date)
-        print(created_since, created_until)
+
         if limit is not None and limit <= 0:
             return
 

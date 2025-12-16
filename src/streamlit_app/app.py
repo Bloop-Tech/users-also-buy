@@ -2,7 +2,7 @@ from __future__ import annotations
 
 import json
 import os
-from pathlib import Path
+from datetime import date, datetime, timedelta
 from typing import Any
 
 import pandas as pd
@@ -11,16 +11,15 @@ from dotenv import load_dotenv
 from streamlit.delta_generator import DeltaGenerator
 
 from src.agent import get_agent
+from src.data_models import Product
+from src.products_fetcher import ProductsFetcher
 from src.search import SearchService
 
 load_dotenv()
 
-DATA_PATH = Path(__file__).resolve().parents[2] / "marketplacer-export.csv"
-TITLE_COL = "*Title Description"
-BRAND_COL = "*Brand"
-CATEGORY_COL = "*Category"
-PRODUCT_ID_COL = "Ad ID"
 RESULT_STATE_KEY = "agent_comparison"
+PRODUCTS_STATE_KEY = "fetched_products"
+DEFAULT_LIMIT = 20
 AGENT_ENV_VARS = [
     "AZURE_OPENAI_ENDPOINT",
     "AZURE_OPENAI_API_VERSION",
@@ -38,45 +37,18 @@ VARIANTS = (
 )
 
 
-@st.cache_data(show_spinner=False)
-def load_products(csv_path: str) -> pd.DataFrame:
-    df = pd.read_csv(csv_path)
-    return df.reset_index(drop=True)
-
-
 def readable_value(value: Any, fallback: str = "Unknown") -> str:
-    if pd.isna(value):
+    if value is None:
         return fallback
     text = str(value).strip()
     return text or fallback
 
 
-def format_product_option(row: pd.Series) -> str:
-    title = readable_value(row.get(TITLE_COL), "Untitled")
-    brand = readable_value(row.get(BRAND_COL), "No brand")
-    category = readable_value(row.get(CATEGORY_COL), "No category")
-    product_id = readable_value(row.get(PRODUCT_ID_COL), "N/A")
-    return f"{title} — {brand} ({category}) · #{product_id}"
-
-
-def build_product_metadata(row: pd.Series) -> dict[str, str]:
-    metadata_map = {
-        "category_lvl_1": row.get("*Category"),
-        "category_lvl_2": row.get("Category 2"),
-        "category_lvl_3": row.get("Category 3"),
-        "category_lvl_4": row.get("Category 4"),
-        "brand": row.get("*Brand"),
-        "title": row.get(TITLE_COL),
-        "description": row.get("*Main Description"),
-    }
-    metadata: dict[str, str] = {}
-    for key, value in metadata_map.items():
-        if pd.isna(value):
-            continue
-        value_str = str(value).strip()
-        if value_str:
-            metadata[key] = value_str
-    return metadata
+def format_product_option(product: Product) -> str:
+    brand = readable_value(product.brand, "No brand")
+    category = readable_value(product.category_lvl_1, "No category")
+    created_at = product.created_date.strftime("%Y-%m-%d")
+    return f"{product.title} — {brand} ({category}) · {created_at}"
 
 
 def get_missing_env(vars_list: list[str]) -> list[str]:
@@ -96,6 +68,43 @@ def load_search_service() -> tuple[SearchService | None, str | None]:
         return _search_service_factory(), None
     except Exception as exc:  # pragma: no cover - networking
         return None, f"Unable to initialise search service: {exc}"
+
+
+@st.cache_resource(show_spinner=False)
+def _products_fetcher_factory() -> ProductsFetcher:
+    return ProductsFetcher()
+
+
+@st.cache_data(show_spinner=False)
+def fetch_products_for_range(
+    start_date: date, end_date: date, limit: int
+) -> tuple[list[Product], str | None]:
+    if start_date > end_date:
+        return [], "Start date must be before or equal to end date."
+
+    if not os.getenv("MARKETPLACER_URL"):
+        return [], "Missing MARKETPLACER_URL environment variable."
+
+    try:
+        fetcher = _products_fetcher_factory()
+    except Exception as exc:  # pragma: no cover - networking
+        return [], f"Unable to initialise product fetcher: {exc}"
+
+    start_dt = datetime.combine(start_date, datetime.min.time())
+    end_dt = datetime.combine(end_date, datetime.max.time())
+
+    products: list["Product"] = []
+    try:
+        for batch in fetcher.fetch_products(
+            min_date=start_dt,
+            max_date=end_dt,
+            limit=limit,
+        ):
+            products.extend(batch)
+    except Exception as exc:  # pragma: no cover - networking
+        return [], f"Error fetching products: {exc}"
+
+    return products, None
 
 
 def run_agent_variant(
@@ -150,6 +159,10 @@ def run_agent_variant(
     }
 
 
+def build_product_metadata(product: Product) -> dict[str, str]:
+    return product.metadata
+
+
 def render_variant_column(
     column: DeltaGenerator,
     *,
@@ -194,8 +207,8 @@ def render_variant_column(
         column.dataframe(result_df, use_container_width=True)
 
 
-def generate_comparison(row: pd.Series) -> dict[str, Any]:
-    metadata = build_product_metadata(row)
+def generate_comparison(product: Product) -> dict[str, Any]:
+    metadata = build_product_metadata(product)
     search_service, search_error = load_search_service()
     results: dict[str, dict[str, Any]] = {}
     for label, flag in VARIANTS:
@@ -206,7 +219,7 @@ def generate_comparison(row: pd.Series) -> dict[str, Any]:
             search_error=search_error,
         )
     return {
-        "product_id": readable_value(row.get(PRODUCT_ID_COL)),
+        "product_id": product.id,
         "metadata": metadata,
         "results": results,
         "search_service_error": search_error,
@@ -224,26 +237,56 @@ def main() -> None:
         "Explore how the agent behaves when `generic_variant` is toggled and compare the downstream search hits."
     )
 
-    if not DATA_PATH.exists():
-        st.error(f"Could not find CSV at {DATA_PATH}")
-        st.stop()
+    if RESULT_STATE_KEY not in st.session_state:
+        st.session_state[RESULT_STATE_KEY] = None
+    if PRODUCTS_STATE_KEY not in st.session_state:
+        st.session_state[PRODUCTS_STATE_KEY] = {"products": [], "error": None}
 
-    products_df = load_products(str(DATA_PATH))
-    if products_df.empty:
-        st.warning("The CSV is empty. Add products and reload the app.")
-        st.stop()
+    today = date.today()
+    default_start = today - timedelta(days=7)
 
-    selected_index = st.selectbox(
-        "Choose a product",
-        options=products_df.index.tolist(),
-        format_func=lambda idx: format_product_option(products_df.loc[idx]),
+    col_start, col_end, col_limit, col_action = st.columns([1, 1, 1, 0.8])
+    start_date = col_start.date_input("Start date", value=default_start)
+    end_date = col_end.date_input("End date", value=today)
+    limit = col_limit.number_input(
+        "Limit",
+        min_value=1,
+        max_value=500,
+        value=DEFAULT_LIMIT,
+        step=5,
+        help="Maximum number of products to fetch.",
     )
-    selected_row = products_df.loc[selected_index]
-    metadata = build_product_metadata(selected_row)
+    load_clicked = col_action.button("Load products", type="secondary")
+
+    if load_clicked:
+        with st.spinner("Fetching products..."):
+            products, error = fetch_products_for_range(
+                start_date=start_date,
+                end_date=end_date,
+                limit=int(limit),
+            )
+        st.session_state[PRODUCTS_STATE_KEY] = {"products": products, "error": error}
+        st.session_state[RESULT_STATE_KEY] = None
+
+    products_state = st.session_state[PRODUCTS_STATE_KEY]
+    if products_state["error"]:
+        st.error(products_state["error"])
+    elif not products_state["products"]:
+        st.info("Set a date range and limit, then click **Load products**.")
+        return
+
+    products: list[Product] = products_state["products"]
+    selected_product = st.selectbox(
+        "Choose a product",
+        options=products,
+        format_func=format_product_option,
+    )
+
+    metadata = build_product_metadata(selected_product)
 
     st.write(
-        f"**Selected product:** {readable_value(selected_row.get(TITLE_COL))} — "
-        f"{readable_value(selected_row.get(BRAND_COL))}"
+        f"**Selected product:** {readable_value(selected_product.title)} — "
+        f"{readable_value(selected_product.brand)}"
     )
     if not metadata:
         st.warning("This product has insufficient metadata for the agent.")
@@ -251,13 +294,10 @@ def main() -> None:
     with st.expander("Metadata sent to the agent"):
         st.json(metadata or {"info": "No metadata available"})
 
-    with st.expander("Raw Marketplacer row"):
-        st.dataframe(selected_row.to_frame(name="value"))
+    with st.expander("Raw product"):
+        st.json(selected_product.model_dump())
 
-    if RESULT_STATE_KEY not in st.session_state:
-        st.session_state[RESULT_STATE_KEY] = None
-
-    current_product_id = readable_value(selected_row.get(PRODUCT_ID_COL))
+    current_product_id = selected_product.id
     previous = st.session_state.get(RESULT_STATE_KEY)
     if previous and previous.get("product_id") != current_product_id:
         st.session_state[RESULT_STATE_KEY] = None
@@ -268,7 +308,7 @@ def main() -> None:
         disabled=not metadata,
     ):
         with st.spinner("Running agents and searching..."):
-            st.session_state[RESULT_STATE_KEY] = generate_comparison(selected_row)
+            st.session_state[RESULT_STATE_KEY] = generate_comparison(selected_product)
 
     comparison = st.session_state.get(RESULT_STATE_KEY)
     if not comparison:

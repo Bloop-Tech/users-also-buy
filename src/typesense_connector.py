@@ -88,7 +88,7 @@ class BaseTypesense:
                 f"Typesense multi_search failed: code={status_code}, error={error_message}"
             )
         cleaned_search_result = []
-        print(search_results)
+
         for group in search_results.get("grouped_hits", []):
             for hit in group.get("hits", []):
                 document = hit.get("document", {})
@@ -102,5 +102,5 @@ class BaseTypesense:
                         "product_vector_distance": hit.get("vector_distance"),
                     }
                 )
-        print([(x["product_name"], x["product_brand"]) for x in cleaned_search_result])
+
         return cleaned_search_result
