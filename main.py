@@ -1,7 +1,7 @@
 from __future__ import annotations
 
-import json
 import datetime
+import json
 from datetime import timedelta
 
 from dotenv import load_dotenv
@@ -18,14 +18,22 @@ def main() -> None:
     fetcher = ProductsFetcher(page_size=2)
     agent = get_agent(generic_variant=False)
     azure_blob_client = AzureBlobClient()
-    last_pipeline_status: PipelineBlobStatus = azure_blob_client.read_json('product_status')
+    last_pipeline_status: PipelineBlobStatus = azure_blob_client.read_json(
+        "product_status"
+    )
     if last_pipeline_status is None:
         min_start_date = datetime.datetime(2023, 1, 1)
     else:
-        min_start_date = last_pipeline_status.latest_product_datetime_updated + timedelta(seconds=1)
+        min_start_date = (
+            last_pipeline_status.latest_product_datetime_updated + timedelta(seconds=1)
+        )
     results: dict[str, AlsoBuyQueries] = {}
-    for batch_products in fetcher.fetch_products(min_start_date, datetime.datetime.now(datetime.UTC), limit=5):
-        print(f"Processing batch of products whose dates range is: {batch_products[0].created_date.isoformat()} and {batch_products[-1].created_date.isoformat()}")
+    for batch_products in fetcher.fetch_products(
+        min_start_date, datetime.datetime.now(datetime.UTC), limit=5
+    ):
+        print(
+            f"Processing batch of products whose dates range is: {batch_products[0].created_date.isoformat()} and {batch_products[-1].created_date.isoformat()}"
+        )
         for product in batch_products:
             result = agent.run_sync(
                 f"""Suggest also-buy queries for this product:
@@ -38,13 +46,16 @@ def main() -> None:
             results[product.id] = result.output
             print()
         # update products to whatever place
+        #
         # store in blob the latest status
         pipeline_status = PipelineBlobStatus(
             latest_product_datetime_updated=batch_products[-1].created_date,
-            latest_datetime_trigger=pipeline_trigger_datetime)
+            latest_datetime_trigger=pipeline_trigger_datetime,
+        )
         print(f"Saving pipeline status to blob: {pipeline_status}")
-        azure_blob_client.write_pipeline_status(blob_name='product_status', pipeline_status=pipeline_status)
-
+        azure_blob_client.write_pipeline_status(
+            blob_name="product_status", pipeline_status=pipeline_status
+        )
 
 
 if __name__ == "__main__":

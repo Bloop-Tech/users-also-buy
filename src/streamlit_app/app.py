@@ -294,9 +294,6 @@ def main() -> None:
     with st.expander("Metadata sent to the agent"):
         st.json(metadata or {"info": "No metadata available"})
 
-    with st.expander("Raw product"):
-        st.json(selected_product.model_dump())
-
     current_product_id = selected_product.id
     previous = st.session_state.get(RESULT_STATE_KEY)
     if previous and previous.get("product_id") != current_product_id:
