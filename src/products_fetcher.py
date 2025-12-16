@@ -1,9 +1,8 @@
 from __future__ import annotations
 
 import os
-from datetime import date
-from tkinter.constants import N
-from typing import Any
+from datetime import date, datetime
+from typing import Any, Iterator
 
 from dotenv import load_dotenv
 from gql import Client, gql
@@ -13,7 +12,9 @@ from src.data_models import Product
 
 GOLDEN_PRODUCTS_QUERY = """
 query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTime, $createdUntil: ISO8601DateTime) {
-  goldenProducts(first: $first, after: $after, filters: {
+  goldenProducts(first: $first, after: $after, sort: [ {
+        field: CREATED_AT, ordering: ASCENDING
+    }], filters: {
      createdSince: $createdSince
      createdUntil: $createdUntil
   }) {
@@ -22,6 +23,7 @@ query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTim
       id
       legacyId
       title
+      createdAt
       description
       brand {
         id
@@ -76,36 +78,36 @@ class ProductsFetcher:
 
     def fetch_products(
         self,
-        min_date: str | date,
-        max_date: str | date,
+        min_date: datetime,
+        max_date: datetime | None = None,
         limit: int | None = None,
-    ) -> list[Product]:
-        """Fetch products between the given dates, respecting limit or exhausting all pages."""
+    ) -> Iterator[list[Product]]:
+        """Yield products between the given dates in batches."""
         created_since = self._normalise_date(min_date)
         created_until = self._normalise_date(max_date)
         print(created_since, created_until)
         if limit is not None and limit <= 0:
-            return []
+            return
 
-        products: list[Product] = []
         cursor: str | None = None
         remaining = limit
 
         while True:
-            batch_size = (
+            current_batch_size = (
                 self.page_size if remaining is None else min(self.page_size, remaining)
             )
             payload = self._run_query(
                 after=cursor,
-                first=batch_size,
-                created_since=created_since,
-                created_until=created_until,
+                first=current_batch_size,
+                created_since=min_date.isoformat(),
+                created_until=max_date.isoformat(),
             )
             nodes = payload.get("nodes") or []
             page_info = payload.get("pageInfo") or {}
 
             mapped = [self._map_product(node) for node in nodes]
-            products.extend(mapped)
+            if mapped:
+                yield mapped
 
             if remaining is not None:
                 remaining -= len(mapped)
@@ -118,8 +120,6 @@ class ProductsFetcher:
             cursor = page_info.get("endCursor")
             if not cursor:
                 break
-
-        return products
 
     def _run_query(
         self,
@@ -155,6 +155,8 @@ class ProductsFetcher:
         if title is None:
             raise ValueError("Product missing title information")
         return Product(
+            id=node.get("id"),
+            created_date=node.get("createdAt"),
             category_lvl_1=categories[0],
             category_lvl_2=categories[1],
             category_lvl_3=categories[2],
@@ -192,6 +194,8 @@ if __name__ == "__main__":
     load_dotenv()
     fetcher = ProductsFetcher()
 
-    products = fetcher.fetch_products("2025-11-01", "2025-11-05", limit=10)
-    for product in products:
-        print(product)
+    for batch in fetcher.fetch_products(
+        "2025-11-01", "2025-11-05", limit=10, batch_size=5
+    ):
+        for product in batch:
+            print(product)
