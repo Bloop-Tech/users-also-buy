@@ -37,10 +37,10 @@ class EmbeddingsClient:
         response = self._client.post("/v1/embeddings", json=payload)
         # Surface more context on common 4xx/5xx
         if response.is_error:
-            try:
-                detail = response.json()
-            except Exception:
-                detail = response.text
+            raise ValueError(
+                f"Embeddings request failed with status "
+                f"{response.status_code}: {response.text}"
+            )
 
             response.raise_for_status()
         data = response.json()

@@ -8,7 +8,6 @@ from uuid import uuid4
 from dotenv import load_dotenv
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
-from jsonschema.benchmarks.subcomponents import v
 
 from src.data_models import Product
 
@@ -202,7 +201,6 @@ class MarketplacerGateway:
             option_value_id = option_value.get("id")
             if option_value_id:
                 option_values_array.append({"optionValueId": option_value_id})
-                print("got here")
             elif text_value:
                 option_values_array.append(
                     {"optionTypeId": option_type_id, "textValue": text_value}
