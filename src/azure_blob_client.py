@@ -58,4 +58,6 @@ class AzureBlobClient:
                 f"'{self._container_client.container_name}'."
             )
             return None
+        if not isinstance(data, bytes):
+            raise ValueError(f"Blob '{blob_name}' has no data.")
         return PipelineBlobStatus(**json.loads(data.decode("utf-8")))

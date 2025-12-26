@@ -154,7 +154,7 @@ class MarketplacerGateway:
                 after=cursor,
                 first=current_batch_size,
                 created_since=min_date.isoformat(),
-                created_until=max_date.isoformat(),
+                created_until=max_date.isoformat() if max_date else None,
             )
             nodes = payload.get("nodes") or []
             page_info = payload.get("pageInfo") or {}
@@ -249,22 +249,34 @@ class MarketplacerGateway:
         brand_payload = node.get("brand") or {}
         brand_name = brand_payload.get("name") or "Unknown"
         brand_id = brand_payload.get("id")
+        if not brand_id:
+            raise ValueError("Product missing brand ID information")
         categories = self._split_categories(tree_name)
+        product_id = node["id"]
+        if not product_id:
+            raise ValueError("Product missing ID information")
+        created_date = node.get("createdAt")
+        if not created_date:
+            raise ValueError("Product missing createdAt information")
         if categories[0] is None:
             raise ValueError("Product missing category information")
         title = node.get("title")
         if title is None:
             raise ValueError("Product missing title information")
+
+        taxon_id = taxon.get("id")
+        if taxon_id is None:
+            raise ValueError("Product missing taxon ID information")
         return Product(
-            id=node.get("id"),
-            created_date=node.get("createdAt"),
+            id=product_id,
+            created_date=created_date,
             category_lvl_1=categories[0],
             category_lvl_2=categories[1],
             category_lvl_3=categories[2],
             category_lvl_4=categories[3],
             brand=brand_name,
             brand_id=brand_id,
-            taxon_id=taxon.get("id"),
+            taxon_id=taxon_id,
             title=title,
             description=node.get("description") or "",
             option_values=(node.get("optionValues") or {"nodes": []})["nodes"],
@@ -276,7 +288,7 @@ class MarketplacerGateway:
             return [None, None, None, None]
 
         separators = [" > ", " / ", "/", ">"]
-        parts: list[str] = []
+        parts: list[str | None] = []
         for sep in separators:
             if sep in tree_name:
                 parts = [part.strip() for part in tree_name.split(sep) if part.strip()]

@@ -18,7 +18,7 @@ class BaseTypesense:
                 "nodes": [
                     {
                         "host": host,
-                        "port": port,
+                        "port": int(port),
                         "protocol": protocol,
                     }
                 ],
@@ -31,14 +31,14 @@ class BaseTypesense:
         self, collection_name: str, search_parameters: dict[str, Any]
     ) -> SearchResponse:
         return self.client.collections[collection_name].documents.search(
-            search_parameters=search_parameters
+            search_parameters=search_parameters  # ty:ignore[invalid-argument-type]
         )
 
     def get_search_results_parsed(
         self, collection_name: str, search_parameters: dict[str, Any]
     ) -> list[dict[str, Any]]:
         search_results = self.client.collections[collection_name].documents.search(
-            search_parameters=search_parameters
+            search_parameters=search_parameters  # ty:ignore[invalid-argument-type]
         )
         cleaned_search_result = list()
         for value in search_results["hits"]:
@@ -49,7 +49,7 @@ class BaseTypesense:
                     product_categories=value["document"]["categories_pt"],
                     product_description=value["document"]["description_pt"],
                     product_text_match=value["text_match"],
-                    product_vector_distance=value["vector_distance"],
+                    product_vector_distance=value["vector_distance"],  # ty:ignore[invalid-key]
                 )
             )
 
@@ -62,7 +62,7 @@ class BaseTypesense:
         multi_body = {
             "searches": [{"collection": collection_name, **search_parameters}]
         }
-        multi_response = self.client.multi_search.perform(multi_body)
+        multi_response = self.client.multi_search.perform(multi_body)  # ty:ignore[invalid-argument-type]
 
         # Ensure successful per-search response before parsing results
         if (
