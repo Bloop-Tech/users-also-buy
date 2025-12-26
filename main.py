@@ -3,19 +3,20 @@ from __future__ import annotations
 import datetime
 import json
 from datetime import timedelta
+from typing import List, Tuple
 
 from dotenv import load_dotenv
 
-from azure_blob_client import AzureBlobClient
 from src.agent import get_agent
-from src.data_models import AlsoBuyQueries, PipelineBlobStatus
-from src.products_fetcher import ProductsFetcher
+from src.azure_blob_client import AzureBlobClient
+from src.data_models import AlsoBuyQueries, PipelineBlobStatus, Product
+from src.marketplacer_gateway import MarketplacerGateway
 
 
 def main() -> None:
     load_dotenv()
     pipeline_trigger_datetime = datetime.datetime.now(datetime.UTC)
-    fetcher = ProductsFetcher(page_size=2)
+    marketplacer_gateway = MarketplacerGateway(page_size=2)
     agent = get_agent(generic_variant=False)
     azure_blob_client = AzureBlobClient()
     last_pipeline_status: PipelineBlobStatus = azure_blob_client.read_json(
@@ -27,8 +28,8 @@ def main() -> None:
         min_start_date = (
             last_pipeline_status.latest_product_datetime_updated + timedelta(seconds=1)
         )
-    results: dict[str, AlsoBuyQueries] = {}
-    for batch_products in fetcher.fetch_products(
+    results: List[Tuple[Product, List[str]]] = []
+    for batch_products in marketplacer_gateway.fetch_products(
         min_start_date, datetime.datetime.now(datetime.UTC), limit=5
     ):
         print(
@@ -43,10 +44,13 @@ def main() -> None:
             print(
                 f"Product Title: {product.title}, Suggested Queries: {result.output.queries}, Reasoning: {result.output.reasoninig}, Tokens: {result.usage().input_tokens}/{result.usage().output_tokens}"
             )
-            results[product.id] = result.output
-            print()
-        # update products to whatever place
-        #
+            results.append((product, result.output.queries))
+
+        for product, queries in results:
+            marketplacer_gateway.update_product_with_complementary_queries(
+                product, queries
+            )
+
         # store in blob the latest status
         pipeline_status = PipelineBlobStatus(
             latest_product_datetime_updated=batch_products[-1].created_date,

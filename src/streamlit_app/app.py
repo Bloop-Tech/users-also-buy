@@ -12,7 +12,7 @@ from streamlit.delta_generator import DeltaGenerator
 
 from src.agent import get_agent
 from src.data_models import Product
-from src.products_fetcher import ProductsFetcher
+from src.marketplacer_gateway import MarketplacerGateway
 from src.search import SearchService
 
 load_dotenv()
@@ -71,8 +71,8 @@ def load_search_service() -> tuple[SearchService | None, str | None]:
 
 
 @st.cache_resource(show_spinner=False)
-def _products_fetcher_factory() -> ProductsFetcher:
-    return ProductsFetcher()
+def _products_fetcher_factory() -> MarketplacerGateway:
+    return MarketplacerGateway()
 
 
 @st.cache_data(show_spinner=False)

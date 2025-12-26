@@ -3,10 +3,12 @@ from __future__ import annotations
 import os
 from datetime import date, datetime
 from typing import Any, Iterator
+from uuid import uuid4
 
 from dotenv import load_dotenv
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
+from jsonschema.benchmarks.subcomponents import v
 
 from src.data_models import Product
 
@@ -33,6 +35,23 @@ query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTim
         id
         treeName
       }
+      optionValues {
+        nodes {
+            optionType {
+                name
+                displayName
+                fieldType
+                id
+            }
+            textValue
+            optionValue {
+                displayName
+                name
+                id
+            }
+            id
+        }
+      }
     }
     pageInfo {
       hasNextPage
@@ -45,8 +64,24 @@ query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTim
 }
 """.strip()
 
+GOLDEN_PRODUCT_UPDATE_MUTATION = """
+mutation goldenProductUpdate($input: GoldenProductUpdateMutationInput!) {
+  goldenProductUpdate(input: $input) {
+    goldenProduct {
+      id
+      title
+      description
+    }
+    errors {
+      field
+      messages
+    }
+  }
+}
+""".strip()
 
-class ProductsFetcher:
+
+class MarketplacerGateway:
     def __init__(
         self,
         token: str | None = None,
@@ -75,6 +110,29 @@ class ProductsFetcher:
             transport=transport,
             fetch_schema_from_transport=False,
         )
+        self.field_id = self.get_complmentary_queries_field_id()
+
+    def get_complmentary_queries_field_id(self) -> str:
+        query = gql(
+            """
+            query {
+              optionTypes {
+                totalCount
+                nodes {
+                  displayName
+                  id
+                }
+              }
+            }
+            """
+        )
+
+        response = self._client.execute(query)
+        option_types = response.get("optionTypes", {}).get("nodes", [])
+        for option_type in option_types:
+            if option_type.get("displayName") == "Bought together queries":
+                return option_type.get("id")
+        raise ValueError("Bought together queries option type not found.")
 
     def fetch_products(
         self,
@@ -83,9 +141,6 @@ class ProductsFetcher:
         limit: int | None = None,
     ) -> Iterator[list[Product]]:
         """Yield products between the given dates in batches."""
-        created_since = self._normalise_date(min_date)
-        created_until = self._normalise_date(max_date)
-
         if limit is not None and limit <= 0:
             return
 
@@ -121,19 +176,67 @@ class ProductsFetcher:
             if not cursor:
                 break
 
+    def update_product_with_complementary_queries(
+        self,
+        product: Product,
+        complementary_queries: list[str],
+    ) -> dict[str, Any]:
+        attributes: dict[str, Any] = {}
+
+        attributes["title"] = product.title
+        attributes["description"] = product.description
+        attributes["brandId"] = product.brand_id
+        attributes["taxonId"] = product.taxon_id
+
+        option_values_array: list[dict[str, Any]] = []
+        option_values_array.append(
+            {
+                "optionTypeId": self.field_id,
+                "textValue": "+++".join(complementary_queries),
+            }
+        )
+        for option in product.option_values:
+            option_type_id = option["optionType"]["id"]
+            text_value = option.get("textValue")
+            option_value = option.get("optionValue") or {}
+            option_value_id = option_value.get("id")
+            if option_value_id:
+                option_values_array.append({"optionValueId": option_value_id})
+                print("got here")
+            elif text_value:
+                option_values_array.append(
+                    {"optionTypeId": option_type_id, "textValue": text_value}
+                )
+            else:
+                ValueError('Option value missing both "optionValueId" and "textValue"')
+
+        if option_values_array:
+            attributes["optionValues"] = option_values_array
+
+        mutation = gql(GOLDEN_PRODUCT_UPDATE_MUTATION)
+        variables = {
+            "input": {
+                "clientMutationId": f"catalog-cleaner-{uuid4().hex}",
+                "goldenProductId": product.id,
+                "attributes": attributes,
+            }
+        }
+        return self._client.execute(mutation, variable_values=variables)
+
     def _run_query(
         self,
         after: str | None,
         first: int,
         created_since: str,
-        created_until: str,
+        created_until: str | None,
     ) -> dict[str, Any]:
         variables = {
             "after": after,
             "first": first,
             "createdSince": created_since,
-            "createdUntil": created_until,
         }
+        if created_until:
+            variables["createdUntil"] = created_until
         query = gql(GOLDEN_PRODUCTS_QUERY)
         query.variable_values = variables
         result = self._client.execute(query)  # , variable_values=variables)
@@ -147,7 +250,7 @@ class ProductsFetcher:
         tree_name = taxon.get("treeName") or ""
         brand_payload = node.get("brand") or {}
         brand_name = brand_payload.get("name") or "Unknown"
-
+        brand_id = brand_payload.get("id")
         categories = self._split_categories(tree_name)
         if categories[0] is None:
             raise ValueError("Product missing category information")
@@ -162,8 +265,11 @@ class ProductsFetcher:
             category_lvl_3=categories[2],
             category_lvl_4=categories[3],
             brand=brand_name,
+            brand_id=brand_id,
+            taxon_id=taxon.get("id"),
             title=title,
             description=node.get("description") or "",
+            option_values=(node.get("optionValues") or {"nodes": []})["nodes"],
         )
 
     @staticmethod
@@ -192,10 +298,10 @@ class ProductsFetcher:
 
 if __name__ == "__main__":
     load_dotenv()
-    fetcher = ProductsFetcher()
+    fetcher = MarketplacerGateway()
 
     for batch in fetcher.fetch_products(
-        "2025-11-01", "2025-11-05", limit=10, batch_size=5
+        datetime(2025, 10, 1), datetime(2025, 11, 1), limit=2
     ):
         for product in batch:
-            print(product)
+            fetcher.update_product_with_complementary_queries(product, [])

@@ -1,4 +1,5 @@
 from datetime import datetime
+from typing import Dict, List
 
 from pydantic import BaseModel, Field
 
@@ -32,15 +33,30 @@ class Product(BaseModel):
         None, description="Fourth-level product category."
     )
     brand: str = Field(..., description="Brand of the product.")
+    brand_id: str = Field(..., description="Brand ID of the product.")
+    taxon_id: str = Field(..., description="Taxon ID of the product.")
     title: str = Field(..., description="Title of the product.")
     description: str = Field(..., description="Detailed product description.")
+    option_values: List[Dict] = Field(..., description="Product option values.")
 
     @property
     def metadata(self) -> dict[str, str]:
         return {
             column: value.strip()
             for column, value in (
-                (c, str(v)) for c, v in self.model_dump().items() if v and c not in ["id","created_date"]
+                (c, str(v))
+                for c, v in self.model_dump().items()
+                if v
+                and c
+                in [
+                    "category_lvl_1",
+                    "category_lvl_2",
+                    "category_lvl_3",
+                    "category_lvl_4",
+                    "brand",
+                    "title",
+                    "description",
+                ]
             )
             if value.strip()
         }
