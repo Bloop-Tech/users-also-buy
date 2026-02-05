@@ -4,6 +4,8 @@ import os
 from abc import ABC
 from typing import Any, Self
 
+from dotenv import load_dotenv
+
 from src.embeddings import EmbeddingsClient
 from src.typesense_connector import BaseTypesense
 
@@ -94,3 +96,11 @@ class SearchService(ABC):
             search_parameters=search_parameters,
         )
         return results[: self.result_limit]
+
+
+if __name__ == "__main__":
+    load_dotenv()
+    search = SearchService.build()
+    a = search.compute_search_results("Socks")
+    for x in a:
+        print(x)

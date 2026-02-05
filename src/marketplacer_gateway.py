@@ -129,9 +129,9 @@ class MarketplacerGateway:
         response = self._client.execute(query)
         option_types = response.get("optionTypes", {}).get("nodes", [])
         for option_type in option_types:
-            if option_type.get("displayName") == "Bought together queries":
+            if option_type.get("displayName") == "Complementary queries":
                 return option_type.get("id")
-        raise ValueError("Bought together queries option type not found.")
+        raise ValueError("Complementary queries option type not found.")
 
     def fetch_products(
         self,
