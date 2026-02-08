@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - main
+      - deploy-azure
   workflow_dispatch:
 
 env:
