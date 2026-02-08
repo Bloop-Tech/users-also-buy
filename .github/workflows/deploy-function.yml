@@ -1,0 +1,63 @@
+name: Deploy Azure Function
+
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch:
+
+env:
+  PYTHON_VERSION: "3.12"
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python ${{ env.PYTHON_VERSION }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ env.PYTHON_VERSION }}
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v4
+        with:
+          version: "latest"
+
+      - name: Install dependencies
+        run: |
+          uv sync --no-dev
+          uv export --no-dev --format requirements-txt > requirements.txt
+          sed -i '/--hash=/d' requirements.txt
+
+      - name: Prepare deployment content
+        run: |
+          rm -rf function_package
+          mkdir -p function_package
+          cp host.json requirements.txt function_package/
+          cp -R TimerFunction src function_package/
+          cp main.py function_package/
+          echo "Function package contents:"
+          ls -R function_package
+
+      - name: Vendor Python dependencies into .python_packages
+        run: |
+          uv pip install -r requirements.txt -t function_package/.python_packages/lib/site-packages
+          echo "Vendored packages:" && ls -la function_package/.python_packages/lib/site-packages | head -n 50
+
+      - name: Create deployment zip
+        run: |
+          rm -f function.zip
+          (cd function_package && zip -r ../function.zip .)
+          unzip -l function.zip
+
+      - name: Deploy to Azure Functions
+        uses: Azure/functions-action@v1
+        with:
+          app-name: influ-police-production-func
+          package: function.zip
+          publish-profile: ${{ secrets.AZURE_FUNCTIONAPP_PUBLISH_PROFILE_PROD }}
+          scm-do-build-during-deployment: false
+          enable-oryx-build: false
