@@ -63,6 +63,46 @@ query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTim
 }
 """.strip()
 
+GOLDEN_PRODUCTS_QUERY_BY_ID = """
+query getGoldenRecordById($id: ID!) {
+  node(id: $id) {
+    ... on GoldenProduct {
+      active
+      id
+      legacyId
+      title
+      createdAt
+      description
+      brand {
+        id
+        name
+      }
+      taxon {
+        id
+        treeName
+      }
+      optionValues {
+        nodes {
+            optionType {
+                name
+                displayName
+                fieldType
+                id
+            }
+            textValue
+            optionValue {
+                displayName
+                name
+                id
+            }
+            id
+        }
+      }
+    }
+  }
+}
+""".strip()
+
 GOLDEN_PRODUCT_UPDATE_MUTATION = """
 mutation goldenProductUpdate($input: GoldenProductUpdateMutationInput!) {
   goldenProductUpdate(input: $input) {
@@ -175,6 +215,11 @@ class MarketplacerGateway:
             if not cursor:
                 break
 
+    def fetch_product_by_id(self, node_id: str) -> Product | None:
+        """Fetch a single product by node id."""
+        payload = self._run_query_by_id(node_id=node_id)
+        return self._map_product(payload)
+
     def update_product_with_complementary_queries(
         self,
         product: Product,
@@ -239,6 +284,18 @@ class MarketplacerGateway:
         query.variable_values = variables
         result = self._client.execute(query)  # , variable_values=variables)
         products_payload = (result or {}).get("goldenProducts")
+        if not isinstance(products_payload, dict):
+            raise RuntimeError("GraphQL response missing 'goldenProducts' payload")
+        return products_payload
+
+    def _run_query_by_id(self, node_id: str) -> dict[str, Any]:
+        variables = {
+            "id": node_id,
+        }
+        query = gql(GOLDEN_PRODUCTS_QUERY_BY_ID)
+        query.variable_values = variables
+        result = self._client.execute(query)  # , variable_values=variables)
+        products_payload = (result or {}).get("node")
         if not isinstance(products_payload, dict):
             raise RuntimeError("GraphQL response missing 'goldenProducts' payload")
         return products_payload
@@ -309,7 +366,7 @@ class MarketplacerGateway:
 if __name__ == "__main__":
     load_dotenv()
     fetcher = MarketplacerGateway()
-
+    print(fetcher.fetch_product_by_id("R29sZGVuUHJvZHVjdC00Mjc2NTg="))
     for batch in fetcher.fetch_products(
         datetime(2025, 10, 1), datetime(2025, 11, 1), limit=2
     ):
