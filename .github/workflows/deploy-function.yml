@@ -45,8 +45,11 @@ jobs:
 
       - name: Vendor Python dependencies into .python_packages
         run: |
-          uv pip install -r requirements.txt -t function_package/.python_packages/lib/site-packages
+          uv pip install --only-binary :all: -r requirements.txt -t function_package/.python_packages/lib/site-packages
           echo "Vendored packages:" && ls -la function_package/.python_packages/lib/site-packages | head -n 50
+          echo "Check pydantic_core extension:"
+          find function_package/.python_packages -name "*_pydantic_core*.so" -print
+          test -n "$(find function_package/.python_packages -name "*_pydantic_core*.so" -print)"
 
       - name: Create deployment zip
         run: |
