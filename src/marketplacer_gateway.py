@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import logging
 import os
 from datetime import date, datetime
 from typing import Any, Iterator
@@ -8,8 +9,11 @@ from uuid import uuid4
 from dotenv import load_dotenv
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
+from tenacity import retry, stop_after_attempt, wait_fixed, before_sleep_log
 
 from src.data_models import Product
+
+logger = logging.getLogger(__name__)
 
 GOLDEN_PRODUCTS_QUERY = """
 query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTime, $createdUntil: ISO8601DateTime) {
@@ -151,6 +155,7 @@ class MarketplacerGateway:
         )
         self.field_id = self.get_complmentary_queries_field_id()
 
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
     def get_complmentary_queries_field_id(self) -> str:
         query = gql(
             """
@@ -220,6 +225,7 @@ class MarketplacerGateway:
         payload = self._run_query_by_id(node_id=node_id)
         return self._map_product(payload)
 
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
     def update_product_with_complementary_queries(
         self,
         product: Product,
@@ -266,6 +272,7 @@ class MarketplacerGateway:
         }
         return self._client.execute(mutation, variable_values=variables)
 
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
     def _run_query(
         self,
         after: str | None,
@@ -288,6 +295,7 @@ class MarketplacerGateway:
             raise RuntimeError("GraphQL response missing 'goldenProducts' payload")
         return products_payload
 
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
     def _run_query_by_id(self, node_id: str) -> dict[str, Any]:
         variables = {
             "id": node_id,

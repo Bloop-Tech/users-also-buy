@@ -19,5 +19,6 @@ dependencies = [
     "openpyxl>=3.1.5",
     "gql[requests]>=4.0.0",
     "azure-storage-blob>=12.27.1",
+    "tenacity>=9.1.2",
     "ty>=0.0.4",
 ]

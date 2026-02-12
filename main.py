@@ -7,6 +7,9 @@ from datetime import timedelta
 from typing import List, Tuple
 
 from dotenv import load_dotenv
+from tenacity import retry, stop_after_attempt, wait_fixed, before_sleep_log
+
+import logging
 
 from src.agent import get_agent
 from src.azure_blob_client import AzureBlobClient
@@ -14,6 +17,10 @@ from src.data_models import PipelineBlobStatus, Product
 from src.marketplacer_gateway import MarketplacerGateway
 
 
+logger = logging.getLogger(__name__)
+
+
+@retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
 async def _generate_queries_for_product(
     agent,
     product: Product,
@@ -30,14 +37,15 @@ async def _generate_queries_for_product(
 async def main() -> None:
     load_dotenv()
     pipeline_trigger_datetime = datetime.datetime.now(datetime.UTC)
-    marketplacer_gateway = MarketplacerGateway(page_size=50)
+    marketplacer_gateway = MarketplacerGateway(page_size=200)
     agent = get_agent(generic_variant=False)
     azure_blob_client = AzureBlobClient()
     product_status_file_name = 'product_status_live'
     last_pipeline_status: PipelineBlobStatus = azure_blob_client.read_json(
         product_status_file_name
     )
-    if last_pipeline_status is None or True:
+    print(last_pipeline_status)
+    if last_pipeline_status is None:
         min_start_date = datetime.datetime(2023, 1, 1)
     else:
         min_start_date = (
