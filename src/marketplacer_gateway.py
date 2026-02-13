@@ -374,7 +374,9 @@ class MarketplacerGateway:
 if __name__ == "__main__":
     load_dotenv()
     fetcher = MarketplacerGateway()
-    print(fetcher.fetch_product_by_id("R29sZGVuUHJvZHVjdC00Mjc2NTg="))
+    from src.logging_config import setup_logging
+    setup_logging()
+    logger.info(fetcher.fetch_product_by_id("R29sZGVuUHJvZHVjdC00Mjc2NTg="))
     for batch in fetcher.fetch_products(
         datetime(2025, 10, 1), datetime(2025, 11, 1), limit=2
     ):

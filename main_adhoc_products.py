@@ -2,13 +2,17 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
 from typing import List, Tuple
 
 from dotenv import load_dotenv
 
 from src.agent import get_agent
 from src.data_models import Product
+from src.logging_config import setup_logging
 from src.marketplacer_gateway import MarketplacerGateway
+
+logger = logging.getLogger(__name__)
 
 PRODUCT_IDS = [
     "R29sZGVuUHJvZHVjdC0zNjEyNDM=",
@@ -23,13 +27,19 @@ async def _generate_queries_for_product(
     agent,
     product: Product,
     semaphore: asyncio.Semaphore,
-) -> Tuple[Product, List[str]]:
+) -> Tuple[Product, List[str]] | None:
     prompt = f"""Suggest also-buy queries for this product:
                     {json.dumps(product.metadata, indent=2)}
                     """
-    async with semaphore:
-        result = await agent.run(prompt)
-    return product, result.output.queries
+    try:
+        async with semaphore:
+            result = await agent.run(prompt)
+        return product, result.output.queries
+    except Exception as e:
+        if "content_filter" in str(e) or "content management policy" in str(e):
+            logger.warning(f"Skipping product {product.id} ({product.title}) due to content filter: {e}")
+            return None
+        raise
 
 
 async def main() -> None:
@@ -40,26 +50,27 @@ async def main() -> None:
 
     products: list[Product] = []
     for product_id in PRODUCT_IDS:
-        print(f"Fetching product {product_id}")
+        logger.info("Fetching product %s", product_id)
         product = marketplacer_gateway.fetch_product_by_id(product_id)
         if product is None:
-            print(f"Product {product_id} not found, skipping.")
+            logger.warning("Product %s not found, skipping.", product_id)
             continue
         products.append(product)
 
     if not products:
-        print("No products to process.")
+        logger.warning("No products to process.")
         return
 
-    print(f"Processing products {[(x.id, x.title) for x in products]}")
-    batch_results: list[tuple[Product, list[str]]] = await asyncio.gather(
+    logger.info("Processing products %s", [(x.id, x.title) for x in products])
+    raw_results = await asyncio.gather(
         *[
             _generate_queries_for_product(agent, product, semaphore)
             for product in products
         ]
     )
+    batch_results: list[tuple[Product, list[str]]] = [r for r in raw_results if r is not None]
 
-    print(f"Saving batch of {len(batch_results)} to marketplacer:")
+    logger.info("Saving batch of %d to marketplacer (skipped %d due to content filter)", len(batch_results), len(raw_results) - len(batch_results))
     for product, queries in batch_results:
         marketplacer_gateway.update_product_with_complementary_queries(
             product, queries
@@ -67,4 +78,5 @@ async def main() -> None:
 
 
 if __name__ == "__main__":
+    setup_logging()
     asyncio.run(main())

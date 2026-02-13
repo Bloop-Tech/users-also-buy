@@ -9,6 +9,8 @@ from azure.storage.blob import BlobServiceClient, ContentSettings
 
 from src.data_models import PipelineBlobStatus
 
+logger = logging.getLogger(__name__)
+
 CONTAINER_NAME = "users-also-buy"
 
 
@@ -53,9 +55,10 @@ class AzureBlobClient:
         try:
             data = self._container_client.download_blob(blob_name).readall()
         except ResourceNotFoundError:
-            logging.warning(
-                f"Blob '{blob_name}' not found in container "
-                f"'{self._container_client.container_name}'."
+            logger.warning(
+                "Blob '%s' not found in container '%s'.",
+                blob_name,
+                self._container_client.container_name,
             )
             return None
         if not isinstance(data, bytes):
