@@ -130,7 +130,7 @@ class MarketplacerGateway:
         self,
         token: str | None = None,
         page_size: int = 100,
-        timeout_seconds: int = 15,
+        timeout_seconds: int = 5,
     ) -> None:
         self.endpoint = os.getenv("MARKETPLACER_URL")
         if not self.endpoint:

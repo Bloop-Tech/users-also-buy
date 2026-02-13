@@ -73,8 +73,8 @@ async def main() -> None:
         min_start_date = (
             last_pipeline_status.latest_product_datetime_updated + timedelta(seconds=1)
         )
-    semaphore = asyncio.Semaphore(10)
-    marketplacer_semaphore = asyncio.Semaphore(6)
+    semaphore = asyncio.Semaphore(12)
+    marketplacer_semaphore = asyncio.Semaphore(8)
     for batch_products in marketplacer_gateway.fetch_products(
         min_start_date,
         datetime.datetime.now(datetime.UTC),
@@ -104,7 +104,6 @@ async def main() -> None:
                 for product, queries in batch_results
             ])
         logger.info(f"Took {time.time() - time_before} seconds to save to marketplacer")
-        time_before = time.time()
         # store in blob the latest status
         pipeline_status = PipelineBlobStatus(
             latest_product_datetime_updated=batch_products[-1].created_date,
@@ -113,7 +112,6 @@ async def main() -> None:
         azure_blob_client.write_pipeline_status(
             blob_name=product_status_file_name, pipeline_status=pipeline_status
         )
-        logger.info(f"Took {time.time() - time_before} seconds to save to blob storage")
 
 
 if __name__ == "__main__":

@@ -32,7 +32,7 @@ def get_agent(generic_variant: bool) -> Agent[None, AlsoBuyQueries]:
             api_version=os.getenv("AZURE_OPENAI_API_VERSION"),
             api_key=os.getenv("AZURE_OPENAI_API_KEY"),
         ),
-        settings=OpenAIChatModelSettings(openai_reasoning_effort="minimal"),
+        settings=OpenAIChatModelSettings(openai_reasoning_effort="minimal", timeout=10),
     )
     return Agent(
         model=model,
