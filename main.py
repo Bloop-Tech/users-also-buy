@@ -3,9 +3,11 @@ from __future__ import annotations
 import asyncio
 import datetime
 import json
+import time
 from datetime import timedelta
 from typing import List, Tuple
 
+import httpx
 from dotenv import load_dotenv
 from tenacity import retry, stop_after_attempt, wait_fixed, before_sleep_log
 
@@ -41,6 +43,19 @@ async def _generate_queries_for_product(
         raise
 
 
+async def _update_product_in_marketplacer(
+    marketplacer_gateway: MarketplacerGateway,
+    product: Product,
+    queries: list[str],
+    http_client: httpx.AsyncClient,
+    semaphore: asyncio.Semaphore,
+) -> None:
+    async with semaphore:
+        await marketplacer_gateway.async_update_product_with_complementary_queries(
+            product, queries, http_client
+        )
+
+
 async def main() -> None:
     load_dotenv()
     pipeline_trigger_datetime = datetime.datetime.now(datetime.UTC)
@@ -59,11 +74,13 @@ async def main() -> None:
             last_pipeline_status.latest_product_datetime_updated + timedelta(seconds=1)
         )
     semaphore = asyncio.Semaphore(10)
+    marketplacer_semaphore = asyncio.Semaphore(6)
     for batch_products in marketplacer_gateway.fetch_products(
         min_start_date,
         datetime.datetime.now(datetime.UTC),
         # limit=30
     ):
+        time_before = time.time()
         logger.info(
             "Processing batch of products whose dates range is: %s and %s",
             batch_products[0].created_date.isoformat(),
@@ -76,13 +93,18 @@ async def main() -> None:
             ]
         )
         batch_results: list[tuple[Product, list[str]]] = [r for r in raw_results if r is not None]
-
+        logger.info(f"Took {time.time() - time_before} seconds to get openai results")
         logger.info("Saving batch of %d to marketplacer (skipped %d due to content filter)", len(batch_results), len(raw_results) - len(batch_results))
-        for product, queries in batch_results:
-            marketplacer_gateway.update_product_with_complementary_queries(
-                product, queries
-            )
-
+        time_before = time.time()
+        async with httpx.AsyncClient() as http_client:
+            await asyncio.gather(*[
+                _update_product_in_marketplacer(
+                    marketplacer_gateway, product, queries, http_client, marketplacer_semaphore
+                )
+                for product, queries in batch_results
+            ])
+        logger.info(f"Took {time.time() - time_before} seconds to save to marketplacer")
+        time_before = time.time()
         # store in blob the latest status
         pipeline_status = PipelineBlobStatus(
             latest_product_datetime_updated=batch_products[-1].created_date,
@@ -91,6 +113,7 @@ async def main() -> None:
         azure_blob_client.write_pipeline_status(
             blob_name=product_status_file_name, pipeline_status=pipeline_status
         )
+        logger.info(f"Took {time.time() - time_before} seconds to save to blob storage")
 
 
 if __name__ == "__main__":

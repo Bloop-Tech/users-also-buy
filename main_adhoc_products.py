@@ -5,6 +5,7 @@ import json
 import logging
 from typing import List, Tuple
 
+import httpx
 from dotenv import load_dotenv
 
 from src.agent import get_agent
@@ -42,6 +43,19 @@ async def _generate_queries_for_product(
         raise
 
 
+async def _update_product_in_marketplacer(
+    marketplacer_gateway: MarketplacerGateway,
+    product: Product,
+    queries: list[str],
+    http_client: httpx.AsyncClient,
+    semaphore: asyncio.Semaphore,
+) -> None:
+    async with semaphore:
+        await marketplacer_gateway.async_update_product_with_complementary_queries(
+            product, queries, http_client
+        )
+
+
 async def main() -> None:
     load_dotenv()
     marketplacer_gateway = MarketplacerGateway(page_size=15)
@@ -71,10 +85,14 @@ async def main() -> None:
     batch_results: list[tuple[Product, list[str]]] = [r for r in raw_results if r is not None]
 
     logger.info("Saving batch of %d to marketplacer (skipped %d due to content filter)", len(batch_results), len(raw_results) - len(batch_results))
-    for product, queries in batch_results:
-        marketplacer_gateway.update_product_with_complementary_queries(
-            product, queries
-        )
+    marketplacer_semaphore = asyncio.Semaphore(6)
+    async with httpx.AsyncClient() as http_client:
+        await asyncio.gather(*[
+            _update_product_in_marketplacer(
+                marketplacer_gateway, product, queries, http_client, marketplacer_semaphore
+            )
+            for product, queries in batch_results
+        ])
 
 
 if __name__ == "__main__":

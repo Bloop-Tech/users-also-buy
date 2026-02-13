@@ -6,6 +6,7 @@ from datetime import date, datetime
 from typing import Any, Iterator
 from uuid import uuid4
 
+import httpx
 from dotenv import load_dotenv
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
@@ -225,8 +226,7 @@ class MarketplacerGateway:
         payload = self._run_query_by_id(node_id=node_id)
         return self._map_product(payload)
 
-    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
-    def update_product_with_complementary_queries(
+    def _build_update_variables(
         self,
         product: Product,
         complementary_queries: list[str],
@@ -262,15 +262,45 @@ class MarketplacerGateway:
         if option_values_array:
             attributes["optionValues"] = option_values_array
 
-        mutation = gql(GOLDEN_PRODUCT_UPDATE_MUTATION)
-        variables = {
+        return {
             "input": {
                 "clientMutationId": f"catalog-cleaner-{uuid4().hex}",
                 "goldenProductId": product.id,
                 "attributes": attributes,
             }
         }
+
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
+    def update_product_with_complementary_queries(
+        self,
+        product: Product,
+        complementary_queries: list[str],
+    ) -> dict[str, Any]:
+        variables = self._build_update_variables(product, complementary_queries)
+        mutation = gql(GOLDEN_PRODUCT_UPDATE_MUTATION)
         return self._client.execute(mutation, variable_values=variables)
+
+    @retry(stop=stop_after_attempt(2), wait=wait_fixed(2),
+           before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
+    async def async_update_product_with_complementary_queries(
+        self,
+        product: Product,
+        complementary_queries: list[str],
+        http_client: httpx.AsyncClient,
+    ) -> dict[str, Any]:
+        assert self.endpoint is not None
+        variables = self._build_update_variables(product, complementary_queries)
+        headers = {"Content-Type": "application/json"}
+        if self.token:
+            headers["Authorization"] = f"Bearer {self.token}"
+        response = await http_client.post(
+            self.endpoint,
+            json={"query": GOLDEN_PRODUCT_UPDATE_MUTATION, "variables": variables},
+            headers=headers,
+            timeout=self.timeout_seconds,
+        )
+        response.raise_for_status()
+        return response.json()
 
     @retry(stop=stop_after_attempt(2), wait=wait_fixed(2), before_sleep=before_sleep_log(logger, logging.WARNING), reraise=True)
     def _run_query(
