@@ -1,0 +1,37 @@
+[
+  {
+    "label": "Validate setup",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python scripts/validate_exploration_themes_setup.py'",
+    "env": {}
+  },
+  {
+    "label": "Create Typesense collection",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python scripts/create_exploration_themes_collection.py'",
+    "env": {}
+  },
+  {
+    "label": "Expand 1 theme",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python -m pipelines.exploration_themes.main_adhoc --mode expand --expand-count 1'",
+    "env": {}
+  },
+  {
+    "label": "Expand 5 themes",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python -m pipelines.exploration_themes.main_adhoc --mode expand --expand-count 5'",
+    "env": {}
+  },
+  {
+    "label": "Refresh all (dry-run)",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python -m pipelines.exploration_themes.main_adhoc --mode refresh --dry-run'",
+    "env": {}
+  },
+  {
+    "label": "Refresh one (dry-run)",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python -m pipelines.exploration_themes.main_adhoc --mode refresh --theme-ids beach-day-essentials --dry-run'",
+    "env": {}
+  },
+  {
+    "label": "Streamlit QA",
+    "command": "sh -c 'eval \"$(curl -sS localhost:8001/setup)\" && .venv/bin/python -m streamlit run tools/streamlit_themes/app.py'",
+    "env": {}
+  }
+]

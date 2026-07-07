@@ -8,8 +8,8 @@ from dotenv import load_dotenv
 
 import logging
 
-from src.embeddings import EmbeddingsClient
-from src.typesense_connector import BaseTypesense
+from src.common.embeddings import EmbeddingsClient
+from src.common.typesense_connector import BaseTypesense
 
 logger = logging.getLogger(__name__)
 
@@ -103,10 +103,11 @@ class SearchService(ABC):
 
 
 if __name__ == "__main__":
-    from src.logging_config import setup_logging
+    from src.common.logging_config import setup_logging
+
     setup_logging()
     load_dotenv()
     search = SearchService.build()
-    a = search.compute_search_results("Socks")
-    for x in a:
-        logger.info(x)
+    hits = search.compute_search_results("Socks")
+    for hit in hits:
+        logger.info(hit)

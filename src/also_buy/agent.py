@@ -4,7 +4,7 @@ from pydantic_ai import Agent
 from pydantic_ai.models.openai import OpenAIChatModel, OpenAIChatModelSettings
 from pydantic_ai.providers.azure import AzureProvider
 
-from src.data_models import AlsoBuyQueries
+from src.also_buy.data_models import AlsoBuyQueries
 
 SYSTEM_PROMPT_SPECIFIC = """Your goal is to suggest complementary products for the input product and basically mimic the concept of 'users also buy'
 To do so, you will receive an input product (its metadata) and you need to suggest search queries that a user could use to find complementary products.

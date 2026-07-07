@@ -10,10 +10,10 @@ import streamlit as st
 from dotenv import load_dotenv
 from streamlit.delta_generator import DeltaGenerator
 
-from src.agent import get_agent
-from src.data_models import Product
-from src.marketplacer_gateway import MarketplacerGateway
-from src.search import SearchService
+from src.also_buy.agent import get_agent
+from src.also_buy.data_models import Product
+from src.also_buy.marketplacer_gateway import MarketplacerGateway
+from src.common.search import SearchService
 
 load_dotenv()
 
@@ -93,7 +93,7 @@ def fetch_products_for_range(
     start_dt = datetime.combine(start_date, datetime.min.time())
     end_dt = datetime.combine(end_date, datetime.max.time())
 
-    products: list["Product"] = []
+    products: list[Product] = []
     try:
         for batch in fetcher.fetch_products(
             min_date=start_dt,

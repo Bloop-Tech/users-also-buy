@@ -38,7 +38,7 @@ jobs:
           rm -rf function_package
           mkdir -p function_package
           cp host.json requirements.txt function_package/
-          cp -R TimerFunction src function_package/
+          cp -R TimerFunction pipelines src function_package/
           cp main.py function_package/
           echo "Function package contents:"
           ls -R function_package

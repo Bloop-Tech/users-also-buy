@@ -1,9 +1,8 @@
-import asyncio
 import logging
 
 import azure.functions as func
 
-from main import main as run_pipeline
+from pipelines.also_buy.main import main as run_pipeline
 
 
 async def main(mytimer: func.TimerRequest) -> None:
