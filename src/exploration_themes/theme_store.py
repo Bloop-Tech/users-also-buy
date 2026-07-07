@@ -1,7 +1,6 @@
 from __future__ import annotations
 
 import math
-import os
 from pathlib import Path
 
 import yaml
@@ -13,15 +12,14 @@ from src.exploration_themes.data_models import (
     ThemesFile,
     slugify_title,
 )
+from src.exploration_themes.runtime_config import get_runtime_config
 
-DEFAULT_THEMES_FILE = Path("data/themes.yaml")
 DEDUP_SIMILARITY_THRESHOLD = 0.85
 
 
 class ThemeStore:
     def __init__(self, path: Path | None = None) -> None:
-        env_path = os.getenv("THEMES_FILE")
-        self.path = path or Path(env_path) if env_path else DEFAULT_THEMES_FILE
+        self.path = path or get_runtime_config().themes_file
 
     def load(self) -> ThemesFile:
         if not self.path.exists():

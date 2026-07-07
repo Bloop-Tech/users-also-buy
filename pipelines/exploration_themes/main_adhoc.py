@@ -5,12 +5,35 @@ import asyncio
 import logging
 
 from dotenv import load_dotenv
+from src.exploration_themes.runtime_config import get_runtime_config
 
 from src.common.logging_config import setup_logging
 from src.exploration_themes.data_models import ThemesPipelineRunConfig
 from src.exploration_themes.pipeline import ExplorationThemesPipeline
 
 logger = logging.getLogger(__name__)
+
+PRODUCTION_WARNING_BANNER = "!" * 80
+
+
+def log_runtime_config() -> None:
+    runtime_config = get_runtime_config()
+    logger.info("Exploration themes runtime config:")
+    logger.info("  APP_ENV=%s", runtime_config.app_env)
+    logger.info("  PRODUCTS_COLLECTION=%s", runtime_config.products_collection)
+    logger.info(
+        "  EXPLORATION_THEMES_COLLECTION=%s",
+        runtime_config.exploration_themes_collection,
+    )
+    logger.info("  THEMES_FILE=%s", runtime_config.themes_file)
+
+    if runtime_config.app_env.lower() == "production":
+        logger.warning(PRODUCTION_WARNING_BANNER)
+        logger.warning("RUNNING EXPLORATION THEMES PIPELINE IN PRODUCTION")
+        logger.warning(
+            "This run will use the production products collection, themes collection, and YAML file."
+        )
+        logger.warning(PRODUCTION_WARNING_BANNER)
 
 
 def parse_args() -> ThemesPipelineRunConfig:
@@ -62,6 +85,7 @@ def parse_args() -> ThemesPipelineRunConfig:
 
 async def main() -> None:
     load_dotenv()
+    log_runtime_config()
     config = parse_args()
     pipeline = ExplorationThemesPipeline()
     await pipeline.run(config)

@@ -12,6 +12,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 import typesense
 from dotenv import load_dotenv
 
+from src.exploration_themes.runtime_config import get_runtime_config
 from src.exploration_themes.typesense_writer import EXPLORATION_THEMES_SCHEMA
 
 
@@ -20,9 +21,7 @@ def main() -> None:
     host = os.getenv("TYPESENSE_NODE_HOST")
     port = os.getenv("TYPESENSE_PORT")
     api_key = os.getenv("TYPESENSE_API_KEY")
-    collection_name = os.getenv(
-        "EXPLORATION_THEMES_COLLECTION", EXPLORATION_THEMES_SCHEMA["name"]
-    )
+    collection_name = get_runtime_config().exploration_themes_collection
 
     if not all([host, port, api_key]):
         print("Missing TYPESENSE_* environment variables.", file=sys.stderr)

@@ -7,6 +7,7 @@ from typing import Any
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
+from src.exploration_themes.runtime_config import get_runtime_config
 
 from src.common.search import SearchService
 from src.exploration_themes.data_models import ExplorationTheme
@@ -120,15 +121,21 @@ def main() -> None:
         layout="wide",
         page_icon="🎨",
     )
+    runtime_config = get_runtime_config()
+
     st.title("Exploration themes QA")
-    st.caption("Review themes from data/themes.yaml and preview search results.")
+    st.caption(
+        f"Review themes from {runtime_config.themes_file} and preview search results from {runtime_config.products_collection}."
+    )
 
     theme_store = _theme_store_factory()
     themes_file = theme_store.load()
     themes = themes_file.themes
 
     if not themes:
-        st.info("No themes in data/themes.yaml yet. Run expand mode first.")
+        st.info(
+            f"No themes in {runtime_config.themes_file} yet. Run expand mode first."
+        )
         return
 
     status_filter = st.multiselect(

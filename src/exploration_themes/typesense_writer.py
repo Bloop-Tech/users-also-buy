@@ -6,6 +6,7 @@ from src.common.embeddings import EmbeddingsClient
 from src.common.typesense_connector import BaseTypesense
 from src.exploration_themes.data_models import ExplorationTheme
 from src.exploration_themes.quality_gates import should_publish_to_typesense
+from src.exploration_themes.runtime_config import get_runtime_config
 
 EXPLORATION_THEMES_SCHEMA = {
     "name": "exploration_themes",
@@ -43,8 +44,9 @@ class ExplorationThemesWriter:
         embeddings_client: EmbeddingsClient | None = None,
         collection_name: str | None = None,
     ) -> None:
-        self.collection_name = collection_name or os.getenv(
-            "EXPLORATION_THEMES_COLLECTION", "exploration_themes"
+        runtime_config = get_runtime_config()
+        self.collection_name = (
+            collection_name or runtime_config.exploration_themes_collection
         )
         self.typesense = typesense or BaseTypesense(
             host=str(os.getenv("TYPESENSE_NODE_HOST")),

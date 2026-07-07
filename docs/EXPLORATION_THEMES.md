@@ -19,16 +19,17 @@ This pipeline **generates and persists** exploration theme collections. It does 
 ## Per-theme pipeline
 
 ```
-data/themes.yaml  →  LLM queries  →  Typesense search  →  LLM selection
-                                                              ↓
-                                         quality gates  →  embed  →  Typesense upsert
-                                                              ↓
-                                                    update data/themes.yaml
+```
+THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION)
+                                                      ↓
+                                     LLM selection  →  quality gates  →  embed
+                                                      ↓
+                    EXPLORATION_THEMES_COLLECTION upsert + update THEMES_FILE
 ```
 
 ### Steps (per theme)
 
-1. Load theme from `data/themes.yaml` (or generate new themes in `expand` mode)
+1. Load theme from `THEMES_FILE` (or generate new themes in `expand` mode)
 2. LLM generates 2–4 keyword search queries
 3. Hybrid Typesense search per query; merge and dedupe candidates (~50 max)
 4. LLM selects 8–15 matching products from candidates
@@ -42,12 +43,12 @@ data/themes.yaml  →  LLM queries  →  Typesense search  →  LLM selection
 
 1. LLM generates N new themes with `title_en`, `title_pt`, `title_es`
 2. Dedup against existing `title_en` values (embedding similarity)
-3. Append to `data/themes.yaml` with `status: pending`
+3. Append to `THEMES_FILE` with `status: pending`
 4. Run full pipeline for pending themes
 
 ### `refresh` — re-curate existing themes
 
-1. Load themes from `data/themes.yaml`
+1. Load themes from `THEMES_FILE`
 2. Re-run queries → search → selection
 3. Bump version, update Typesense + yaml
 
@@ -66,7 +67,7 @@ data/themes.yaml  →  LLM queries  →  Typesense search  →  LLM selection
 
 ### Local theme file
 
-`data/themes.yaml` is the source of truth, committed to the repo. Review diffs after expand runs.
+`THEMES_FILE` selects the active local theme YAML file. For example, you can point dev and prod to different files because curated `product_ids` differ by environment. Review diffs after expand runs.
 
 ## Typesense collection: `exploration_themes`
 
@@ -106,38 +107,61 @@ Create manually or via `scripts/create_exploration_themes_collection.py`:
 
 ## Running locally
 
+Swap the active `.env` file depending on the target environment. The active `.env` controls `APP_ENV`, `PRODUCTS_COLLECTION`, `EXPLORATION_THEMES_COLLECTION`, and `THEMES_FILE`.
+
 ```bash
 # Validate local setup (no API calls)
 uv run python scripts/validate_exploration_themes_setup.py
 
-# Create Typesense collection (requires TYPESENSE_* env vars)
+# Create the configured Typesense collection (requires TYPESENSE_* env vars)
 uv run python scripts/create_exploration_themes_collection.py
 
-# Expand with new themes
+# Expand with new themes using the active .env
 uv run python -m pipelines.exploration_themes.main_adhoc --mode expand --expand-count 30
 
-# Refresh all themes
+# Refresh all themes using the active .env
 uv run python -m pipelines.exploration_themes.main_adhoc --mode refresh
 
-# Refresh one theme
+# Refresh one theme using the active .env
 uv run python -m pipelines.exploration_themes.main_adhoc --mode refresh --theme-ids beach-day-with-friends
 
 # QA UI
 uv run streamlit run tools/streamlit_themes/app.py
 ```
 
+Example environment-specific values:
+
+```env
+# .env.dev
+APP_ENV=development
+PRODUCTS_COLLECTION=products_v2_dev
+EXPLORATION_THEMES_COLLECTION=exploration_themes_dev
+THEMES_FILE=data/themes.dev.yaml
+```
+
+```env
+# .env.prod
+APP_ENV=production
+PRODUCTS_COLLECTION=products_v2
+EXPLORATION_THEMES_COLLECTION=exploration_themes
+THEMES_FILE=data/themes.prod.yaml
+```
+
 ## Environment variables
 
 | Variable | Default | Used by |
 |----------|---------|---------|
+| `APP_ENV` | `development` | Logging and production warning |
 | `AZURE_OPENAI_*` | — | LLM agents |
 | `TYPESENSE_*` | — | Search + write |
 | `EMBEDDINGS_SERVICE_URL` | — | Theme embeddings |
-| `EXPLORATION_THEMES_COLLECTION` | `exploration_themes` | Typesense collection |
+| `PRODUCTS_COLLECTION` | `products_v2` | Source Typesense product collection |
+| `EXPLORATION_THEMES_COLLECTION` | `exploration_themes` | Theme Typesense collection |
 | `THEMES_FILE` | `data/themes.yaml` | Local theme store |
 
 ## Operational notes
 
 - v1 runs **manually** via adhoc CLI; Azure timer planned post-QA
-- `data/themes.yaml` is version-controlled; no blob storage for themes
+- The active `THEMES_FILE` is version-controlled; no blob storage for themes
+- When `APP_ENV=production`, the adhoc CLI prints a large warning banner and logs the active config values before running
 - Also-buy daily pipeline is unaffected (separate entry point)

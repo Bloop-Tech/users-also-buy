@@ -477,3 +477,133 @@ themes:
   status: active
   version: 1
   updated_at: '2026-07-07T12:36:02.286792Z'
+- id: sustainable-kitchen-swaps
+  title_en: Sustainable kitchen swaps
+  title_pt: Trocas sustentáveis para a cozinha
+  title_es: Alternativas sostenibles para la cocina
+  description: Everyday kitchen items that reduce waste and make cooking greener.
+  tags:
+  - kitchen
+  - sustainable
+  - home
+  category: kitchen
+  audience: all
+  season: evergreen
+  search_queries:
+  - beeswax food wraps
+  - reusable silicone food bags
+  - compost bin kitchen
+  product_ids:
+  - '3721'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-07T14:40:38.556953Z'
+- id: sunset-rooftop-essentials
+  title_en: Sunset rooftop essentials
+  title_pt: Essenciais para pôr do sol no terraço
+  title_es: Imprescindibles para atardeceres en la azotea
+  description: Small items to create a cozy rooftop sunset with friends.
+  tags:
+  - home
+  - outdoor
+  - entertaining
+  category: home
+  audience: all
+  season: summer
+  search_queries:
+  - outdoor string lights
+  - patio throw blankets
+  - portable citronella candles
+  product_ids:
+  - '4194'
+  - '3146'
+  - '3553'
+  - '4052'
+  - '3451'
+  - '3190'
+  - '3298'
+  - '3201'
+  - '3237'
+  - '3803'
+  - '3656'
+  - '3184'
+  - '3552'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T14:40:46.495740Z'
+- id: minimal-travel-skincare
+  title_en: Minimal travel skincare
+  title_pt: Cuidados de pele de viagem minimal
+  title_es: Cuidado facial minimalista para viaje
+  description: Compact, multipurpose skincare you can pack for any trip.
+  tags:
+  - beauty
+  - travel
+  - compact
+  category: beauty
+  audience: all
+  season: evergreen
+  search_queries:
+  - travel skincare kit
+  - mini facial cleanser
+  - multiuse moisturizer balm
+  product_ids:
+  - '16665'
+  - '16463'
+  - '16524'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-07T14:40:52.908668Z'
+- id: back-to-school-dorm-hacks
+  title_en: Back-to-school dorm hacks
+  title_pt: Dicas para quartos universitários
+  title_es: Trucos para residencias estudiantiles
+  description: Space-saving and study-friendly items every student needs for dorm
+    life.
+  tags:
+  - home
+  - kids
+  - students
+  category: kids
+  audience: all
+  season: autumn
+  search_queries:
+  - dorm storage organizers
+  - compact desk lamp
+  - bedside caddy
+  product_ids:
+  - '3298'
+  - '3776'
+  - '3527'
+  - '3170'
+  - '16716'
+  - '3265'
+  - '3439'
+  - '3265'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T14:40:58.579762Z'
+- id: weekend-outdoor-grilling-gear
+  title_en: Weekend outdoor grilling gear
+  title_pt: Equipamento para grelhados de fim de semana
+  title_es: Equipo para barbacoas de fin de semana
+  description: Tools and accessories that make backyard or park grilling easier and
+    tastier.
+  tags:
+  - outdoor
+  - kitchen
+  - entertaining
+  category: kitchen
+  audience: all
+  season: summer
+  search_queries:
+  - portable charcoal grill
+  - grill tool set
+  - meat thermometer wireless
+  product_ids:
+  - '3175'
+  - '4153'
+  - '4194'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-07T14:41:04.849849Z'
