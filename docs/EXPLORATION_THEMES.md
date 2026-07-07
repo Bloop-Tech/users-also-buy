@@ -34,14 +34,14 @@ THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION
 3. Hybrid Typesense search per query; merge and dedupe candidates (~50 max)
 4. LLM selects 8–15 matching products from candidates
 5. Quality gates (min/max products, valid IDs, brand diversity)
-6. Embed `title_en + description + tags` for personalization
+6. Embed `title_en + description_en + tags` for personalization
 7. Upsert to Typesense `exploration_themes`; write back yaml
 
 ## Iteration modes
 
 ### `expand` — add new themes
 
-1. LLM generates N new themes with `title_en`, `title_pt`, `title_es`
+1. LLM generates N new themes with `title_en`, `title_pt`, `title_es`, `description_en`, `description_pt`, `description_es`
 2. Dedup against existing `title_en` values (embedding similarity)
 3. Append to `THEMES_FILE` with `status: pending`
 4. Run full pipeline for pending themes
@@ -56,11 +56,16 @@ THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION
 
 `title_en` is the **canonical theme name** — used for slug generation and embeddings.
 
+`description_*` mirrors the title localization approach: one shopper-friendly subtitle per supported locale.
+
+`seasons` is a multi-value field so a theme can be discoverable across more than one seasonal context (for example, `["spring", "summer"]`). Use `["evergreen"]` for non-seasonal themes.
+
 | Field | Stored in yaml | Stored in Typesense |
 |-------|----------------|---------------------|
 | `id` | yes | yes |
 | `title_en`, `title_pt`, `title_es` | yes | yes |
-| `description`, `tags`, `category`, `audience`, `season` | yes | yes |
+| `description_en`, `description_pt`, `description_es` | yes | yes |
+| `tags`, `category`, `audience`, `seasons` | yes | yes |
 | `search_queries`, `product_ids` | yes | yes |
 | `status`, `version`, `updated_at` | yes | yes |
 | `embedding` | no | yes |
@@ -68,6 +73,33 @@ THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION
 ### Local theme file
 
 `THEMES_FILE` selects the active local theme YAML file. For example, you can point dev and prod to different files because curated `product_ids` differ by environment. Review diffs after expand runs.
+
+Example yaml shape:
+
+```yaml
+- id: beach-day-essentials
+  title_en: Beach day essentials
+  title_pt: Essenciais para um dia de praia
+  title_es: Esenciales para un día de playa
+  description_en: Easy summer picks for a fun beach day with friends.
+  description_pt: Escolhas fáceis de verão para um dia de praia divertido com amigas.
+  description_es: Selecciones fáciles de verano para un día de playa divertido con amigas.
+  tags:
+    - beach
+    - summer
+    - fashion
+    - accessories
+  category: fashion
+  audience: women
+  seasons:
+    - spring
+    - summer
+  search_queries: []
+  product_ids: []
+  status: pending
+  version: 1
+  updated_at: 1720000000
+```
 
 ## Typesense collection: `exploration_themes`
 
@@ -77,9 +109,11 @@ Create manually or via `scripts/create_exploration_themes_collection.py`:
 |-------|------|-------|
 | `id` | string | slug, facet |
 | `title_en`, `title_pt`, `title_es` | string | localized titles |
-| `description` | string | |
+| `description_en`, `description_pt`, `description_es` | string | localized subtitles |
 | `tags` | string[] | facet |
-| `category`, `audience`, `season` | string | facet |
+| `category` | string | facet |
+| `audience` | string | facet |
+| `seasons` | string[] | facet |
 | `search_queries` | string[] | |
 | `product_ids` | string[] | |
 | `product_count` | int32 | |
@@ -101,7 +135,7 @@ Create manually or via `scripts/create_exploration_themes_collection.py`:
 ## Serve-time contract (frontend)
 
 1. Vector-search `exploration_themes` by user interest embedding
-2. Display localized title (`title_pt` / `title_es` based on locale)
+2. Display localized title and description (`title_*` + `description_*` based on locale)
 3. Hydrate `product_ids` from `products_v2`
 4. Filter products by user locale at serve time
 

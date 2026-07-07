@@ -7,11 +7,11 @@ from typing import Any
 import pandas as pd
 import streamlit as st
 from dotenv import load_dotenv
-from src.exploration_themes.runtime_config import get_runtime_config
 
 from src.common.search import SearchService
 from src.exploration_themes.data_models import ExplorationTheme
 from src.exploration_themes.pipeline import ExplorationThemesPipeline
+from src.exploration_themes.runtime_config import get_runtime_config
 from src.exploration_themes.theme_store import ThemeStore
 from src.exploration_themes.typesense_writer import ExplorationThemesWriter
 
@@ -68,7 +68,10 @@ def load_typesense_theme(theme_id: str) -> dict[str, Any] | None:
 def render_theme_details(theme: ExplorationTheme) -> None:
     st.subheader(theme.title_en)
     st.caption(f"PT: {theme.title_pt} · ES: {theme.title_es}")
-    st.write(theme.description)
+    st.write(theme.description_en)
+    st.caption(
+        f"PT description: {theme.description_pt} · ES description: {theme.description_es}"
+    )
 
     cols = st.columns(4)
     cols[0].metric("Status", theme.status)
@@ -78,6 +81,8 @@ def render_theme_details(theme: ExplorationTheme) -> None:
 
     st.markdown("**Tags**")
     st.write(", ".join(theme.tags) if theme.tags else "—")
+    st.markdown("**Seasons**")
+    st.write(", ".join(theme.seasons) if theme.seasons else "—")
 
     if theme.search_queries:
         st.markdown("**Search queries**")
@@ -99,8 +104,8 @@ def render_theme_details(theme: ExplorationTheme) -> None:
         st.warning("Theme not found in Typesense (or Typesense unavailable).")
 
     search_service, search_error = load_search_service()
-    if search_error:
-        st.warning(search_error)
+    if search_error or search_service is None:
+        st.warning(search_error or "Search service unavailable")
         return
 
     if theme.search_queries:

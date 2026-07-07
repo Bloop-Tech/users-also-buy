@@ -7,7 +7,6 @@ from typing import Literal
 
 from pydantic import BaseModel, Field, field_validator
 
-
 ThemeStatus = Literal["active", "insufficient_products", "deprecated", "pending"]
 
 
@@ -23,11 +22,13 @@ class ExplorationTheme(BaseModel):
     title_en: str
     title_pt: str
     title_es: str
-    description: str
+    description_en: str
+    description_pt: str
+    description_es: str
     tags: list[str] = Field(default_factory=list)
     category: str
     audience: str | None = None
-    season: str | None = None
+    seasons: list[str] = Field(default_factory=list)
     search_queries: list[str] = Field(default_factory=list)
     product_ids: list[str] = Field(default_factory=list)
     status: ThemeStatus = "pending"
@@ -45,6 +46,20 @@ class ExplorationTheme(BaseModel):
             return [str(item) for item in value]
         return [str(value)]
 
+    @field_validator("seasons", mode="before")
+    @classmethod
+    def normalize_seasons(cls, value: object) -> list[str]:
+        if value is None:
+            return ["evergreen"]
+        if isinstance(value, str):
+            seasons = [value]
+        elif isinstance(value, list):
+            seasons = [str(item) for item in value]
+        else:
+            seasons = [str(value)]
+        normalized = [season for season in seasons if season]
+        return normalized or ["evergreen"]
+
     @classmethod
     def from_generated(
         cls,
@@ -52,29 +67,33 @@ class ExplorationTheme(BaseModel):
         title_en: str,
         title_pt: str,
         title_es: str,
-        description: str,
+        description_en: str,
+        description_pt: str,
+        description_es: str,
         tags: list[str],
         category: str,
         audience: str | None,
-        season: str | None,
+        seasons: list[str],
     ) -> ExplorationTheme:
         return cls(
             id=slugify_title(title_en),
             title_en=title_en,
             title_pt=title_pt,
             title_es=title_es,
-            description=description,
+            description_en=description_en,
+            description_pt=description_pt,
+            description_es=description_es,
             tags=tags,
             category=category,
             audience=audience,
-            season=season,
+            seasons=seasons,
             status="pending",
             version=0,
         )
 
     def embedding_text(self) -> str:
         tags = ", ".join(self.tags)
-        return f"{self.title_en}. {self.description}. Tags: {tags}"
+        return f"{self.title_en}. {self.description_en}. Tags: {tags}"
 
     def to_typesense_document(self, embedding: list[float]) -> dict:
         updated_at = self.updated_at or datetime.now(UTC)
@@ -83,11 +102,13 @@ class ExplorationTheme(BaseModel):
             "title_en": self.title_en,
             "title_pt": self.title_pt,
             "title_es": self.title_es,
-            "description": self.description,
+            "description_en": self.description_en,
+            "description_pt": self.description_pt,
+            "description_es": self.description_es,
             "tags": self.tags,
             "category": self.category,
             "audience": self.audience or "",
-            "season": self.season or "",
+            "seasons": self.seasons,
             "search_queries": self.search_queries,
             "product_ids": self.product_ids,
             "product_count": len(self.product_ids),
@@ -106,11 +127,13 @@ class GeneratedTheme(BaseModel):
     title_en: str
     title_pt: str
     title_es: str
-    description: str
+    description_en: str
+    description_pt: str
+    description_es: str
     tags: list[str]
     category: str
     audience: str | None = None
-    season: str | None = None
+    seasons: list[str] = Field(default_factory=lambda: ["evergreen"])
 
 
 class GeneratedThemesBatch(BaseModel):

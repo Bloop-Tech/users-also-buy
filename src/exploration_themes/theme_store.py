@@ -68,11 +68,13 @@ class ThemeStore:
                 title_en=item.title_en,
                 title_pt=item.title_pt,
                 title_es=item.title_es,
-                description=item.description,
+                description_en=item.description_en,
+                description_pt=item.description_pt,
+                description_es=item.description_es,
                 tags=item.tags,
                 category=item.category,
                 audience=item.audience,
-                season=item.season,
+                seasons=item.seasons,
             )
             if theme.id in existing_ids:
                 theme.id = f"{theme.id}-{len(existing_ids)}"

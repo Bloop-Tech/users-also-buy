@@ -1,0 +1,41 @@
+themes:
+- id: weekend-picnic-must-haves
+  title_en: Weekend picnic must-haves
+  title_pt: Essenciais para um piquenique de fim‑de‑semana
+  title_es: Imprescindibles para un picnic de fin de semana
+  description_en: Everything you need for a relaxed outdoor picnic, from blankets
+    to easy snacks and portable tableware.
+  description_pt: Tudo o que precisa para um piquenique descontraído ao ar livre,
+    desde mantas a snacks práticos e loiça portátil.
+  description_es: Todo lo que necesitas para un picnic al aire libre y relajado, desde
+    mantas hasta snacks fáciles y vajilla portátil.
+  tags:
+  - outdoor
+  - food
+  - travel
+  category: travel
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - picnic blanket waterproof
+  - portable picnic basket
+  - insulated cooler bag
+  - reusable picnic tableware
+  product_ids:
+  - '1047326'
+  - '257417'
+  - '257570'
+  - '690243'
+  - '252045'
+  - '1047021'
+  - '352308'
+  - '962296'
+  - '955080'
+  - '697278'
+  - '338646'
+  - '1003461'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:27:29.803033Z'

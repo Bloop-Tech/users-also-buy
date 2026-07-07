@@ -51,11 +51,13 @@ Output fields:
 - title_en: short canonical English title, natural and catchy, usually 3-7 words
 - title_pt: natural European Portuguese display title
 - title_es: natural Spanish display title
-- description: one short sentence for UI subtitle, concrete and shopper-friendly
+- description_en: one short sentence in English for the UI subtitle, concrete and shopper-friendly
+- description_pt: natural European Portuguese translation of description_en
+- description_es: natural Spanish translation of description_en
 - tags: 2-5 lowercase tags, broad but relevant
 - category: choose a single top-level category anchor that best fits the theme
 - audience: women, men, kids, all, or null
-- season: summer, winter, spring, autumn, evergreen, or null
+- seasons: array with 1-3 values chosen from summer, winter, spring, autumn, evergreen
 
 Category guidance:
 Prefer stable top-level categories such as fashion, beauty, home, kitchen, tech, fitness, kids, pets, travel, health.
@@ -68,7 +70,9 @@ Prefer titles built around:
 - life moments
 rather than generic product classes.
 
-Avoid duplicating themes already in the catalog. Prefer diversity across categories and occasions."""
+Avoid duplicating themes already in the catalog. Prefer diversity across categories and occasions.
+
+If a theme is not tied to a specific time of year, use ["evergreen"]."""
 
 
 THEME_QUERY_PROMPT = """You suggest product search queries for a social-commerce theme.

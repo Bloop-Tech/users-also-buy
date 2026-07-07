@@ -1,8 +1,10 @@
 import os
-from typing import List
+from typing import Any, List, cast
 
 import httpx
 from pydantic import BaseModel, Field
+
+MAX_EMBED_BATCH_SIZE = 32
 
 
 class EmbedRequest(BaseModel):
@@ -38,24 +40,35 @@ class EmbeddingsClient:
         data = response.json()
         if isinstance(data, dict):
             if "data" in data and data["data"]:
-                return data["data"][0]["embedding"]
+                items = cast(list[dict[str, Any]], data["data"])
+                return cast(list[float], items[0]["embedding"])
             if "embeddings" in data:
-                return EmbedResponse(embeddings=data["embeddings"]).embeddings[0]
-        return EmbedResponse(embeddings=data).embeddings[0]
+                return cast(list[list[float]], data["embeddings"])[0]
+        return cast(list[list[float]], data)[0]
 
     def embed_batch(self, texts: list[str]) -> list[list[float]]:
         if not texts:
             return []
-        payload = EmbedRequest(input=texts).model_dump(exclude_none=True)
-        response = self._client.post("/v1/embeddings", json=payload)
-        if response.is_error:
-            raise ValueError(
-                f"Embeddings request failed with status "
-                f"{response.status_code}: {response.text}"
-            )
-        data = response.json()
-        if isinstance(data, dict) and "data" in data:
-            return [item["embedding"] for item in data["data"]]
-        if isinstance(data, dict) and "embeddings" in data:
-            return data["embeddings"]
-        return EmbedResponse(embeddings=data).embeddings
+
+        embeddings: list[list[float]] = []
+        for start in range(0, len(texts), MAX_EMBED_BATCH_SIZE):
+            chunk = texts[start : start + MAX_EMBED_BATCH_SIZE]
+            payload = EmbedRequest(input=chunk).model_dump(exclude_none=True)
+            response = self._client.post("/v1/embeddings", json=payload)
+            if response.is_error:
+                raise ValueError(
+                    f"Embeddings request failed with status "
+                    f"{response.status_code}: {response.text}"
+                )
+            data = response.json()
+            if isinstance(data, dict) and "data" in data:
+                items = cast(list[dict[str, Any]], data["data"])
+                embeddings.extend(
+                    cast(list[float], item["embedding"]) for item in items
+                )
+                continue
+            if isinstance(data, dict) and "embeddings" in data:
+                embeddings.extend(cast(list[list[float]], data["embeddings"]))
+                continue
+            embeddings.extend(cast(list[list[float]], data))
+        return embeddings

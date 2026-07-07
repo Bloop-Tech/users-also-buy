@@ -27,9 +27,24 @@ def main() -> None:
                 f"WARNING: theme id '{theme.id}' does not match slug of '{theme.title_en}'",
                 file=sys.stderr,
             )
+        missing_descriptions = [
+            field_name
+            for field_name in ("description_en", "description_pt", "description_es")
+            if not getattr(theme, field_name).strip()
+        ]
+        if missing_descriptions:
+            print(
+                f"WARNING: theme '{theme.id}' is missing localized descriptions: {', '.join(missing_descriptions)}",
+                file=sys.stderr,
+            )
+        if not theme.seasons:
+            print(
+                f"WARNING: theme '{theme.id}' has no seasons; expected at least one value",
+                file=sys.stderr,
+            )
         print(
             f"  - {theme.id}: {theme.title_en} [{theme.status}] "
-            f"products={len(theme.product_ids)} version={theme.version}"
+            f"products={len(theme.product_ids)} version={theme.version} seasons={theme.seasons}"
         )
 
     required_env = [
@@ -50,7 +65,9 @@ def main() -> None:
     else:
         print("\nAll required env vars are set.")
 
-    print(f"\nTypesense collection schema fields: {len(EXPLORATION_THEMES_SCHEMA['fields'])}")
+    print(
+        f"\nTypesense collection schema fields: {len(EXPLORATION_THEMES_SCHEMA['fields'])}"
+    )
     print("Create collection with:")
     print("  uv run python scripts/create_exploration_themes_collection.py")
 
