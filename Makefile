@@ -3,4 +3,4 @@ ruff:
 	uv run ruff check --fix
 
 ty:
-    uv run ty check src
+	uv run ty check src pipelines

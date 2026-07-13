@@ -1,0 +1,6582 @@
+themes:
+- id: weekend-picnic-must-haves
+  title_en: Weekend picnic must-haves
+  title_pt: Essenciais para um piquenique de fim‑de‑semana
+  title_es: Imprescindibles para un picnic de fin de semana
+  description_en: Everything you need for a relaxed outdoor picnic, from blankets
+    to easy snacks and portable tableware.
+  description_pt: Tudo o que precisa para um piquenique descontraído ao ar livre,
+    desde mantas a snacks práticos e loiça portátil.
+  description_es: Todo lo que necesitas para un picnic al aire libre y relajado, desde
+    mantas hasta snacks fáciles y vajilla portátil.
+  tags:
+  - outdoor
+  - food
+  - travel
+  category: travel
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - picnic blanket waterproof
+  - portable picnic basket
+  - insulated cooler bag
+  - reusable picnic tableware
+  product_ids:
+  - '1047326'
+  - '257417'
+  - '257570'
+  - '690243'
+  - '252045'
+  - '1047021'
+  - '352308'
+  - '962296'
+  - '955080'
+  - '697278'
+  - '338646'
+  - '1003461'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:27:29.803033Z'
+- id: sunset-beach-picnic-kit
+  title_en: Sunset beach picnic kit
+  title_pt: Kit para piquenique ao pôr-do-sol
+  title_es: Kit para picnic al atardecer
+  description_en: Everything you need for a relaxed picnic while watching the sunset.
+  description_pt: Tudo o que precisa para um piquenique descontraído a ver o pôr-do-sol.
+  description_es: Todo lo que necesitas para un picnic relajado viendo el atardecer.
+  tags:
+  - picnic
+  - beach
+  - outdoors
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - beach picnic kit
+  - portable picnic set
+  - insulated picnic basket
+  product_ids:
+  - '251041'
+  - '251110'
+  - '252045'
+  - '1026495'
+  - '1026521'
+  - '952534'
+  - '1047326'
+  - '690243'
+  - '996166'
+  - '697278'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:28:43.720050Z'
+- id: small-space-plant-corner
+  title_en: Small-space plant corner
+  title_pt: Cantinho de plantas para espaços pequenos
+  title_es: Rincón de plantas para espacios pequeños
+  description_en: Ideas and items to create a thriving mini indoor garden in tight
+    spaces.
+  description_pt: Ideias e artigos para criar uma mini-horta interior em espaços reduzidos.
+  description_es: Ideas y productos para crear un pequeño jardín interior en espacios
+    reducidos.
+  tags:
+  - plants
+  - home
+  - decor
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - indoor plant pots
+  - wall planter shelf
+  - small indoor planters
+  - hanging plant holders
+  product_ids:
+  - '1046920'
+  - '1046939'
+  - '988113'
+  - '249660'
+  - '249162'
+  - '671808'
+  - '671373'
+  - '205266'
+  - '290118'
+  - '175041'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:28:51.590314Z'
+- id: easy-weeknight-dinners
+  title_en: Easy weeknight dinners
+  title_pt: Jantares simples para dias de semana
+  title_es: Cenas fáciles entre semana
+  description_en: Quick tools and ingredients to make tasty dinners with minimal fuss.
+  description_pt: Ferramentas e ingredientes rápidos para preparar jantares saborosos
+    sem complicações.
+  description_es: Utensilios e ingredientes rápidos para preparar cenas sabrosas sin
+    complicaciones.
+  tags:
+  - kitchen
+  - meals
+  - quick
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - quick dinner kits
+  - one-pan skillets
+  - meal prep containers
+  - easy pasta sauce
+  product_ids:
+  - '1047397'
+  - '724230'
+  - '663699'
+  - '679258'
+  - '960641'
+  - '671016'
+  - '930427'
+  - '340542'
+  - '1026490'
+  - '954666'
+  - '400688'
+  - '892512'
+  - '945763'
+  - '302669'
+  - '65337'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:28:58.510160Z'
+- id: commute-comfort-upgrades
+  title_en: Commute comfort upgrades
+  title_pt: Melhorias para o conforto do trajeto
+  title_es: Mejoras para la comodidad del trayecto
+  description_en: Small upgrades to make daily commuting more pleasant and productive.
+  description_pt: Pequenas melhorias para tornar o trajeto diário mais agradável e
+    produtivo.
+  description_es: Pequeñas mejoras para hacer el trayecto diario más cómodo y productivo.
+  tags:
+  - travel
+  - tech
+  - lifestyle
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - commuter headphones noise cancelling
+  - portable phone power bank
+  - travel neck pillow
+  - bike commuter backpack
+  product_ids:
+  - '1085840'
+  - '1085841'
+  - '1085850'
+  - '850267'
+  - '468255'
+  - '572284'
+  - '1121475'
+  - '627811'
+  - '706882'
+  - '1121488'
+  - '1121494'
+  - '628915'
+  - '360890'
+  - '410316'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:29:06.172704Z'
+- id: rainy-day-cozy-kit
+  title_en: Rainy-day cozy kit
+  title_pt: Kit aconchegante para dias de chuva
+  title_es: Kit acogedor para días de lluvia
+  description_en: Comfort items and indoor activities to make rainy days feel cozy
+    and fun.
+  description_pt: Artigos confortáveis e atividades para tornar dias de chuva acolhedores
+    e divertidos.
+  description_es: Artículos confortables y actividades para convertir los días de
+    lluvia en acogedores y divertidos.
+  tags:
+  - comfort
+  - home
+  - entertainment
+  category: home
+  audience: all
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - plush throw blanket
+  - indoor board games
+  - herbal tea sampler
+  product_ids:
+  - '410375'
+  - '410397'
+  - '255891'
+  - '255302'
+  - '255790'
+  - '410346'
+  - '949604'
+  - '949122'
+  - '1019499'
+  - '858740'
+  - '832965'
+  - '750430'
+  - '205325'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T15:29:15.226073Z'
+- id: morning-routine-energizers
+  title_en: Morning routine energizers
+  title_pt: Impulsionadores da rotina matinal
+  title_es: Impulsores de la rutina matutina
+  description_en: Products that make mornings smoother and help you start the day
+    energized.
+  description_pt: Produtos que tornam as manhãs mais simples e ajudam a começar o
+    dia com energia.
+  description_es: Productos que hacen las mañanas más fáciles y te ayudan a empezar
+    el día con energía.
+  tags:
+  - morning
+  - wellness
+  - home
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - electric coffee maker
+  - wake-up alarm clock
+  - blender for smoothies
+  product_ids:
+  - '723977'
+  - '723983'
+  - '760912'
+  - '818993'
+  - '791771'
+  - '675222'
+  - '671670'
+  - '817847'
+  - '690315'
+  - '869216'
+  - '986205'
+  - '689859'
+  - '351368'
+  - '930766'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T16:05:39.569745Z'
+- id: effortless-travel-carry-ons
+  title_en: Effortless travel carry-ons
+  title_pt: Mala de mão sem esforço
+  title_es: Equipaje de mano sin complicaciones
+  description_en: Compact, multi-use items that fit perfectly in a carry-on for short
+    trips.
+  description_pt: Artigos compactos e multifuncionais que cabem na mala de mão para
+    viagens curtas.
+  description_es: Artículos compactos y multiusos que encajan perfectamente en el
+    equipaje de mano para viajes cortos.
+  tags:
+  - travel
+  - packing
+  - essentials
+  category: travel
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - travel toiletry bag
+  - packable daypack
+  - compression packing cubes
+  product_ids:
+  - '278965'
+  - '1101572'
+  - '1101566'
+  - '959418'
+  - '860949'
+  - '1119301'
+  - '980484'
+  - '355217'
+  - '1047384'
+  - '973347'
+  - '972766'
+  - '968665'
+  - '968136'
+  - '1003877'
+  - '949459'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T16:05:47.179482Z'
+- id: quick-meal-prep-helpers
+  title_en: Quick meal-prep helpers
+  title_pt: Ajudantes para meal prep rápidos
+  title_es: Ayudantes para meal prep rápidos
+  description_en: Kitchen tools and containers that speed up prepping lunches and
+    dinners for the week.
+  description_pt: Utensílios e recipientes de cozinha que aceleram a preparação de
+    almoços e jantares para a semana.
+  description_es: Herramientas y recipientes de cocina que aceleran la preparación
+    de almuerzos y cenas para la semana.
+  tags:
+  - kitchen
+  - mealprep
+  - time-saving
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - meal prep containers
+  - meal prep kit
+  - food storage containers
+  - vegetable chopper
+  product_ids:
+  - '340542'
+  - '1026490'
+  - '945763'
+  - '892512'
+  - '892462'
+  - '399912'
+  - '400380'
+  - '400408'
+  - '954666'
+  - '690187'
+  - '1047416'
+  - '690263'
+  - '961767'
+  - '690140'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T16:05:56.514755Z'
+- id: home-gym-starter-picks
+  title_en: Home gym starter picks
+  title_pt: Escolhas para começar na ginásio em casa
+  title_es: Selecciones para empezar tu gimnasio en casa
+  description_en: Compact, budget-friendly fitness gear to build a simple home workout
+    corner.
+  description_pt: Equipamento fitness compacto e acessível para montar um cantinho
+    de treino em casa.
+  description_es: Equipamiento fitness compacto y económico para montar un rincón
+    de entrenamiento en casa.
+  tags:
+  - fitness
+  - home
+  - workout
+  category: fitness
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - adjustable dumbbells
+  - resistance bands set
+  - yoga mat non-slip
+  product_ids:
+  - '1026557'
+  - '1005428'
+  - '1019689'
+  - '689940'
+  - '956305'
+  - '813907'
+  - '1047005'
+  - '1047002'
+  - '812631'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T16:06:03.241667Z'
+- id: stylish-laptop-to-cafe-outfits
+  title_en: Stylish laptop-to-cafe outfits
+  title_pt: Looks práticos do portátil ao café
+  title_es: Outfits con estilo de portátil a cafetería
+  description_en: Comfortable, camera-ready clothes that look good at your desk and
+    in a coffee shop.
+  description_pt: Roupas confortáveis e com boa aparência para o escritório em casa
+    e ir ao café.
+  description_es: Ropa cómoda y lista para cámara que queda bien en la oficina y en
+    la cafetería.
+  tags:
+  - fashion
+  - workwear
+  - casual
+  category: fashion
+  audience: women
+  seasons:
+  - evergreen
+  search_queries:
+  - women's casual blazer
+  - stretch knit midi dress
+  - button-down overshirt
+  - comfortable loafers women
+  product_ids:
+  - '263058'
+  - '263358'
+  - '747013'
+  - '354603'
+  - '354556'
+  - '263045'
+  - '263026'
+  - '1002736'
+  - '1038717'
+  - '1002743'
+  - '933384'
+  - '929743'
+  - '901401'
+  - '900523'
+  - '902058'
+  status: active
+  version: 1
+  updated_at: '2026-07-07T16:06:11.386408Z'
+- id: commuter-capsule-wardrobe
+  title_en: Commuter capsule wardrobe
+  title_pt: Guarda-roupa cápsula para o dia a dia
+  title_es: Armario cápsula para el día a día
+  description_en: Mix-and-match pieces that make getting dressed for commuting simple
+    and stylish.
+  description_pt: Peças fáceis de combinar que tornam vestir-se para o trajeto simples
+    e elegante.
+  description_es: Piezas combinables que hacen que vestirse para el trayecto sea fácil
+    y con estilo.
+  tags:
+  - fashion
+  - commute
+  category: fashion
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - women commuter blazer
+  - men travel trousers
+  - neutral capsule wardrobe essentials
+  - wrinkle-resistant work shirts
+  product_ids:
+  - '263026'
+  - '263045'
+  - '263145'
+  - '354556'
+  - '263358'
+  - '263058'
+  - '263436'
+  - '355196'
+  - '355529'
+  - '900570'
+  - '931858'
+  - '864562'
+  - '937942'
+  - '896921'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T09:30:08.685193Z'
+- id: homemade-bakery-starter-kit
+  title_en: Homemade bakery starter kit
+  title_pt: Kit inicial para padaria caseira
+  title_es: Kit básico para panadería casera
+  description_en: Everything you need to bake fresh bread and pastries at home.
+  description_pt: Tudo o que precisa para fazer pão e bolos frescos em casa.
+  description_es: Todo lo necesario para hornear pan y bollería fresca en casa.
+  tags:
+  - kitchen
+  - baking
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bread baking kit
+  - pastry baking tools
+  - home bakery supplies
+  product_ids:
+  - '181313'
+  - '177554'
+  - '179106'
+  - '951324'
+  - '951649'
+  - '1019837'
+  - '670621'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-08T09:30:16.311342Z'
+- id: outdoor-movie-night-essentials
+  title_en: Outdoor movie night essentials
+  title_pt: Essenciais para noite de cinema ao ar livre
+  title_es: Imprescindibles para cine al aire libre
+  description_en: Portable gear and cozy extras to set up a backyard movie under the
+    stars.
+  description_pt: Equipamento portátil e extras aconchegantes para montar um cinema
+    no quintal.
+  description_es: Equipamiento portátil y accesorios cómodos para montar un cine en
+    el jardín.
+  tags:
+  - outdoor
+  - entertainment
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  - autumn
+  search_queries:
+  - outdoor projector
+  - portable projector screen
+  - portable bluetooth speaker
+  - outdoor throw blanket
+  product_ids:
+  - '344153'
+  - '627646'
+  - '1003569'
+  - '950854'
+  - '913108'
+  - '349303'
+  - '351374'
+  - '763243'
+  - '697278'
+  - '246122'
+  - '952534'
+  - '1047326'
+  - '257570'
+  - '657346'
+  - '690134'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T09:30:24.196032Z'
+- id: quick-skincare-for-busy-mornings
+  title_en: Quick skincare for busy mornings
+  title_pt: Cuidados rápidos de pele para manhãs ocupadas
+  title_es: Cuidado facial express para mañanas ocupadas
+  description_en: Fast-acting products and tools to refresh your skin in five minutes
+    or less.
+  description_pt: Produtos e ferramentas de ação rápida para revigorar a pele em cinco
+    minutos ou menos.
+  description_es: Productos y herramientas de acción rápida para refrescar la piel
+    en cinco minutos o menos.
+  tags:
+  - beauty
+  - routine
+  category: beauty
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - face mist quick
+  - tinted moisturizer spf
+  - cleansing wipes portable
+  - eye cream de puffing
+  product_ids:
+  - '1117688'
+  - '883899'
+  - '673878'
+  - '673639'
+  - '751461'
+  - '672267'
+  - '748642'
+  - '373907'
+  - '1113812'
+  - '664661'
+  - '987669'
+  - '984566'
+  - '987498'
+  - '1008754'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T09:30:33.695863Z'
+- id: small-apartment-entertaining-hacks
+  title_en: Small apartment entertaining hacks
+  title_pt: Truques para receber em apartamentos pequenos
+  title_es: Trucos para recibir en pisos pequeños
+  description_en: Smart multi-use items and setup ideas for hosting guests in compact
+    spaces.
+  description_pt: Artigos multiusos e ideias de organização para receber convidados
+    em espaços compactos.
+  description_es: Artículos multiusos e ideas para organizar y recibir invitados en
+    espacios pequeños.
+  tags:
+  - home
+  - hosting
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - space saving furniture
+  - multiuse kitchenware
+  - folding dining table
+  - compact serveware
+  product_ids:
+  - '1006211'
+  - '1006096'
+  - '1086640'
+  - '690116'
+  - '690263'
+  - '845067'
+  - '929783'
+  - '944604'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T09:30:41.335086Z'
+- id: sustainable-kitchen-swaps
+  title_en: Sustainable kitchen swaps
+  title_pt: Alternativas sustentáveis para a cozinha
+  title_es: Sustituciones sostenibles para la cocina
+  description_en: Simple low-waste tools and ingredients to make your kitchen greener.
+  description_pt: Ferramentas e ingredientes de baixo desperdício para tornar a cozinha
+    mais sustentável.
+  description_es: Herramientas e ingredientes de bajo desperdicio para hacer tu cocina
+    más sostenible.
+  tags:
+  - sustainable
+  - kitchen
+  - eco-friendly
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bamboo dish brush
+  - beeswax food wrap
+  - reusable produce bags
+  - compost bin kitchen
+  product_ids:
+  - '204921'
+  - '944612'
+  - '260751'
+  - '665107'
+  - '964261'
+  - '964394'
+  - '964426'
+  - '944612'
+  - '326682'
+  - '326684'
+  - '1046419'
+  - '991084'
+  - '1006055'
+  - '988580'
+  - '962682'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T10:02:22.839569Z'
+- id: date-night-at-home-upgrades
+  title_en: Date-night at-home upgrades
+  title_pt: Melhorias para um encontro em casa
+  title_es: Mejoras para una cita en casa
+  description_en: Small touches to turn a regular night in into a special date at
+    home.
+  description_pt: Pequenos detalhes para transformar uma noite comum num encontro
+    especial em casa.
+  description_es: Pequeños detalles para convertir una noche normal en una cita especial
+    en casa.
+  tags:
+  - date-night
+  - home
+  - gifts
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - romantic dinner set
+  - candle holder set
+  - couples board games
+  product_ids:
+  - '939219'
+  - '1012923'
+  - '975182'
+  - '256797'
+  - '356859'
+  - '252589'
+  - '975191'
+  - '883583'
+  - '127207'
+  - '197719'
+  - '172817'
+  - '892259'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T10:02:31.626865Z'
+- id: back-to-school-study-nook
+  title_en: Back-to-school study nook
+  title_pt: Cantinho de estudo para o regresso às aulas
+  title_es: Rincón de estudio para la vuelta al cole
+  description_en: Compact desk accessories and lighting to create a focused study
+    spot.
+  description_pt: Acessórios de secretária compactos e iluminação para criar um espaço
+    de estudo concentrado.
+  description_es: Accesorios de escritorio compactos e iluminación para crear un rincón
+    de estudio concentrado.
+  tags:
+  - study
+  - kids
+  - organization
+  category: kids
+  audience: kids
+  seasons:
+  - autumn
+  - evergreen
+  search_queries:
+  - kids study desk lamp
+  - compact desk organizer
+  - children desk chair
+  product_ids:
+  - '974027'
+  - '973928'
+  - '989353'
+  - '993110'
+  - '992890'
+  - '1009165'
+  - '358849'
+  - '824486'
+  - '468173'
+  - '352493'
+  - '205438'
+  - '1042062'
+  - '1042058'
+  - '1042062'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T10:02:40.054370Z'
+- id: weekend-farmers-market-haul
+  title_en: Weekend farmer’s market haul
+  title_pt: Compras no mercado local para o fim de semana
+  title_es: Compra en el mercado local para el fin de semana
+  description_en: Fresh picks and pantry staples to build meals from a market visit.
+  description_pt: Produtos frescos e básicos de despensa para criar refeições a partir
+    de uma visita ao mercado.
+  description_es: Productos frescos y básicos de despensa para preparar comidas después
+    del mercado.
+  tags:
+  - food
+  - fresh
+  - market
+  category: food
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - fresh produce box
+  - local farmer vegetables
+  - artisan pantry staples
+  product_ids:
+  - '993247'
+  - '1019693'
+  - '205272'
+  - '205263'
+  - '205313'
+  - '868829'
+  - '400559'
+  - '398116'
+  - '398230'
+  - '771093'
+  - '954666'
+  - '1047210'
+  - '287613'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T10:02:49.900521Z'
+- id: cold-weather-commute-essentials
+  title_en: Cold-weather commute essentials
+  title_pt: Essenciais para o trajeto em dias frios
+  title_es: Esenciales para el trayecto en clima frío
+  description_en: Warm layers and handy gear to make chilly commutes more comfortable.
+  description_pt: Camadas quentes e acessórios práticos para tornar os trajetos frios
+    mais confortáveis.
+  description_es: Capas cálidas y accesorios prácticos para que los trayectos fríos
+    sean más cómodos.
+  tags:
+  - commute
+  - winter
+  - outerwear
+  category: fashion
+  audience: all
+  seasons:
+  - winter
+  search_queries:
+  - men's winter coat
+  - thermal gloves
+  - insulated commuter jacket
+  product_ids:
+  - '899915'
+  - '962026'
+  - '900663'
+  - '906741'
+  - '906760'
+  - '1023535'
+  - '901506'
+  - '930458'
+  - '931649'
+  - '896079'
+  - '896188'
+  - '896415'
+  - '951332'
+  - '972129'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T10:02:57.176024Z'
+- id: quick-cafe-at-home-setup
+  title_en: Quick café-at-home setup
+  title_pt: Cantinho de café rápido em casa
+  title_es: Rincón de café rápido en casa
+  description_en: Everything you need to make café-quality drinks at home in minutes.
+  description_pt: Tudo o que precisa para preparar cafés de qualidade em casa em minutos.
+  description_es: Todo lo necesario para preparar cafés de calidad en casa en minutos.
+  tags:
+  - kitchen
+  - coffee
+  - morning
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - espresso machine compact
+  - single-serve coffee maker
+  - milk frother handheld
+  - coffee grinder electric
+  product_ids:
+  - '697575'
+  - '845067'
+  - '689945'
+  - '817929'
+  - '823327'
+  - '818125'
+  - '670777'
+  - '364718'
+  - '960204'
+  - '347517'
+  - '677583'
+  - '819219'
+  - '845276'
+  - '723992'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:54:11.818741Z'
+- id: festival-outfit-capsule
+  title_en: Festival outfit capsule
+  title_pt: Capsule de looks para festivais
+  title_es: Capsula de looks para festivales
+  description_en: Comfortable, stylish pieces and accessories to dance all day and
+    night.
+  description_pt: Peças confortáveis e estilosas e acessórios para dançar o dia e
+    a noite.
+  description_es: Prendas cómodas y con estilo y accesorios para bailar todo el día
+    y la noche.
+  tags:
+  - fashion
+  - festival
+  - accessories
+  category: fashion
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - festival outfit womens
+  - boho festival clothing
+  - dance-friendly shoes
+  - festival accessories set
+  product_ids:
+  - '1117556'
+  - '897089'
+  - '901025'
+  - '899760'
+  - '900666'
+  - '900706'
+  - '902417'
+  - '900025'
+  - '769780'
+  - '771110'
+  - '816400'
+  - '350451'
+  - '329956'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:55:52.309390Z'
+- id: plant-care-for-beginners
+  title_en: Plant care for beginners
+  title_pt: Cuidados de plantas para iniciantes
+  title_es: Cuidado de plantas para principiantes
+  description_en: Simple tools and easy-to-follow supplies to keep houseplants thriving.
+  description_pt: Ferramentas simples e suprimentos fáceis de usar para manter plantas
+    de casa saudáveis.
+  description_es: Herramientas sencillas y suministros fáciles de usar para mantener
+    las plantas de interior saludables.
+  tags:
+  - home
+  - plants
+  - beginner
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - indoor plant care kit
+  - self-watering planter
+  - houseplant soil mix
+  - succulent care tools
+  product_ids:
+  - '288738'
+  - '145125'
+  - '68419'
+  - '672144'
+  - '990453'
+  - '383891'
+  - '1042229'
+  - '832470'
+  - '907477'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:01.446237Z'
+- id: apero-essentials-for-friends
+  title_en: Apéro essentials for friends
+  title_pt: Essenciais para um aperitivo entre amigos
+  title_es: Esenciales para un aperitivo con amigos
+  description_en: Bites, serveware and drinks-ready items for spontaneous get-togethers.
+  description_pt: Petiscos, loiça e itens prontos para bebidas em encontros espontâneos.
+  description_es: Aperitivos, vajilla e artículos listos para bebidas para reuniones
+    espontáneas.
+  tags:
+  - home
+  - entertaining
+  - kitchen
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - charcuterie board set
+  - aperitif glassware
+  - appetizer serving platter
+  product_ids:
+  - '249647'
+  - '249310'
+  - '249641'
+  - '348916'
+  - '867286'
+  - '205324'
+  - '854278'
+  - '124069'
+  - '107992'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:10.226668Z'
+- id: zero-waste-bathroom-swaps
+  title_en: Zero-waste bathroom swaps
+  title_pt: Alternativas zero desperdício para a casa de banho
+  title_es: Alternativas zero residuos para el baño
+  description_en: Reusable and low-waste beauty and hygiene items to reduce plastic
+    at home.
+  description_pt: Produtos reutilizáveis e de baixo desperdício para reduzir plástico
+    em casa.
+  description_es: Productos reutilizables y de bajo desperdicio para reducir plástico
+    en casa.
+  tags:
+  - sustainable
+  - bathroom
+  - beauty
+  category: beauty
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bamboo toothbrush
+  - reusable makeup remover pads
+  - plastic-free shampoo bar
+  product_ids:
+  - '768700'
+  - '826461'
+  - '664517'
+  - '857522'
+  - '816251'
+  - '675742'
+  - '750429'
+  - '399755'
+  - '690508'
+  - '952119'
+  - '981123'
+  - '981114'
+  - '981111'
+  - '846805'
+  - '665997'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:18.781020Z'
+- id: college-dorm-comfort-picks
+  title_en: College dorm comfort picks
+  title_pt: Escolhas confortáveis para dormitórios universitários
+  title_es: Selecciones cómodas para residencias universitarias
+  description_en: Small-space bedding, lighting and gadgets that make dorm life cozier
+    and easier.
+  description_pt: Roupa de cama, iluminação e gadgets para tornar o dormitório mais
+    confortável e prático.
+  description_es: Ropa de cama, iluminación y gadgets que hacen la residencia más
+    acogedora y práctica.
+  tags:
+  - home
+  - students
+  - college
+  category: home
+  audience: kids
+  seasons:
+  - autumn
+  search_queries:
+  - twin xl bedding set
+  - dorm room lighting
+  - compact mattress topper
+  product_ids:
+  - '1009165'
+  - '824486'
+  - '1009209'
+  - '1009142'
+  - '401684'
+  - '256567'
+  - '1006530'
+  - '971443'
+  - '971956'
+  - '971813'
+  - '1045986'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:28.734510Z'
+- id: al-fresco-dining-must-haves
+  title_en: Al fresco dining must-haves
+  title_pt: Essenciais para jantar ao ar livre
+  title_es: Imprescindibles para cenar al aire libre
+  description_en: Portable tableware, lighting and comforts for picnics, balconies
+    or terraces.
+  description_pt: Loiça portátil, iluminação e confortos para piqueniques, varandas
+    ou terraços.
+  description_es: Vajilla portátil, iluminación y comodidades para picnics, balcones
+    o terrazas.
+  tags:
+  - outdoor
+  - dining
+  - lifestyle
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - portable picnic tableware
+  - outdoor string lights
+  - folding picnic blanket
+  - insulated picnic basket
+  product_ids:
+  - '257417'
+  - '1047326'
+  - '761134'
+  - '384078'
+  - '1086067'
+  - '1047408'
+  - '690243'
+  - '952534'
+  - '1003461'
+  - '697278'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:37.001220Z'
+- id: weekend-hiking-essentials
+  title_en: Weekend hiking essentials
+  title_pt: Essenciais para caminhadas de fim de semana
+  title_es: Esenciales para senderismo de fin de semana
+  description_en: Lightweight gear, footwear and snacks for easy day hikes and nature
+    walks.
+  description_pt: Equipamento leve, calçado e snacks para caminhadas de um dia e passeios
+    na natureza.
+  description_es: Equipo ligero, calzado y snacks para rutas de un día y paseos por
+    la naturaleza.
+  tags:
+  - outdoor
+  - fitness
+  - travel
+  category: fitness
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - lightweight hiking gear
+  - day hike backpack
+  - trail running shoes
+  product_ids:
+  - '902188'
+  - '980484'
+  - '1003888'
+  - '1003979'
+  - '901312'
+  - '901809'
+  - '901732'
+  - '901677'
+  - '900740'
+  - '900462'
+  - '900940'
+  - '902068'
+  - '901721'
+  - '735294'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:44.860366Z'
+- id: minimal-morning-coffee-corner
+  title_en: Minimal morning coffee corner
+  title_pt: Cantinho minimalista do café matinal
+  title_es: Rincón minimalista para el café matutino
+  description_en: Compact brewers, mugs and storage to build a simple, stylish coffee
+    spot.
+  description_pt: Máquinas compactas, canecas e arrumação para criar um cantinho de
+    café simples e elegante.
+  description_es: Cafeteras compactas, tazas y almacenamiento para crear un rincón
+    de café simple y con estilo.
+  tags:
+  - kitchen
+  - coffee
+  - morning
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - compact coffee maker
+  - minimalist coffee mug
+  - coffee storage canister
+  product_ids:
+  - '1047281'
+  - '946765'
+  - '689945'
+  - '1003462'
+  - '410480'
+  - '992292'
+  - '990929'
+  - '1047270'
+  - '1047267'
+  - '1047284'
+  - '690122'
+  - '877512'
+  - '723992'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:56:53.917715Z'
+- id: at-home-manicure-station
+  title_en: At-home manicure station
+  title_pt: Estação de manicure em casa
+  title_es: Estación de manicura en casa
+  description_en: Tools, polishes and storage to create salon-style nails without
+    leaving home.
+  description_pt: Ferramentas, vernizes e arrumação para unhas com aspeto de salão
+    em casa.
+  description_es: Herramientas, lacas y almacenamiento para unas de estilo salón en
+    casa.
+  tags:
+  - beauty
+  - selfcare
+  - nails
+  category: beauty
+  audience: women
+  seasons:
+  - evergreen
+  search_queries:
+  - nail polish kit
+  - manicure tools set
+  - LED nail lamp
+  - nail storage organizer
+  product_ids:
+  - '1047407'
+  - '690240'
+  - '468705'
+  - '338648'
+  - '819554'
+  - '855794'
+  - '267455'
+  - '809276'
+  - '767789'
+  - '674168'
+  - '1008911'
+  - '958479'
+  - '953906'
+  - '1042361'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:57:04.424361Z'
+- id: pet-travel-comfort-kit
+  title_en: Pet travel comfort kit
+  title_pt: Kit de conforto para viajar com animais
+  title_es: Kit de confort para viajar con mascotas
+  description_en: Carriers, bowls and calming extras to keep pets happy on short trips.
+  description_pt: Transportadoras, tigelas e extras calmantes para manter animais
+    felizes em viagens curtas.
+  description_es: Transportines, comederos y extras calmantes para mantener a las
+    mascotas contentas en viajes cortos.
+  tags:
+  - pets
+  - travel
+  - comfort
+  category: pets
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - pet carrier travel
+  - portable pet bowl
+  - calming pet travel kit
+  product_ids:
+  - '830688'
+  - '829242'
+  - '831484'
+  - '831272'
+  - '829557'
+  - '827341'
+  - '954586'
+  - '827291'
+  - '827301'
+  - '572315'
+  - '829630'
+  status: active
+  version: 1
+  updated_at: '2026-07-08T14:57:12.247696Z'
+- id: picnic-for-two-ideas
+  title_en: Picnic for Two Ideas
+  title_pt: Piquenique a Dois
+  title_es: Picnic para Dos
+  description_en: Compact, romantic picks to make a park picnic special for two.
+  description_pt: Escolhas compactas e românticas para tornar um piquenique no parque
+    especial a dois.
+  description_es: Selecciones compactas y románticas para hacer especial un picnic
+    en el parque para dos.
+  tags:
+  - outdoor
+  - food
+  - gifts
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - picnic basket for two
+  - insulated picnic cooler
+  - portable picnic blanket
+  - wine and cheese set
+  product_ids:
+  - '251110'
+  - '251319'
+  - '257417'
+  - '952534'
+  - '1047326'
+  - '690243'
+  - '1047408'
+  - '352308'
+  - '1129609'
+  - '1003461'
+  - '945374'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:55:24.097644Z'
+- id: one-pot-weeknight-wonders
+  title_en: One-Pot Weeknight Wonders
+  title_pt: Pratos de Uma Só Panela
+  title_es: Platos de Una Sola Olla
+  description_en: Simple one-pot recipes and tools to save time on busy weeknights.
+  description_pt: Receitas simples numa só panela e utensílios para poupar tempo nas
+    noites ocupadas.
+  description_es: Recetas sencillas en una sola olla y utensilios para ahorrar tiempo
+    entre semana.
+  tags:
+  - kitchen
+  - dinner
+  - easy
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - one pot skillet
+  - slow cooker meals
+  - one pot pasta
+  - cast iron skillet meals
+  product_ids:
+  - '876508'
+  - '1035569'
+  - '1042925'
+  - '1042953'
+  - '917965'
+  - '672016'
+  - '664412'
+  - '948917'
+  - '670130'
+  - '572319'
+  - '723991'
+  - '750141'
+  - '306984'
+  - '295596'
+  - '197611'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:55:32.496861Z'
+- id: starter-kit-for-new-parents
+  title_en: Starter Kit for New Parents
+  title_pt: Kit Inicial para Novos Pais
+  title_es: Kit Inicial para Nuevos Padres
+  description_en: Essential baby-care and convenience items for the first months at
+    home.
+  description_pt: Itens essenciais de cuidados do bebé e conveniência para os primeiros
+    meses em casa.
+  description_es: Artículos esenciales para el cuidado del bebé y comodidad durante
+    los primeros meses en casa.
+  tags:
+  - kids
+  - baby
+  - parenting
+  category: kids
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - newborn essentials
+  - baby feeding kit
+  - diapering essentials
+  - infant sleep gear
+  product_ids:
+  - '1006866'
+  - '372154'
+  - '750770'
+  - '981651'
+  - '1006852'
+  - '892178'
+  - '974452'
+  - '332141'
+  - '374675'
+  - '984145'
+  - '979191'
+  - '861053'
+  - '972147'
+  - '972335'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:55:39.367254Z'
+- id: stylish-home-office-lighting
+  title_en: Stylish Home Office Lighting
+  title_pt: Iluminação Elegante para Escritório em Casa
+  title_es: Iluminación Estilosa para Oficina en Casa
+  description_en: Desk lamps and ambient lighting to make remote work feel polished
+    and cozy.
+  description_pt: Candeeiros de secretária e iluminação ambiente para tornar o teletrabalho
+    elegante e acolhedor.
+  description_es: Lámparas de escritorio e iluminación ambiental para que el teletrabajo
+    sea cómodo y elegante.
+  tags:
+  - home
+  - tech
+  - decor
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - LED desk lamp
+  - adjustable task lamp
+  - ambient floor lamp
+  - dimmable desk light
+  product_ids:
+  - '358849'
+  - '1009165'
+  - '1009205'
+  - '327187'
+  - '845504'
+  - '939903'
+  - '467429'
+  - '824486'
+  - '327154'
+  - '253483'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:55:48.104417Z'
+- id: weekend-market-to-table-finds
+  title_en: Weekend Market-to-Table Finds
+  title_pt: Achados do Mercado ao Prato
+  title_es: Tesoros del Mercado a la Mesa
+  description_en: Tools and pantry staples that turn market produce into effortless
+    meals.
+  description_pt: Utensílios e básicos de despensa que transformam produtos do mercado
+    em refeições sem esforço.
+  description_es: Utensilios y básicos que convierten las compras del mercado en comidas
+    sin complicaciones.
+  tags:
+  - kitchen
+  - food
+  - seasonal
+  category: kitchen
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - cast iron skillet
+  - olive oil pantry staples
+  - wooden cutting board
+  - herb scissors
+  product_ids:
+  - '1038670'
+  - '1026473'
+  - '205308'
+  - '205303'
+  - '198396'
+  - '983230'
+  - '1035570'
+  - '1047387'
+  - '876508'
+  - '876516'
+  - '960581'
+  - '723976'
+  - '867286'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:55:55.680631Z'
+- id: sunny-balcony-refresh
+  title_en: Sunny Balcony Refresh
+  title_pt: Renovaçao da Varanda Ensoralada
+  title_es: Renueva tu Terraza Soleada
+  description_en: Compact furniture and planters to transform a small balcony into
+    a sunny lounge.
+  description_pt: Mobiliário compacto e vasos para transformar uma pequena varanda
+    numa sala solarenga.
+  description_es: Muebles compactos y macetas para convertir un balcón pequeño en
+    un rincón soleado.
+  tags:
+  - home
+  - outdoor
+  - decor
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - small balcony furniture
+  - outdoor planters
+  - compact bistro set
+  product_ids:
+  - '249395'
+  - '249174'
+  - '991174'
+  - '672144'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T14:56:03.788431Z'
+- id: quick-post-workout-rituals
+  title_en: Quick Post-Workout Rituals
+  title_pt: Rituais Rápidos Pós-Treino
+  title_es: Rituales Rápidos Post-Entreno
+  description_en: Hydration, quick-recovery snacks, and items to refresh after a workout.
+  description_pt: Hidratação, snacks de recuperação rápida e itens para refrescar
+    após o treino.
+  description_es: Hidratación, snacks para recuperar rápido y artículos para refrescarse
+    tras el entrenamiento.
+  tags:
+  - fitness
+  - health
+  - snacks
+  category: fitness
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - electrolyte drink mix
+  - protein recovery snacks
+  - post-workout cooling towel
+  product_ids:
+  - '814841'
+  - '814615'
+  - '814623'
+  - '1131046'
+  - '814401'
+  - '814930'
+  - '814788'
+  - '814123'
+  - '814582'
+  - '814638'
+  - '750602'
+  - '346396'
+  - '353877'
+  - '814041'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:56:10.577218Z'
+- id: cozy-reading-nook-musts
+  title_en: Cozy Reading Nook Musts
+  title_pt: Essenciais para um Cantinho de Leitura
+  title_es: Imprescindibles para un Rincón de Lectura
+  description_en: Throws, lighting, and organizers to build a comfy reading corner
+    at home.
+  description_pt: Mantas, iluminação e organizadores para criar um cantinho de leitura
+    confortável em casa.
+  description_es: Mantas, iluminación y organizadores para crear un rincón de lectura
+    acogedor en casa.
+  tags:
+  - home
+  - decor
+  - books
+  category: home
+  audience: all
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - throw blanket
+  - floor lamp with shade
+  - bookcase organizer
+  - reading chair
+  product_ids:
+  - '250431'
+  - '252478'
+  - '255448'
+  - '1046943'
+  - '1019818'
+  - '1019765'
+  - '1019782'
+  - '282901'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:56:18.608920Z'
+- id: effortless-beach-to-street-looks
+  title_en: Effortless Beach-to-Street Looks
+  title_pt: Looks Praia para Rua sem Esforço
+  title_es: Looks de Playa a Calle sin Esfuerzo
+  description_en: Light layers and accessories that take you straight from the beach
+    to a café.
+  description_pt: Camadas leves e acessórios que te levam da praia direto a um café.
+  description_es: Capas ligeras y accesorios que te llevan de la playa al café en
+    un instante.
+  tags:
+  - fashion
+  - beach
+  - travel
+  category: fashion
+  audience: women
+  seasons:
+  - summer
+  search_queries:
+  - women's beach cover-up
+  - straw tote bag
+  - linen button-down shirt
+  product_ids:
+  - '359964'
+  - '1081637'
+  - '735295'
+  - '1007209'
+  - '923641'
+  - '409335'
+  - '996170'
+  - '1003789'
+  - '243140'
+  - '1113199'
+  - '901162'
+  - '899894'
+  - '900312'
+  - '959558'
+  - '996170'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:56:25.703911Z'
+- id: pet-friendly-small-space-hacks
+  title_en: Pet-Friendly Small-Space Hacks
+  title_pt: Dicas para Casas Pequenas com Animais
+  title_es: Consejos para Espacios Pequeños con Mascotas
+  description_en: Smart furniture, toys, and storage solutions for pets in compact
+    homes.
+  description_pt: Mobiliário inteligente, brinquedos e soluções de arrumação para
+    animais em casas pequenas.
+  description_es: Muebles inteligentes, juguetes y soluciones de almacenamiento para
+    mascotas en pisos pequeños.
+  tags:
+  - pets
+  - home
+  - storage
+  category: pets
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - pet furniture small space
+  - cat litter box hidden
+  - dog storage solutions
+  - space-saving pet bed
+  product_ids:
+  - '467209'
+  - '845254'
+  - '403187'
+  - '403205'
+  - '832267'
+  - '830855'
+  - '831403'
+  - '832377'
+  - '951850'
+  - '958844'
+  - '326680'
+  - '572315'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:56:33.861007Z'
+- id: city-stroll-outfit-ideas
+  title_en: City stroll outfit ideas
+  title_pt: Looks para passeio na cidade
+  title_es: Ideas de outfit para paseos urbanos
+  description_en: Simple, comfortable outfits perfect for exploring the city all day.
+  description_pt: Looks simples e confortáveis, perfeitos para explorar a cidade o
+    dia todo.
+  description_es: Outfits sencillos y cómodos, perfectos para explorar la ciudad todo
+    el día.
+  tags:
+  - fashion
+  - everyday
+  category: fashion
+  audience: all
+  seasons:
+  - spring
+  search_queries:
+  - casual women's outfits
+  - men's city casual wear
+  - comfortable walking shoes
+  - lightweight spring jackets
+  product_ids:
+  - '901155'
+  - '901656'
+  - '900285'
+  - '900590'
+  - '900830'
+  - '901292'
+  - '901032'
+  - '906740'
+  - '901471'
+  - '901624'
+  - '901084'
+  - '902058'
+  - '900721'
+  - '901699'
+  - '902113'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T14:59:56.733971Z'
+- id: quick-picnic-for-kids
+  title_en: Quick picnic for kids
+  title_pt: Piquenique rápido para crianças
+  title_es: Picnic rápido para niños
+  description_en: Easy-to-pack snacks and games that keep little ones happy outdoors.
+  description_pt: Lanches e jogos fáceis de levar que mantêm os miúdos felizes ao
+    ar livre.
+  description_es: Snacks y juegos fáciles de llevar que mantienen a los peques felices
+    al aire libre.
+  tags:
+  - kids
+  - outdoor
+  category: kids
+  audience: kids
+  seasons:
+  - summer
+  search_queries:
+  - kids picnic snacks
+  - portable kids lunchbox
+  - outdoor kids games
+  - snack boxes for children
+  product_ids:
+  - '410531'
+  - '1093429'
+  - '410555'
+  - '410484'
+  - '1042360'
+  - '892537'
+  - '400688'
+  - '958205'
+  - '955756'
+  - '398919'
+  - '750897'
+  - '399859'
+  - '399526'
+  - '957084'
+  - '974825'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:03.945340Z'
+- id: apartment-balcony-bar-setup
+  title_en: Apartment balcony bar setup
+  title_pt: Barinho na varanda do apartamento
+  title_es: Mini bar en el balcón del piso
+  description_en: Compact bar tools and cocktail ingredients for cosy evenings on
+    a balcony.
+  description_pt: Utensílios compactos e ingredientes de cocktails para noites acolhedoras
+    na varanda.
+  description_es: Utensilios compactos e ingredientes para cócteles para noches acogedoras
+    en el balcón.
+  tags:
+  - home
+  - entertaining
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - autumn
+  search_queries:
+  - compact cocktail kit
+  - balcony bar cart
+  - outdoor wine glasses
+  product_ids:
+  - '1019524'
+  - '1026449'
+  - '689928'
+  - '163036'
+  - '317661'
+  - '125139'
+  - '198284'
+  - '385094'
+  - '991915'
+  - '250342'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:14.299187Z'
+- id: low-effort-weekender-suitcase
+  title_en: Low-effort weekender suitcase
+  title_pt: Mala de fim de semana descomplicada
+  title_es: Maleta de fin de semana sin complicaciones
+  description_en: Pack versatile outfits and compact essentials for spontaneous weekend
+    trips.
+  description_pt: Leve peças versáteis e essenciais compactos para escapadinhas de
+    fim de semana espontâneas.
+  description_es: Empaca outfits versátiles y esenciales compactos para escapadas
+    de fin de semana espontáneas.
+  tags:
+  - travel
+  - packing
+  category: travel
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - weekender suitcase
+  - carry-on travel bag
+  - packing cubes set
+  product_ids:
+  - '354852'
+  - '1046425'
+  - '1046416'
+  - '1026522'
+  - '988044'
+  - '1046438'
+  - '940652'
+  - '396761'
+  - '950326'
+  - '1006667'
+  - '768250'
+  - '766066'
+  - '304798'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:22.644392Z'
+- id: home-baking-for-beginners
+  title_en: Home baking for beginners
+  title_pt: Patisserie em casa para principiantes
+  title_es: Repostería casera para principiantes
+  description_en: Starter tools and pantry items to bake simple cakes and cookies
+    at home.
+  description_pt: Ferramentas iniciais e ingredientes para assar bolos e biscoitos
+    simples em casa.
+  description_es: Herramientas básicas e ingredientes para hornear pasteles y galletas
+    sencillos en casa.
+  tags:
+  - kitchen
+  - baking
+  category: kitchen
+  audience: all
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - baking starter kit
+  - measuring cups spoons
+  - cake mixing bowls
+  - cookie baking pans
+  product_ids:
+  - '663685'
+  - '367719'
+  - '951281'
+  - '1019744'
+  - '948390'
+  - '672456'
+  - '155563'
+  - '308813'
+  - '181313'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:31.033456Z'
+- id: compact-home-office-tech-upgrades
+  title_en: Compact home office tech upgrades
+  title_pt: Upgrades tecnológicos para escritório pequeno
+  title_es: Mejoras tecnológicas para oficina en casa compacta
+  description_en: Small gadgets that boost comfort and productivity in a tight workspace.
+  description_pt: Pequenos gadgets que aumentam o conforto e produtividade num espaço
+    de trabalho reduzido.
+  description_es: Pequeños gadgets que aumentan la comodidad y productividad en un
+    espacio de trabajo reducido.
+  tags:
+  - tech
+  - home
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - compact standing desk
+  - mini desktop monitor
+  - wireless compact keyboard
+  - usb-c docking station
+  product_ids:
+  - '336937'
+  - '761042'
+  - '572100'
+  - '409061'
+  - '961336'
+  - '759613'
+  - '850292'
+  - '1064796'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:39.422768Z'
+- id: kid-friendly-rainy-day-activities
+  title_en: Kid-friendly rainy day activities
+  title_pt: Atividades para crianças em dias de chuva
+  title_es: Actividades para niños en días de lluvia
+  description_en: Indoor crafts, games and cozy supplies to keep kids entertained
+    on wet days.
+  description_pt: Artes, jogos e itens aconchegantes para entreter as crianças em
+    dias de chuva.
+  description_es: Manualidades, juegos y cosas acogedoras para mantener a los niños
+    entretenidos en días de lluvia.
+  tags:
+  - kids
+  - home
+  category: kids
+  audience: kids
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - kids craft kits
+  - indoor board games kids
+  - children's storybooks cozy
+  - kids art supplies set
+  product_ids:
+  - '954428'
+  - '958171'
+  - '961370'
+  - '763719'
+  - '954318'
+  - '1023754'
+  - '954819'
+  - '953758'
+  - '954417'
+  - '657015'
+  - '954580'
+  - '1042039'
+  - '289056'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:46.646738Z'
+- id: sustainable-picnic-kit-swaps
+  title_en: Sustainable picnic kit swaps
+  title_pt: Trocas sustentáveis para um piquenique
+  title_es: Alternativas sostenibles para picnic
+  description_en: Reusable containers and eco-friendly utensils to make picnics greener.
+  description_pt: Recipientes reutilizáveis e talheres ecológicos para tornar os piqueniques
+    mais sustentáveis.
+  description_es: Envases reutilizables y utensilios ecológicos para hacer los picnics
+    más sostenibles.
+  tags:
+  - sustainable
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - reusable picnic utensils
+  - eco-friendly food containers
+  - bamboo picnic cutlery set
+  product_ids:
+  - '204951'
+  - '1019524'
+  - '254393'
+  - '969368'
+  - '1035570'
+  - '344851'
+  - '251041'
+  - '954324'
+  - '892692'
+  - '892692'
+  - '892692'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:00:53.774796Z'
+- id: post-workout-recovery-essentials
+  title_en: Post-workout recovery essentials
+  title_pt: Essenciais para recuperação pós-treino
+  title_es: Esenciales para recuperación post-entreno
+  description_en: Accessible tools and snacks to help soothe sore muscles and refuel
+    after exercise.
+  description_pt: Ferramentas e snacks acessíveis para ajudar a aliviar músculos doridos
+    e repor energias após o exercício.
+  description_es: Herramientas y snacks accesibles para ayudar a calmar músculos doloridos
+    y recuperar energías tras el ejercicio.
+  tags:
+  - fitness
+  - health
+  category: fitness
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - post workout recovery kit
+  - muscle recovery tools
+  - protein recovery snacks
+  product_ids:
+  - '814862'
+  - '814123'
+  - '832943'
+  - '814788'
+  - '814930'
+  - '750602'
+  - '814041'
+  - '813991'
+  - '814266'
+  - '814582'
+  - '814090'
+  - '814445'
+  - '814638'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:01:02.327798Z'
+- id: cozy-movie-night-snacks
+  title_en: Cozy movie night snacks
+  title_pt: Petiscos para noite de cinema aconchegante
+  title_es: Snacks para noche de cine acogedora
+  description_en: Easy-to-make treats and nibble-sized bites perfect for an at-home
+    movie night.
+  description_pt: Guloseimas fáceis de preparar e petiscos pequenos perfeitos para
+    uma noite de cinema em casa.
+  description_es: Dulces y bocaditos fáciles de preparar, perfectos para una noche
+    de cine en casa.
+  tags:
+  - kitchen
+  - entertaining
+  category: kitchen
+  audience: all
+  seasons:
+  - winter
+  search_queries:
+  - movie night snacks
+  - mini appetizer platters
+  - popcorn seasonings
+  - bite-sized desserts
+  product_ids:
+  - '673807'
+  - '676462'
+  - '671861'
+  - '676462'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:01:07.488210Z'
+- id: lazy-sunday-brunch-setup
+  title_en: Lazy Sunday brunch setup
+  title_pt: Kit para brunch de domingo
+  title_es: Kit para brunch de domingo
+  description_en: Everything you need to host an easy, laid-back brunch at home.
+  description_pt: Tudo o que precisa para um brunch descontraído em casa.
+  description_es: Todo lo que necesitas para un brunch relajado en casa.
+  tags:
+  - home
+  - food
+  - entertaining
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - brunch serveware set
+  - breakfast tableware
+  - pancake griddle nonstick
+  - mason jar drinkware
+  product_ids:
+  - '983318'
+  - '983246'
+  - '256294'
+  - '348999'
+  - '330915'
+  - '671582'
+  - '962156'
+  - '348999'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:16:15.501761Z'
+- id: carry-on-beauty-basics
+  title_en: Carry-on beauty basics
+  title_pt: Essenciais de beleza de viagem
+  title_es: Básicos de belleza para llevar
+  description_en: Compact makeup and skincare items that fit in a carry-on and save
+    time on the go.
+  description_pt: Produtos de maquilhagem e cuidados de pele compactos para levar
+    na bagagem de mão.
+  description_es: Productos compactos de maquillaje y cuidado que caben en el equipaje
+    de mano.
+  tags:
+  - beauty
+  - travel
+  category: beauty
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - travel makeup kit
+  - mini skincare set
+  - carry-on beauty essentials
+  product_ids:
+  - '1006878'
+  - '1006667'
+  - '1101572'
+  - '984681'
+  - '1134524'
+  - '245763'
+  - '847518'
+  - '1097384'
+  - '898888'
+  - '1109405'
+  - '1006811'
+  - '766487'
+  - '400296'
+  - '961175'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:16:23.230455Z'
+- id: studio-apartment-kitchen-hacks
+  title_en: Studio apartment kitchen hacks
+  title_pt: Truques de cozinha para estúdios
+  title_es: Trucos de cocina para estudios
+  description_en: Small gadgets and smart storage solutions for cooking in a tiny
+    kitchen.
+  description_pt: Gadgets pequenos e soluções de arrumação inteligentes para cozinhar
+    em cozinhas pequenas.
+  description_es: Gadgets pequeños y soluciones de almacenamiento para cocinar en
+    cocinas diminutas.
+  tags:
+  - kitchen
+  - home
+  - small-space
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - compact kitchen gadgets
+  - space-saving kitchen storage
+  - collapsible kitchen utensils
+  product_ids:
+  - '1026473'
+  - '690116'
+  - '690140'
+  - '690172'
+  - '945296'
+  - '1026473'
+  - '818991'
+  - '811810'
+  - '349706'
+  - '991310'
+  - '671993'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:16:31.534225Z'
+- id: post-work-pamper-treats
+  title_en: Post-work pamper treats
+  title_pt: Mimos pós-trabalho
+  title_es: Mimos para después del trabajo
+  description_en: Quick, relaxing products to unwind after a long day at the office.
+  description_pt: Produtos rápidos e relaxantes para descontrair depois de um dia
+    de trabalho.
+  description_es: Productos rápidos y relajantes para desconectar tras el trabajo.
+  tags:
+  - wellness
+  - self-care
+  category: health
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bath bombs gift set
+  - aromatherapy diffuser
+  - face sheet masks
+  - foot soak salts
+  product_ids:
+  - '263289'
+  - '467516'
+  - '690185'
+  - '690110'
+  - '673082'
+  - '268604'
+  - '1058777'
+  - '984336'
+  - '1011707'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:16:39.400413Z'
+- id: backyard-bbq-flavor-boosters
+  title_en: Backyard BBQ flavor boosters
+  title_pt: Realçadores de sabor para churrasco
+  title_es: Potenciadores de sabor para barbacoa
+  description_en: Marinades, rubs, and tools to take your backyard grill to the next
+    level.
+  description_pt: Marinadas, temperos e utensílios para melhorar o churrasco no quintal.
+  description_es: Marinados, salsas y herramientas para mejorar tu barbacoa en casa.
+  tags:
+  - kitchen
+  - food
+  - outdoor
+  category: kitchen
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - BBQ meat rubs
+  - Grill marinades
+  - Smoking wood chips
+  - Barbecue sauce variety pack
+  product_ids:
+  - '1027620'
+  - '1027621'
+  - '943413'
+  - '353940'
+  - '724235'
+  - '952769'
+  - '1005854'
+  - '311069'
+  - '313536'
+  - '311533'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:16:47.450531Z'
+- id: lightweight-travel-wardrobe-staples
+  title_en: Lightweight travel wardrobe staples
+  title_pt: Peças leves para viagem
+  title_es: Prendas ligeras para viajar
+  description_en: Versatile, wrinkle-resistant clothes for packing light and looking
+    sharp on the road.
+  description_pt: Peças versáteis e resistentes a vincos para viajar leve e com estilo.
+  description_es: Prendas versátiles y antiarrugas para viajar ligero y con estilo.
+  tags:
+  - fashion
+  - travel
+  category: fashion
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - travel wrinkle-resistant shirts
+  - packable travel pants
+  - lightweight travel jacket
+  product_ids:
+  - '1047384'
+  - '901013'
+  - '901411'
+  - '899806'
+  - '899930'
+  - '879175'
+  - '879868'
+  - '879869'
+  - '996203'
+  - '1003913'
+  - '1003808'
+  - '1026104'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:16:56.174265Z'
+- id: first-apartment-starter-essentials
+  title_en: First apartment starter essentials
+  title_pt: Essenciais para o primeiro apartamento
+  title_es: Esenciales para el primer piso
+  description_en: Affordable basics that make a new flat livable and welcoming from
+    day one.
+  description_pt: Básicos acessíveis que tornam um novo apartamento habitável e acolhedor.
+  description_es: Básicos asequibles que hacen un nuevo piso habitable y acogedor
+    desde el primer día.
+  tags:
+  - home
+  - living
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - kitchen starter set
+  - basic bedding set
+  - essential cookware set
+  product_ids:
+  - '690250'
+  - '959961'
+  - '953962'
+  - '929783'
+  - '940350'
+  - '930427'
+  - '871072'
+  - '990361'
+  - '993243'
+  - '1042357'
+  - '1045986'
+  - '1046036'
+  - '828118'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:17:03.555979Z'
+- id: rainy-day-indoor-play-ideas
+  title_en: Rainy-day indoor play ideas
+  title_pt: Atividades para dias chuvosos
+  title_es: Juegos para días lluviosos en casa
+  description_en: Creative toys and setups to keep kids entertained when the weather
+    keeps you inside.
+  description_pt: Brinquedos criativos e soluções para entreter crianças quando o
+    tempo não permite sair.
+  description_es: Juguetes creativos y actividades para entretener a los niños en
+    días lluviosos.
+  tags:
+  - kids
+  - indoor
+  - play
+  category: kids
+  audience: kids
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - indoor play tent
+  - kids arts and crafts kit
+  - indoor ride-on toys
+  product_ids:
+  - '974824'
+  - '975095'
+  - '975229'
+  - '974985'
+  - '892566'
+  - '892556'
+  - '975048'
+  - '954637'
+  - '958171'
+  - '961370'
+  - '954349'
+  - '1019522'
+  - '1019445'
+  - '953784'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:17:11.145730Z'
+- id: minimalist-desk-upgrades
+  title_en: Minimalist desk upgrades
+  title_pt: Melhorias minimalistas para secretária
+  title_es: Mejoras minimalistas para escritorio
+  description_en: Sleek accessories that declutter your workspace and boost focus.
+  description_pt: Acessórios elegantes que reduzem a desordem na secretária e aumentam
+    a concentração.
+  description_es: Accesorios elegantes que reducen el desorden y mejoran la concentración.
+  tags:
+  - tech
+  - home
+  - office
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - minimalist desk accessories
+  - desk cable organizer
+  - monitor riser stand
+  - wireless charging pad
+  product_ids:
+  - '333201'
+  - '762029'
+  - '343601'
+  - '205443'
+  - '340743'
+  - '345588'
+  - '1103565'
+  - '989340'
+  - '343896'
+  - '761087'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:17:18.236344Z'
+- id: cosy-winter-supper-upgrades
+  title_en: Cosy winter supper upgrades
+  title_pt: Melhorias para jantares de inverno
+  title_es: Mejoras para cenas de invierno
+  description_en: Small additions to make chilly evenings at home feel special and
+    warm.
+  description_pt: Pequenos extras para tornar as noites frias em casa mais especiais
+    e acolhedoras.
+  description_es: Pequeños añadidos para que las noches frías en casa sean más especiales
+    y cálidas.
+  tags:
+  - home
+  - dining
+  - cozy
+  category: home
+  audience: all
+  seasons:
+  - winter
+  search_queries:
+  - plaid throw blanket
+  - candle centerpiece set
+  - hearthside serving platter
+  product_ids:
+  - '256927'
+  - '402103'
+  - '256985'
+  - '845115'
+  - '845118'
+  - '951276'
+  - '672887'
+  - '410375'
+  - '410397'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:17:42.104473Z'
+- id: weekend-plant-care-kit
+  title_en: Weekend plant care kit
+  title_pt: Kit de cuidados de plantas para o fim de semana
+  title_es: Kit de cuidado de plantas para el fin de semana
+  description_en: Everything you need for a quick weekend refresh for indoor plants.
+  description_pt: Tudo o que precisa para uma renovação rápida das plantas de interior
+    no fim de semana.
+  description_es: Todo lo necesario para un refresco rápido de plantas de interior
+    el fin de semana.
+  tags:
+  - plants
+  - gardening
+  - home
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - indoor plant care kit
+  - succulent and houseplant supplies
+  - plant watering tools
+  - houseplant pruning kit
+  product_ids:
+  - '670764'
+  - '670676'
+  - '670499'
+  - '348423'
+  - '468237'
+  - '468336'
+  - '670978'
+  - '990867'
+  - '326910'
+  - '256413'
+  - '145125'
+  - '288738'
+  - '295084'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:17:49.180331Z'
+- id: smart-kitchen-shortcuts
+  title_en: Smart kitchen shortcuts
+  title_pt: Atalhos inteligentes para a cozinha
+  title_es: Atajos inteligentes para la cocina
+  description_en: Gadgets and tools that shave time off everyday cooking tasks.
+  description_pt: Gadgets e utensílios que reduzem o tempo nas tarefas culinárias
+    diárias.
+  description_es: Gadgets y herramientas que ahorran tiempo en las tareas diarias
+    de cocina.
+  tags:
+  - kitchen
+  - tech
+  - cooking
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - electric vegetable chopper
+  - immersion blender
+  - rapid egg cooker
+  product_ids:
+  - '1047397'
+  - '1047416'
+  - '953781'
+  - '672016'
+  - '572287'
+  - '572300'
+  - '344782'
+  - '671755'
+  - '817938'
+  - '818249'
+  - '348373'
+  - '817879'
+  - '952619'
+  - '349450'
+  - '690187'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:17:55.808180Z'
+- id: lightweight-sightseeing-shoes
+  title_en: Lightweight sightseeing shoes
+  title_pt: Sapatos leves para turismo
+  title_es: Zapatos ligeros para turismo
+  description_en: Comfortable, packable footwear perfect for long city days exploring.
+  description_pt: Calçado confortável e fácil de levar, perfeito para longos dias
+    a explorar a cidade.
+  description_es: Calzado cómodo y fácil de llevar, perfecto para largos días de turismo
+    en la ciudad.
+  tags:
+  - travel
+  - fashion
+  - comfort
+  category: fashion
+  audience: all
+  seasons:
+  - summer
+  - spring
+  - autumn
+  search_queries:
+  - lightweight walking shoes
+  - packable travel sneakers
+  - comfortable city shoes
+  product_ids:
+  - '901084'
+  - '1008414'
+  - '906502'
+  - '905544'
+  - '901669'
+  - '904245'
+  - '863361'
+  - '1108401'
+  - '906525'
+  - '906589'
+  - '901721'
+  - '899985'
+  - '1046403'
+  - '1046432'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:18:03.170316Z'
+- id: no-fuss-beach-hair-fixes
+  title_en: No-fuss beach hair fixes
+  title_pt: Soluções fáceis para o cabelo na praia
+  title_es: Soluciones fáciles para el pelo en la playa
+  description_en: Quick products and tricks to tame salty, windy beach hair without
+    a salon trip.
+  description_pt: Produtos e truques rápidos para domar o cabelo com sal e vento sem
+    ir ao cabeleireiro.
+  description_es: Productos y trucos rápidos para domar el pelo con sal y viento sin
+    ir a la peluquería.
+  tags:
+  - beauty
+  - beach
+  - hair
+  category: beauty
+  audience: women
+  seasons:
+  - summer
+  search_queries:
+  - sea salt spray
+  - leave-in conditioner
+  - detangling hair brush
+  product_ids:
+  - '809860'
+  - '983387'
+  - '981408'
+  - '979299'
+  - '883531'
+  - '370784'
+  - '1006953'
+  - '690324'
+  - '331221'
+  - '816152'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:18:10.635528Z'
+- id: tiny-terrace-cocktail-setup
+  title_en: Tiny terrace cocktail setup
+  title_pt: Bar de cocktails para terraços pequenos
+  title_es: Bar de cócteles para terrazas pequeñas
+  description_en: Compact bar tools and mixers to make evening drinks on small terraces
+    or balconies.
+  description_pt: Acessórios e misturadores compactos para preparar bebidas à noite
+    em pequenos terraços ou varandas.
+  description_es: Herramientas de bar compactas y mixers para preparar bebidas por
+    la noche en pequeñas terrazas o balcones.
+  tags:
+  - home
+  - drinks
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - autumn
+  search_queries:
+  - compact cocktail kit
+  - portable bar tools
+  - balcony outdoor glassware
+  product_ids:
+  - '1019524'
+  - '1026449'
+  - '689928'
+  - '163036'
+  - '125139'
+  - '198284'
+  - '1019664'
+  - '327158'
+  - '252857'
+  - '988302'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:18:18.319453Z'
+- id: beginner-sewing-survival-kit
+  title_en: Beginner sewing survival kit
+  title_pt: Kit de costura para iniciantes
+  title_es: Kit de costura para principiantes
+  description_en: Essential tools and quick fixes for mending clothes and simple sewing
+    projects.
+  description_pt: Ferramentas essenciais e remendos rápidos para consertar roupas
+    e projetos simples de costura.
+  description_es: Herramientas esenciales y arreglos rápidos para remendar ropa y
+    proyectos sencillos de costura.
+  tags:
+  - crafts
+  - home
+  - DIY
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - beginner sewing kit
+  - sewing repair kit
+  - hand sewing supplies
+  product_ids:
+  - '690203'
+  - '61597'
+  - '181560'
+  - '184197'
+  - '958171'
+  - '954659'
+  - '372136'
+  - '748586'
+  - '992877'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:18:25.622629Z'
+- id: stress-free-holiday-packing
+  title_en: Stress-free holiday packing
+  title_pt: Mala de férias sem stress
+  title_es: Equipaje de vacaciones sin estrés
+  description_en: Simple organizers and garment choices to pack efficiently for a
+    holiday trip.
+  description_pt: Organizadores simples e escolhas de roupas para fazer as malas de
+    viagem de forma eficiente.
+  description_es: Organizadores sencillos y prendas para empacar eficientemente para
+    un viaje de vacaciones.
+  tags:
+  - travel
+  - organizing
+  - lifestyle
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - travel packing cubes
+  - vacation toiletry bag
+  - lightweight travel outfits
+  product_ids:
+  - '1047423'
+  - '1047413'
+  - '1117472'
+  - '1117420'
+  - '959418'
+  - '1101566'
+  - '326685'
+  - '1006667'
+  - '968136'
+  - '968660'
+  - '900285'
+  - '901411'
+  - '902068'
+  - '1045881'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:18:34.280515Z'
+- id: at-home-coffee-bar-upgrades
+  title_en: At-home coffee bar upgrades
+  title_pt: Melhorias para o seu bar de café em casa
+  title_es: Mejoras para tu barra de café en casa
+  description_en: Small tools and extras to make café-quality drinks at home every
+    morning.
+  description_pt: Pequenos utensílios e extras para preparar bebidas de café com qualidade
+    em casa todas as manhãs.
+  description_es: Pequeñas herramientas y extras para preparar bebidas tipo café de
+    calidad en casa cada mañana.
+  tags:
+  - kitchen
+  - coffee
+  - home
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - espresso machine accessories
+  - milk frother handheld
+  - coffee grinder burr
+  - coffee tampers
+  product_ids:
+  - '823327'
+  - '817760'
+  - '817941'
+  - '818125'
+  - '817929'
+  - '817871'
+  - '817803'
+  - '663818'
+  - '845151'
+  - '1005948'
+  - '670777'
+  - '364718'
+  - '960204'
+  - '155606'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:18:41.190617Z'
+- id: balcony-breakfast-brighteners
+  title_en: Balcony Breakfast Brighteners
+  title_pt: Pequeno-almoço no terraço
+  title_es: Desayunos alegres en el balcón
+  description_en: Easy items to make morning balcony breakfasts feel like a mini getaway.
+  description_pt: Itens fáceis para transformar o pequeno-almoço no terraço numa pequena
+    escapadela.
+  description_es: Artículos sencillos para convertir los desayunos en el balcón en
+    una pequeña escapada.
+  tags:
+  - breakfast
+  - balcony
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - outdoor breakfast tableware
+  - balcony bistro furniture
+  - portable breakfast tray
+  product_ids:
+  - '1042790'
+  - '1042903'
+  - '253920'
+  - '1129609'
+  - '697278'
+  - '1003461'
+  - '400380'
+  - '399912'
+  - '399743'
+  - '764488'
+  - '1007198'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:05.488135Z'
+- id: capsule-travel-skincare
+  title_en: Capsule Travel Skincare
+  title_pt: Skincare de viagem essencial
+  title_es: Rutina de viaje en formato cápsula
+  description_en: Compact cosmetics and tools to keep skin fresh while on the go.
+  description_pt: Cosméticos compactos e acessórios para manter a pele fresca durante
+    viagens.
+  description_es: Cosméticos compactos y utensilios para mantener la piel fresca durante
+    viajes.
+  tags:
+  - beauty
+  - travel
+  - skincare
+  category: beauty
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - travel skincare set
+  - mini face cleanser
+  - solid moisturizer stick
+  product_ids:
+  - '1006878'
+  - '1006667'
+  - '984681'
+  - '960093'
+  - '960090'
+  - '995827'
+  - '994402'
+  - '995827'
+  - '749496'
+  - '750985'
+  - '673667'
+  - '955258'
+  - '1008639'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:13.713790Z'
+- id: study-snack-stash
+  title_en: Study Snack Stash
+  title_pt: Lanches para horas de estudo
+  title_es: Snacks para estudiar
+  description_en: Tasty, portable snacks and containers to fuel study sessions without
+    the mess.
+  description_pt: Lanches saborosos e fáceis de levar para acompanhar longas sessões
+    de estudo sem confusão.
+  description_es: Snacks sabrosos y portátiles y recipientes para alimentar las sesiones
+    de estudio sin liarlo.
+  tags:
+  - snacks
+  - students
+  - study
+  category: kitchen
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - kids snack containers
+  - portable study snacks
+  - bento lunch box
+  - healthy grab-and-go snacks
+  product_ids:
+  - '204947'
+  - '204883'
+  - '204901'
+  - '1117626'
+  - '892512'
+  - '892462'
+  - '1042360'
+  - '1042402'
+  - '1042389'
+  - '975369'
+  - '1011539'
+  - '1109412'
+  - '1003461'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:23.045709Z'
+- id: comfortable-flight-outfit-ideas
+  title_en: Comfortable Flight Outfit Ideas
+  title_pt: Looks confortáveis para avião
+  title_es: Looks cómodos para volar
+  description_en: Outfits that blend comfort and style for long flights or quick hops.
+  description_pt: Looks que combinam conforto e estilo para voos longos ou curtos.
+  description_es: Outfits que combinan comodidad y estilo para vuelos largos o cortos.
+  tags:
+  - travel
+  - fashion
+  - comfort
+  category: fashion
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - travel leggings women
+  - oversized hoodie travel
+  - compression socks flight
+  - lightweight travel jacket
+  product_ids:
+  - '761121'
+  - '904015'
+  - '1026070'
+  - '979412'
+  - '928769'
+  - '896253'
+  - '896347'
+  - '899953'
+  - '901525'
+  - '1026104'
+  - '899915'
+  - '899812'
+  - '901186'
+  - '896387'
+  - '896266'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:31.365907Z'
+- id: pet-safe-cleaning-picks
+  title_en: Pet-Safe Cleaning Picks
+  title_pt: Produtos de limpeza amigos dos animais
+  title_es: Productos de limpieza seguros para mascotas
+  description_en: Cleaning products and tools that keep homes fresh without harming
+    pets.
+  description_pt: Produtos e acessórios de limpeza que mantêm a casa fresca sem prejudicar
+    os animais de estimação.
+  description_es: Productos y utensilios de limpieza que mantienen el hogar fresco
+    sin dañar a las mascotas.
+  tags:
+  - pets
+  - home
+  - cleaning
+  category: pets
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - pet safe cleaners
+  - pet-friendly floor cleaner
+  - natural pet stain remover
+  product_ids:
+  - '907397'
+  - '829684'
+  - '333049'
+  - '829894'
+  - '829855'
+  - '828928'
+  - '829547'
+  - '828087'
+  - '827421'
+  - '828354'
+  - '828064'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:38.706102Z'
+- id: quick-dinner-party-hacks
+  title_en: Quick Dinner Party Hacks
+  title_pt: Truques para jantares rápidos
+  title_es: Trucos para cenas rápidas
+  description_en: Simple serving ideas and multipurpose tools to host last-minute
+    dinner guests.
+  description_pt: Ideias de serviço simples e utensílios versáteis para receber convidados
+    de última hora.
+  description_es: Ideas de presentación simples y utensilios multiuso para recibir
+    invitados de última hora.
+  tags:
+  - entertaining
+  - kitchen
+  - hosting
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - cheese board set
+  - serving platters
+  - food prep tools
+  - party appetizer trays
+  product_ids:
+  - '962425'
+  - '945296'
+  - '690263'
+  - '817779'
+  - '952572'
+  - '256367'
+  - '255906'
+  - '992293'
+  - '668342'
+  - '1103649'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:47.129775Z'
+- id: rainy-walk-essentials-for-kids
+  title_en: Rainy Walk Essentials for Kids
+  title_pt: Essenciais para passeios chuvosos (crianças)
+  title_es: Esenciales para paseos bajo la lluvia (niños)
+  description_en: Weatherproof jackets, boots, and playful gear to keep kids happy
+    on wet days.
+  description_pt: Casacos impermeáveis, galochas e acessórios divertidos para manter
+    as crianças felizes em dias de chuva.
+  description_es: Chaquetas impermeables, botas y accesorios divertidos para mantener
+    a los niños felices en días de lluvia.
+  tags:
+  - kids
+  - outdoor
+  - rain
+  category: kids
+  audience: kids
+  seasons:
+  - autumn
+  - winter
+  - spring
+  search_queries:
+  - kids raincoat waterproof
+  - children rain boots
+  - kids umbrella set
+  product_ids:
+  - '880409'
+  - '880412'
+  - '355084'
+  - '889474'
+  - '889478'
+  - '410360'
+  - '1042386'
+  - '892243'
+  - '946860'
+  - '971255'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:19:54.103525Z'
+- id: easy-eco-office-swaps
+  title_en: Easy Eco Office Swaps
+  title_pt: Alternativas eco para o escritório
+  title_es: Alternativas ecológicas para la oficina
+  description_en: Small sustainable swaps to make your desk greener and reduce daily
+    waste.
+  description_pt: Pequenas mudanças sustentáveis para tornar a secretária mais ecológica
+    e reduzir desperdício diário.
+  description_es: Pequeños cambios sostenibles para hacer tu escritorio más verde
+    y reducir residuos diarios.
+  tags:
+  - eco
+  - office
+  - sustainable
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bamboo desk accessories
+  - reusable coffee cup
+  - recycled paper notebooks
+  product_ids:
+  - '393139'
+  - '1019854'
+  - '989527'
+  - '991133'
+  - '912232'
+  - '912232'
+  - '385585'
+  - '670364'
+  - '1096206'
+  - '1096206'
+  - '981111'
+  - '981123'
+  - '952168'
+  - '818584'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:20:03.066786Z'
+- id: date-ready-dessert-kits
+  title_en: Date-Ready Dessert Kits
+  title_pt: Kits de sobremesa para um encontro
+  title_es: Kits de postre para una cita
+  description_en: Easy-to-make dessert mixes and plating tools to impress on a casual
+    date night.
+  description_pt: Misturas fáceis e acessórios para apresentar sobremesas que impressionam
+    num encontro informal.
+  description_es: Mezclas fáciles y utensilios para presentar postres que impresionen
+    en una cita informal.
+  tags:
+  - food
+  - date
+  - kitchen
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - dessert kit for two
+  - dessert mix kit
+  - plating tools set
+  product_ids:
+  - '954668'
+  - '367719'
+  - '364740'
+  - '989924'
+  - '989853'
+  - '251329'
+  - '298444'
+  - '953621'
+  - '951324'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:20:10.418480Z'
+- id: plant-based-cooking-basics
+  title_en: Plant-Based Cooking Basics
+  title_pt: Essenciais para cozinhar à base de plantas
+  title_es: Básicos para cocinar plant-based
+  description_en: Kitchen tools and pantry staples to start cooking more plant-based
+    meals.
+  description_pt: Utensílios e ingredientes básicos para começar a cozinhar mais refeições
+    à base de plantas.
+  description_es: Utensilios de cocina e ingredientes básicos para empezar a cocinar
+    más platos plant-based.
+  tags:
+  - kitchen
+  - vegan
+  - cooking
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - vegan pantry staples
+  - plant-based cookware
+  - vegan protein alternatives
+  product_ids:
+  - '690263'
+  - '929783'
+  - '935669'
+  - '285959'
+  - '288664'
+  - '301060'
+  - '205272'
+  - '814023'
+  - '814396'
+  - '814633'
+  - '814519'
+  - '814514'
+  - '814871'
+  - '1107942'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:20:34.047684Z'
+- id: compact-workout-gear
+  title_en: Compact Workout Gear
+  title_pt: Equipamento de treino compacto
+  title_es: Equipo de entrenamiento compacto
+  description_en: Small, easy-to-store fitness gear for quick home or travel workouts.
+  description_pt: Equipamento de fitness pequeno e fácil de arrumar para treinos rápidos
+    em casa ou em viagem.
+  description_es: Equipamiento fitness pequeño y fácil de guardar para entrenos rápidos
+    en casa o de viaje.
+  tags:
+  - fitness
+  - home
+  - travel
+  category: fitness
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - resistance bands set
+  - foldable yoga mat
+  - compact adjustable dumbbells
+  - portable suspension trainer
+  product_ids:
+  - '1005428'
+  - '1026557'
+  - '956305'
+  - '1019689'
+  - '1005941'
+  - '1121465'
+  - '1129609'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:20:42.392514Z'
+- id: quick-picnic-desserts
+  title_en: Quick Picnic Desserts
+  title_pt: Sobremesas rápidas para piquenique
+  title_es: Postres rápidos para picnic
+  description_en: Portable sweet treats and easy recipes perfect for taking outdoors.
+  description_pt: Doces portáteis e receitas fáceis perfeitas para levar para o exterior.
+  description_es: Dulces portátiles y recetas fáciles perfectas para llevar al exterior.
+  tags:
+  - food
+  - picnic
+  - dessert
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - portable dessert jars
+  - no-bake picnic desserts
+  - handheld sweet snacks
+  product_ids:
+  - '400380'
+  - '1042373'
+  - '951324'
+  - '954668'
+  - '957209'
+  - '1003461'
+  - '892692'
+  - '889894'
+  - '220634'
+  - '280091'
+  - '989777'
+  - '988594'
+  - '972466'
+  - '1129609'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:20:49.479908Z'
+- id: evening-wfh-comforts
+  title_en: Evening WFH Comforts
+  title_pt: Confortos para o teletrabalho à noite
+  title_es: Confort en casa para trabajar por la noche
+  description_en: Products to make late-night work-from-home sessions cozier and more
+    productive.
+  description_pt: Produtos para tornar as sessões de teletrabalho noturnas mais acolhedoras
+    e produtivas.
+  description_es: Productos para hacer las sesiones de teletrabajo nocturnas más acogedoras
+    y productivas.
+  tags:
+  - home
+  - work
+  - comfort
+  category: home
+  audience: all
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - ergonomic lap desk
+  - soft throw blanket
+  - adjustable floor lamp
+  product_ids:
+  - '1086123'
+  - '1103582'
+  - '329573'
+  - '252008'
+  - '1103636'
+  - '824543'
+  - '410375'
+  - '405598'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:20:56.298945Z'
+- id: starter-camping-kitchen-kit
+  title_en: Starter Camping Kitchen Kit
+  title_pt: Kit de cozinha para campismo iniciante
+  title_es: Kit de cocina para acampada para principiantes
+  description_en: Lightweight cookware and utensils that make cooking outdoors easy
+    for first-time campers.
+  description_pt: Panelas leves e utensílios que tornam a cozinha ao ar livre fácil
+    para campistas iniciantes.
+  description_es: Menaje ligero y utensilios que hacen fácil cocinar al aire libre
+    para campistas primerizos.
+  tags:
+  - outdoor
+  - kitchen
+  - camping
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - camping cookware set
+  - lightweight camping pots
+  - portable camping kitchen utensils
+  product_ids:
+  - '349660'
+  - '689917'
+  - '1117596'
+  - '1004014'
+  - '350451'
+  - '1131814'
+  - '953346'
+  - '1026438'
+  - '1003461'
+  - '862061'
+  - '690261'
+  - '689929'
+  - '134605'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:21:05.850167Z'
+- id: minimalist-evening-skincare
+  title_en: Minimalist Evening Skincare
+  title_pt: Skincare noturno minimalista
+  title_es: Rutina nocturna de skincare minimalista
+  description_en: A short, effective night routine with just a few gentle products
+    for healthier skin.
+  description_pt: Uma rotina noturna curta e eficaz com apenas alguns produtos suaves
+    para uma pele mais saudável.
+  description_es: Una rutina nocturna corta y eficaz con solo unos pocos productos
+    suaves para una piel más sana.
+  tags:
+  - beauty
+  - skincare
+  - night
+  category: beauty
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - night moisturizer lightweight
+  - gentle facial cleanser
+  - hydrating face oil
+  - overnight treatment cream
+  product_ids:
+  - '750722'
+  - '750635'
+  - '750923'
+  - '673790'
+  - '673548'
+  - '833088'
+  - '984176'
+  - '399218'
+  - '673611'
+  - '672539'
+  - '673808'
+  - '673824'
+  - '750923'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:21:13.873030Z'
+- id: backyard-date-night-setups
+  title_en: Backyard Date Night Setups
+  title_pt: Noite romântica no quintal
+  title_es: Cenas para cita nocturna en el jardín
+  description_en: Ideas and items to transform your backyard into a romantic at-home
+    date night spot.
+  description_pt: Ideias e itens para transformar o quintal num espaço romântico para
+    uma noite a dois em casa.
+  description_es: Ideas y artículos para transformar tu jardín en un lugar romántico
+    para una cita nocturna en casa.
+  tags:
+  - home
+  - date
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - autumn
+  search_queries:
+  - outdoor string lights
+  - patio heater
+  - inflatable movie screen
+  - outdoor bistro set
+  product_ids:
+  - '384078'
+  - '761134'
+  - '1086067'
+  - '1086053'
+  - '572703'
+  - '348692'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:21:21.669505Z'
+- id: playdate-activity-pack
+  title_en: Playdate Activity Pack
+  title_pt: Conjunto de atividades para playdate
+  title_es: Pack de actividades para playdate
+  description_en: Fun, compact toys and crafts to keep kids entertained during a playdate
+    or rainy afternoon.
+  description_pt: Brinquedos e atividades compactas e divertidas para entreter as
+    crianças durante um playdate ou uma tarde chuvosa.
+  description_es: Juguetes y manualidades compactas y divertidas para mantener a los
+    niños entretenidos durante un playdate o una tarde lluviosa.
+  tags:
+  - kids
+  - toys
+  - activities
+  category: kids
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - kids activity pack
+  - playdate toys set
+  - craft kits for kids
+  product_ids:
+  - '961370'
+  - '960884'
+  - '958171'
+  - '954318'
+  - '1023754'
+  - '763719'
+  - '961444'
+  - '931154'
+  - '345264'
+  - '960101'
+  - '974572'
+  - '1019624'
+  - '956280'
+  - '798008'
+  - '173078'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:21:27.964969Z'
+- id: cozy-picnic-blankets-throws
+  title_en: Cozy Picnic Blankets & Throws
+  title_pt: Mantas e Cobertores para Piqueniques
+  title_es: Mantas y Plaids para Picnic
+  description_en: Soft, portable blankets and throws perfect for picnics, beach days,
+    or balcony lounging.
+  description_pt: Mantas macias e portáteis, perfeitas para piqueniques, dias de praia
+    ou relaxar na varanda.
+  description_es: Mantas suaves y portátiles, perfectas para picnics, días de playa
+    o descansar en el balcón.
+  tags:
+  - outdoor
+  - home
+  - picnic
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - picnic blanket waterproof
+  - outdoor throw blanket
+  - beach picnic blanket
+  product_ids:
+  - '257417'
+  - '257570'
+  - '257475'
+  - '1026495'
+  - '1047326'
+  - '952534'
+  - '954324'
+  - '1026521'
+  - '657346'
+  - '672477'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:21:49.598962Z'
+- id: no-fuss-breakfast-gadgets
+  title_en: No-Fuss Breakfast Gadgets
+  title_pt: Gadgetes para Pequenos-Almoços Sem Complicações
+  title_es: Gadgets para Desayunos Sin Complicaciones
+  description_en: Simple countertop tools that make morning breakfasts faster and
+    tastier.
+  description_pt: Acessórios de bancada simples que tornam os pequenos-almoços mais
+    rápidos e saborosos.
+  description_es: Herramientas de cocina sencillas que hacen los desayunos más rápidos
+    y sabrosos.
+  tags:
+  - kitchen
+  - breakfast
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - toaster oven compact
+  - electric egg cooker
+  - single-serve waffle maker
+  - auto coffee brewer
+  product_ids:
+  - '845151'
+  - '954070'
+  - '818439'
+  - '723983'
+  - '724334'
+  - '817793'
+  - '336985'
+  - '1005921'
+  - '954406'
+  - '744383'
+  - '818091'
+  - '953781'
+  - '349706'
+  - '724051'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:21:58.690779Z'
+- id: compact-commuter-tech-accessories
+  title_en: Compact Commuter Tech Accessories
+  title_pt: Acessórios Tecnológicos Compactos para o Trajeto
+  title_es: Accesorios Tech Compactos para el Trayecto
+  description_en: Small tech add-ons that make daily commutes easier and more organized.
+  description_pt: Pequenos acessórios tecnológicos que tornam o trajeto diário mais
+    fácil e organizado.
+  description_es: Pequeños accesorios tech que hacen el trayecto diario más fácil
+    y organizado.
+  tags:
+  - tech
+  - commute
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - compact phone charger
+  - portable power bank slim
+  - wireless earbuds commuter
+  - cable organizer travel
+  product_ids:
+  - '1121409'
+  - '405748'
+  - '572468'
+  - '824741'
+  - '341274'
+  - '205443'
+  - '1121475'
+  - '673862'
+  - '205391'
+  - '205387'
+  - '1121464'
+  - '808644'
+  - '959028'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:22:08.421760Z'
+- id: easy-plant-propagation-starters
+  title_en: Easy Plant Propagation Starters
+  title_pt: Iniciadores Fáceis de Propagação de Plantas
+  title_es: Iniciadores Fáciles para Propagación de Plantas
+  description_en: Tools and containers to start propagating cuttings at home with
+    minimal fuss.
+  description_pt: Ferramentas e recipientes para começar a propagar estacas em casa
+    com o mínimo de esforço.
+  description_es: Herramientas y recipientes para empezar a propagar esquejes en casa
+    con poco esfuerzo.
+  tags:
+  - plants
+  - home
+  - gardening
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - evergreen
+  search_queries:
+  - plant propagation kit
+  - propagation trays and domes
+  - glass propagation stations
+  product_ids:
+  - '670764'
+  - '672144'
+  - '988919'
+  - '363579'
+  - '407547'
+  - '150115'
+  - '157040'
+  - '149443'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:22:16.515203Z'
+- id: comfortable-at-home-yoga-setup
+  title_en: Comfortable At-Home Yoga Setup
+  title_pt: Espaço Confortável de Yoga em Casa
+  title_es: Espacio Cómodo de Yoga en Casa
+  description_en: Mats, blocks and cozy gear to make short home yoga sessions more
+    inviting.
+  description_pt: Tapetes, blocos e equipamento confortável para tornar sessões rápidas
+    de yoga em casa mais convidativas.
+  description_es: Esterillas, bloques y accesorios cómodos para que las sesiones cortas
+    de yoga en casa sean más atractivas.
+  tags:
+  - fitness
+  - home
+  - wellness
+  category: fitness
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - yoga mat non-slip
+  - yoga block set
+  - yoga bolster cushion
+  - yoga props kit
+  product_ids:
+  - '689940'
+  - '1019689'
+  - '1093278'
+  - '880117'
+  - '1093323'
+  - '975009'
+  - '150938'
+  - '118381'
+  - '280232'
+  - '1047432'
+  - '371321'
+  - '896298'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:22:24.109085Z'
+- id: easy-hostess-appetizer-tools
+  title_en: Easy Hostess Appetizer Tools
+  title_pt: Acessórios Práticos para Petiscos
+  title_es: Accesorios Prácticos para Aperitivos
+  description_en: Plates, serving tools and simple gadgets to assemble crowd-pleasing
+    appetizers quickly.
+  description_pt: Pratos, utensílios de servir e gadgets simples para montar petiscos
+    que agradam a todos rapidamente.
+  description_es: Platos, herramientas de servicio y gadgets sencillos para montar
+    aperitivos que encanten rápidamente.
+  tags:
+  - kitchen
+  - entertaining
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - appetizer serving platter
+  - cheese board set
+  - small serving bowls
+  - appetizer tongs and picks
+  product_ids:
+  - '257162'
+  - '1006015'
+  - '256367'
+  - '867286'
+  - '307182'
+  - '124069'
+  - '107992'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:22:31.047445Z'
+- id: lightweight-weekend-walk-shoes
+  title_en: Lightweight Weekend Walk Shoes
+  title_pt: Sapatos Leves para Passeios de Fim de Semana
+  title_es: Zapatos Ligeros para Paseos de Fin de Semana
+  description_en: Comfortable, breathable shoes ideal for casual weekend strolls and
+    sightseeing.
+  description_pt: Sapatos confortáveis e respiráveis, ideais para passeios casuais
+    ao fim de semana e visitas turísticas.
+  description_es: Zapatos cómodos y transpirables, ideales para paseos casuales de
+    fin de semana y turismo.
+  tags:
+  - fashion
+  - travel
+  category: fashion
+  audience: all
+  seasons:
+  - spring
+  - summer
+  - autumn
+  search_queries:
+  - lightweight walking shoes
+  - breathable casual sneakers
+  - travel walking loafers
+  product_ids:
+  - '901084'
+  - '1008414'
+  - '906502'
+  - '906393'
+  - '906525'
+  - '906589'
+  - '901721'
+  - '901669'
+  - '901522'
+  - '900523'
+  - '900816'
+  - '863361'
+  - '899985'
+  - '896110'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:22:38.344222Z'
+- id: snack-size-baking-essentials
+  title_en: Snack-Size Baking Essentials
+  title_pt: Essenciais para Miniaturas de Pastelaria
+  title_es: Esenciales para Repostería en Miniatura
+  description_en: Small pans, portion tools and molds for making mini cakes and treats
+    at home.
+  description_pt: Formas pequenas, utensílios de porcionamento e moldes para fazer
+    mini bolos e doces em casa.
+  description_es: Molde pequeños, herramientas de porcionado y moldes para hacer mini
+    tartas y dulces en casa.
+  tags:
+  - kitchen
+  - baking
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - mini baking pans
+  - mini silicone molds
+  - portion scoops for baking
+  product_ids:
+  - '818991'
+  - '822638'
+  - '818508'
+  - '723893'
+  - '822643'
+  - '358787'
+  - '220642'
+  - '1042352'
+  - '1051831'
+  - '974078'
+  - '973124'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:22:45.930520Z'
+- id: quick-change-hair-accessories
+  title_en: Quick-Change Hair Accessories
+  title_pt: Acessórios Capilares de Mudança Rápida
+  title_es: Accesorios Capilares de Cambio Rápido
+  description_en: Clips, scrunchies and easy fasteners to switch up hairstyles in
+    seconds.
+  description_pt: Ganchos, scrunchies e fixadores fáceis para mudar o penteado em
+    segundos.
+  description_es: Clips, coleteros y sujetadores fáciles para cambiar de peinado en
+    segundos.
+  tags:
+  - beauty
+  - fashion
+  category: beauty
+  audience: women
+  seasons:
+  - evergreen
+  search_queries:
+  - hair clips
+  - scrunchies
+  - hair bun maker
+  - easy hair accessories
+  product_ids:
+  - '1134579'
+  - '382023'
+  - '1134617'
+  - '1007296'
+  - '1007289'
+  - '1023614'
+  - '1090850'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:22:53.098349Z'
+- id: quick-weekend-camping-kit
+  title_en: Quick Weekend Camping Kit
+  title_pt: Kit rápido para acampar no fim de semana
+  title_es: Kit de camping rápido para el fin de semana
+  description_en: Compact picks for an easy overnight nature escape—sleep, cook and
+    stay cozy.
+  description_pt: Escolhas compactas para uma escapadinha de uma noite na natureza—dormir,
+    cozinhar e ficar confortável.
+  description_es: Selecciones compactas para una escapada de una noche en la naturaleza—dormir,
+    cocinar y mantenerse cómodo.
+  tags:
+  - outdoor
+  - travel
+  - camping
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  - spring
+  - autumn
+  search_queries:
+  - compact camping tent
+  - sleeping bag lightweight
+  - portable camping stove
+  - camping cookware set
+  product_ids:
+  - '951918'
+  - '1087392'
+  - '349660'
+  - '350451'
+  - '1004014'
+  - '971443'
+  - '970622'
+  - '969509'
+  - '973744'
+  - '880325'
+  - '912836'
+  - '953469'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:24:16.330753Z'
+- id: five-minute-morning-makeup
+  title_en: Five-Minute Morning Makeup
+  title_pt: Maquilhagem matinal de cinco minutos
+  title_es: Maquillaje matutino de cinco minutos
+  description_en: Simple, quick beauty picks to look polished when you’re short on
+    time.
+  description_pt: Escolhas de beleza simples e rápidas para parecer polida quando
+    tem pouco tempo.
+  description_es: Selecciones de belleza sencillas y rápidas para lucir arreglada
+    cuando tienes poco tiempo.
+  tags:
+  - beauty
+  - routine
+  - quick
+  category: beauty
+  audience: women
+  seasons:
+  - evergreen
+  search_queries:
+  - tinted moisturizer SPF
+  - cream blush stick
+  - brow tint pen
+  - mascara lengthening
+  product_ids:
+  - '987669'
+  - '1008754'
+  - '982136'
+  - '984566'
+  - '767692'
+  - '1129463'
+  - '994011'
+  - '883789'
+  - '1131783'
+  - '227566'
+  - '1136362'
+  - '666896'
+  - '767249'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:24:25.174341Z'
+- id: apartment-balcony-garden-ideas
+  title_en: Apartment Balcony Garden Ideas
+  title_pt: Ideias para jardim na varanda do apartamento
+  title_es: Ideas de jardín para la terraza del apartamento
+  description_en: Space-saving planters, lighting and tools to turn a balcony into
+    a green nook.
+  description_pt: Vasos, iluminação e ferramentas que poupam espaço para transformar
+    a varanda num canto verde.
+  description_es: Maceteros, iluminación y herramientas que ahorran espacio para convertir
+    la terraza en un rincón verde.
+  tags:
+  - home
+  - plants
+  - decor
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - balcony planters vertical
+  - small-space gardening tools
+  - hanging plant baskets
+  - outdoor solar string lights
+  product_ids:
+  - '1042793'
+  - '1086067'
+  - '749808'
+  - '689994'
+  - '988968'
+  - '1047011'
+  - '1047015'
+  - '672144'
+  - '671808'
+  - '670676'
+  - '1003866'
+  - '146803'
+  - '175041'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:24:33.173306Z'
+- id: healthy-lunchbox-swaps
+  title_en: Healthy Lunchbox Swaps
+  title_pt: Alternativas saudáveis para a marmita
+  title_es: Cambios saludables para la fiambrera
+  description_en: Better container choices, snacks and prep tools to upgrade your
+    midday meals.
+  description_pt: Melhores recipientes, snacks e ferramentas de preparação para melhorar
+    as suas refeições do meio do dia.
+  description_es: Mejores recipientes, snacks y herramientas de preparación para mejorar
+    tus comidas del mediodía.
+  tags:
+  - kitchen
+  - health
+  - work
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bento lunch box
+  - insulated lunch bag
+  - meal prep containers
+  - healthy snack packs
+  product_ids:
+  - '340542'
+  - '340167'
+  - '399912'
+  - '400380'
+  - '400408'
+  - '892512'
+  - '892462'
+  - '945763'
+  - '399859'
+  - '814291'
+  - '399614'
+  - '892692'
+  - '302669'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:24:41.967060Z'
+- id: sleek-minimal-wallet-alternatives
+  title_en: Sleek Minimal Wallet Alternatives
+  title_pt: Alternativas minimalistas de carteira
+  title_es: Alternativas de cartera minimalista
+  description_en: Compact wallets and card holders to simplify what you carry every
+    day.
+  description_pt: Carteiras compactas e porta-cartões para simplificar o que carrega
+    todos os dias.
+  description_es: Carteras compactas y tarjeteros para simplificar lo que llevas cada
+    día.
+  tags:
+  - accessories
+  - everyday
+  - minimal
+  category: fashion
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - slim card holder
+  - minimal leather wallet
+  - RFID card sleeve
+  product_ids:
+  - '354956'
+  - '960665'
+  - '956026'
+  - '948549'
+  - '924363'
+  - '923578'
+  - '952601'
+  - '735299'
+  - '735300'
+  - '735301'
+  - '938328'
+  - '940739'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:24:49.411843Z'
+- id: family-bike-ride-essentials
+  title_en: Family Bike Ride Essentials
+  title_pt: Essenciais para passeio de bicicleta em família
+  title_es: Esenciales para paseos en bici en familia
+  description_en: Helmets, lights, storage and snacks to keep every ride safe and
+    fun for kids.
+  description_pt: Capacetes, luzes, arrumação e snacks para manter cada passeio seguro
+    e divertido para as crianças.
+  description_es: Cascos, luces, almacenamiento y snacks para mantener cada paseo
+    seguro y divertido para los niños.
+  tags:
+  - outdoor
+  - kids
+  - safety
+  category: fitness
+  audience: all
+  seasons:
+  - spring
+  - summer
+  - autumn
+  search_queries:
+  - kids bike helmets
+  - bike lights front rear
+  - child bike cargo trailer
+  - bike snack storage bag
+  product_ids:
+  - '1046130'
+  - '1046132'
+  - '1042418'
+  - '953565'
+  - '969275'
+  - '969114'
+  - '969112'
+  - '969167'
+  - '825363'
+  - '689948'
+  - '345760'
+  - '963990'
+  - '962821'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:24:57.548420Z'
+- id: effortless-plant-based-weeknight-dinners
+  title_en: Effortless Plant-Based Weeknight Dinners
+  title_pt: Jantares veganos rápidos para dias de semana
+  title_es: Cenas veganas fáciles para entre semana
+  description_en: Simple pantry staples and tools to make quick plant-based meals
+    any night.
+  description_pt: Produtos básicos de despensa e ferramentas simples para preparar
+    refeições rápidas à base de plantas em qualquer noite.
+  description_es: Básicos de despensa y utensilios sencillos para preparar cenas veganas
+    rápidas cualquier noche.
+  tags:
+  - kitchen
+  - plant-based
+  - easy
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - plant-based pantry staples
+  - vegan weeknight meals
+  - quick vegan meal kit
+  product_ids:
+  - '322173'
+  - '195344'
+  - '197674'
+  - '205272'
+  - '814023'
+  - '814514'
+  - '891724'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:25:04.193224Z'
+- id: at-home-date-night-drinks
+  title_en: At-Home Date Night Drinks
+  title_pt: Bebidas para noite de encontro em casa
+  title_es: Bebidas para noche de cita en casa
+  description_en: Cocktail tools, mixers and glassware to mix special drinks for a
+    cozy night in.
+  description_pt: Utensílios de cocktail, misturadores e copos para preparar bebidas
+    especiais para uma noite acolhedora em casa.
+  description_es: Utensilios de coctelería, mezcladores y copas para preparar bebidas
+    especiales para una noche acogedora en casa.
+  tags:
+  - home
+  - drinks
+  - date-night
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - cocktail shaker set
+  - drink mixers mixers
+  - glassware cocktail glasses
+  - bar tools cocktail muddler
+  product_ids:
+  - '689928'
+  - '1019524'
+  - '1026449'
+  - '249484'
+  - '249290'
+  - '249310'
+  - '307687'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:25:11.133768Z'
+- id: quick-fix-tech-cables-chargers
+  title_en: Quick Fix Tech Cables & Chargers
+  title_pt: Cabos e carregadores para solução rápida
+  title_es: Cables y cargadores para solución rápida
+  description_en: Compact, reliable chargers and cable organizers to stop tech headaches
+    fast.
+  description_pt: Carregadores compactos e fiáveis e organizadores de cabos para acabar
+    com problemas tecnológicos rapidamente.
+  description_es: Cargadores compactos y fiables y organizadores de cables para acabar
+    con problemas tecnológicos rápidamente.
+  tags:
+  - tech
+  - accessories
+  - travel
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - portable phone charger
+  - USB-C charging cable
+  - cable organizer
+  - wall charger compact
+  product_ids:
+  - '1122832'
+  - '205402'
+  - '205391'
+  - '205387'
+  - '824520'
+  - '1121465'
+  - '572468'
+  - '1121475'
+  - '1121488'
+  - '627811'
+  - '762673'
+  - '760930'
+  - '689527'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:25:21.720545Z'
+- id: sustainable-picnic-tableware-set
+  title_en: Sustainable picnic tableware set
+  title_pt: Louça de piquenique sustentável
+  title_es: Vajilla de picnic sostenible
+  description_en: Reusable and lightweight tableware for eco-friendly outdoor meals.
+  description_pt: Louça reutilizável e leve para refeições ao ar livre ecológicas.
+  description_es: Vajilla reutilizable y ligera para comidas al aire libre eco‑friendly.
+  tags:
+  - sustainable
+  - picnic
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - sustainable picnic tableware
+  - reusable picnic plates set
+  - bamboo picnic utensils
+  - eco-friendly outdoor dinnerware
+  product_ids:
+  - '254393'
+  - '204951'
+  - '1035570'
+  - '1035558'
+  - '996166'
+  - '1096206'
+  - '350461'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:25:47.861060Z'
+- id: quick-beach-to-bar-looks
+  title_en: Quick beach-to-bar looks
+  title_pt: Looks rápidos praia‑para‑bar
+  title_es: Looks rápidos de playa a bar
+  description_en: Easy outfits and accessories that go from sand to sunset drinks.
+  description_pt: Roupas e acessórios fáceis que vão da areia ao pôr do sol num copo.
+  description_es: Outfits y accesorios fáciles que van de la arena a la puesta de
+    sol y copas.
+  tags:
+  - fashion
+  - summer
+  - travel
+  category: fashion
+  audience: women
+  seasons:
+  - summer
+  search_queries:
+  - women's beach cover-up dress
+  - linen button-down shirt women
+  - wide-brim sun hat straw
+  - platform sandals casual
+  product_ids:
+  - '243140'
+  - '1003789'
+  - '900312'
+  - '1048897'
+  - '904273'
+  - '900065'
+  - '1074873'
+  - '263458'
+  - '879868'
+  - '1113194'
+  - '1113196'
+  - '987846'
+  - '989848'
+  - '1006754'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:25:56.033764Z'
+- id: study-desk-cable-tidy-up
+  title_en: Study desk cable tidy-up
+  title_pt: Organização de cabos para secretária
+  title_es: Organiza cables para el escritorio
+  description_en: Small gadgets and organizers to keep cords neat while studying or
+    working.
+  description_pt: Gadgets e organizadores pequenos para manter os cabos arrumados
+    a estudar ou trabalhar.
+  description_es: Pequeños gadgets y organizadores para mantener los cables ordenados
+    al estudiar o trabajar.
+  tags:
+  - tech
+  - organization
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - desk cable organizer
+  - cable clips and holders
+  - under-desk cable tray
+  - USB charging cable tidy
+  product_ids:
+  - '340743'
+  - '959037'
+  - '1121454'
+  - '1121374'
+  - '205438'
+  - '205443'
+  - '205420'
+  - '340848'
+  - '340884'
+  - '253983'
+  - '253577'
+  - '912833'
+  - '335338'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:26:04.585170Z'
+- id: low-effort-plant-styling-picks
+  title_en: Low-effort plant styling picks
+  title_pt: Plantas fáceis para decorar
+  title_es: Plantas fáciles para decorar
+  description_en: Low-maintenance plants and pots that instantly lift any room’s vibe.
+  description_pt: Plantas e vasos de baixa manutenção que valorizam instantaneamente
+    qualquer divisão.
+  description_es: Plantas y macetas de bajo mantenimiento que elevan al instante cualquier
+    estancia.
+  tags:
+  - home
+  - plants
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - easy-care houseplants
+  - low-maintenance potted plants
+  - indoor succulents
+  - decorative plant pots
+  product_ids:
+  - '990388'
+  - '256702'
+  - '356795'
+  - '205266'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:26:15.503509Z'
+- id: after-school-snack-box-ideas
+  title_en: After-school snack box ideas
+  title_pt: Lanches rápidos pós‑escola
+  title_es: Ideas de snack para después del cole
+  description_en: Healthy and portable snack options kids will actually eat after
+    school.
+  description_pt: Opções de lanches saudáveis e portáteis que as crianças realmente
+    comem depois da escola.
+  description_es: Opciones de snacks saludables y portátiles que los niños sí comerán
+    después del colegio.
+  tags:
+  - kids
+  - food
+  category: kids
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - kids snack box
+  - portable kids snacks
+  - healthy snack packs
+  product_ids:
+  - '678063'
+  - '1042360'
+  - '892692'
+  - '892622'
+  - '1042402'
+  - '1042389'
+  - '1042427'
+  - '1109412'
+  - '1011539'
+  - '975369'
+  - '398426'
+  - '399171'
+  - '750897'
+  - '399614'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:26:23.088909Z'
+- id: cosy-balcony-movie-nights
+  title_en: Cosy balcony movie nights
+  title_pt: Noites de cinema na varanda
+  title_es: Noches de cine en el balcón
+  description_en: Comfy blankets, portable projectors and snack setups for balcony
+    screenings.
+  description_pt: Cobertores confortáveis, projetores portáteis e snacks para sessões
+    na varanda.
+  description_es: Mantas cómodas, proyectores portátiles y snacks para sesiones en
+    el balcón.
+  tags:
+  - home
+  - entertainment
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - autumn
+  search_queries:
+  - portable projector
+  - outdoor blanket throw
+  - patio string lights
+  - snack serving tray
+  product_ids:
+  - '627646'
+  - '1003569'
+  - '950854'
+  - '913108'
+  - '410397'
+  - '410375'
+  - '257570'
+  - '1047326'
+  - '761134'
+  - '671450'
+  - '1006550'
+  - '254529'
+  - '690134'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:26:32.896231Z'
+- id: quick-freshen-up-toiletries-kit
+  title_en: Quick freshen-up toiletries kit
+  title_pt: Kit de higiene rápida
+  title_es: Kit de aseo rápido
+  description_en: Compact toiletries and freshening products for busy days or short
+    trips.
+  description_pt: Produtos de higiene compactos e refrescantes para dias ocupados
+    ou curtas viagens.
+  description_es: Aseo compacto y productos refrescantes para días ajetreados o viajes
+    cortos.
+  tags:
+  - travel
+  - health
+  category: travel
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - travel toiletries kit
+  - compact hygiene kit
+  - refreshing travel essentials
+  product_ids:
+  - '1006878'
+  - '400296'
+  - '1101572'
+  - '1109405'
+  - '898888'
+  - '982245'
+  - '764990'
+  - '672541'
+  - '1019670'
+  - '1011540'
+  - '672913'
+  - '956855'
+  - '960090'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:26:41.381095Z'
+- id: casual-work-lunch-upgrades
+  title_en: Casual work lunch upgrades
+  title_pt: Melhorias para almoço no trabalho
+  title_es: Mejoras para la comida del curro
+  description_en: Easy containers, seasonings and gadgets to make office lunches tastier.
+  description_pt: Recipientes, temperos e gadgets fáceis para tornar almoços de escritório
+    mais saborosos.
+  description_es: Recipientes, condimentos y gadgets fáciles para hacer más sabrosas
+    las comidas en la oficina.
+  tags:
+  - kitchen
+  - office
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - meal prep containers
+  - portable lunch containers
+  - salad dressing bottle
+  - office food gadgets
+  product_ids:
+  - '670137'
+  - '340542'
+  - '892512'
+  - '892462'
+  - '399912'
+  - '400380'
+  - '807791'
+  - '954666'
+  - '1026490'
+  - '961767'
+  - '1003461'
+  - '1003461'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:26:50.037779Z'
+- id: rainy-day-kid-craft-box
+  title_en: Rainy-day kid craft box
+  title_pt: Caixa de artes para dias chuvosos
+  title_es: Caja de manualidades para días lluviosos
+  description_en: Simple craft supplies and kits to keep kids busy and creative indoors.
+  description_pt: Materiais e kits de artes simples para manter as crianças ocupadas
+    e criativas dentro de casa.
+  description_es: Materiales y kits de manualidades sencillos para mantener a los
+    niños entretenidos y creativos en casa.
+  tags:
+  - kids
+  - indoor
+  category: kids
+  audience: kids
+  seasons:
+  - autumn
+  - winter
+  search_queries:
+  - kids craft kit
+  - children's art supplies
+  - indoor activity kits
+  product_ids:
+  - '954428'
+  - '954339'
+  - '953758'
+  - '961370'
+  - '961444'
+  - '954318'
+  - '763719'
+  - '1023754'
+  - '892715'
+  - '892701'
+  - '657015'
+  - '953703'
+  - '962193'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:26:57.708551Z'
+- id: compact-zero-waste-kitchen-tools
+  title_en: Compact zero-waste kitchen tools
+  title_pt: Utensílios de cozinha zero‑waste compactos
+  title_es: Utensilios de cocina cero‑residuos compactos
+  description_en: Space-saving reusable tools that reduce waste in small kitchens.
+  description_pt: Utensílios reutilizáveis e compactos que reduzem o desperdício em
+    cozinhas pequenas.
+  description_es: Utensilios reutilizables y compactos que reducen residuos en cocinas
+    pequeñas.
+  tags:
+  - sustainable
+  - kitchen
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - compact reusable kitchen tools
+  - space saving kitchen utensils
+  - zero waste food storage
+  - collapsible kitchen gadgets
+  product_ids:
+  - '1026473'
+  - '204921'
+  - '689895'
+  - '690116'
+  - '690140'
+  - '945296'
+  - '1026490'
+  - '954666'
+  - '1051831'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:27:06.312391Z'
+- id: sunrise-jog-essentials
+  title_en: Sunrise jog essentials
+  title_pt: Essenciais para corrida ao nascer do sol
+  title_es: Esenciales para correr al amanecer
+  description_en: Lightweight gear and accessories to make your morning runs safer
+    and more comfortable.
+  description_pt: Equipamento leve e acessórios para tornar as suas corridas matinais
+    mais seguras e confortáveis.
+  description_es: Equipamiento ligero y accesorios para que tus carreras matutinas
+    sean más seguras y cómodas.
+  tags:
+  - fitness
+  - running
+  category: fitness
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - reflective running jacket
+  - running headlamp
+  - lightweight running shoes
+  product_ids:
+  - '364723'
+  - '342782'
+  - '671479'
+  - '1008427'
+  - '901669'
+  - '902178'
+  - '901179'
+  - '906525'
+  - '901122'
+  - '901060'
+  - '1035616'
+  - '300643'
+  - '240382'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:27:33.902519Z'
+- id: compact-balcony-cocktail-kit
+  title_en: Compact balcony cocktail kit
+  title_pt: Kit compacto para cocktails na varanda
+  title_es: Kit compacto para cócteles en el balcón
+  description_en: Space-saving bar tools and mixers for making cocktails on small
+    balconies.
+  description_pt: Utensílios e misturadores que poupam espaço para preparar cocktails
+    em varandas pequenas.
+  description_es: Herramientas de bar y mezcladores que ahorran espacio para preparar
+    cócteles en balcones pequeños.
+  tags:
+  - home
+  - drinks
+  category: home
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - compact cocktail kit
+  - balcony bar tools
+  - small-space cocktail set
+  product_ids:
+  - '385872'
+  - '988968'
+  - '1019524'
+  - '689928'
+  - '1026449'
+  - '249484'
+  - '198284'
+  - '340245'
+  - '146803'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:27:43.564601Z'
+- id: quick-toddler-snack-prep
+  title_en: Quick toddler snack prep
+  title_pt: Preparação rápida de snacks para recém-andantes
+  title_es: Preparación rápida de meriendas para niños pequeños
+  description_en: Easy-to-pack snacks and simple prep tools that make outings with
+    toddlers smoother.
+  description_pt: Snacks fáceis de embalar e utensílios simples que tornam as saídas
+    com crianças pequenas mais fáceis.
+  description_es: Meriendas fáciles de preparar y utensilios sencillos que hacen las
+    salidas con niños pequeños más cómodas.
+  tags:
+  - kids
+  - snacks
+  category: kids
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - kids snack containers
+  - toddler snack packs
+  - portable snack containers
+  - baby snack feeder
+  product_ids:
+  - '678063'
+  - '892692'
+  - '892622'
+  - '1042360'
+  - '1042402'
+  - '1042389'
+  - '1011539'
+  - '974142'
+  - '399859'
+  - '399171'
+  - '399479'
+  - '400815'
+  - '1011539'
+  - '1042366'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:27:52.374869Z'
+- id: minimalist-weekend-carry
+  title_en: Minimalist weekend carry
+  title_pt: Mala de fim de semana minimalista
+  title_es: Equipaje minimalista de fin de semana
+  description_en: Compact bags and multipurpose items to pack light for a short trip.
+  description_pt: Bolsas compactas e artigos polivalentes para fazer as malas com
+    leveza numa escapadinha.
+  description_es: Bolsas compactas y artículos multipropósito para viajar ligero en
+    una escapada corta.
+  tags:
+  - travel
+  - bags
+  category: travel
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - compact weekender bag
+  - travel packing cubes
+  - convertible crossbody bag
+  product_ids:
+  - '901958'
+  - '902068'
+  - '355635'
+  - '1117472'
+  - '1047423'
+  - '1047413'
+  - '1006667'
+  - '936340'
+  - '933758'
+  - '934435'
+  - '926723'
+  - '629188'
+  - '901595'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:28:00.524399Z'
+- id: cold-weather-dog-walks
+  title_en: Cold-weather dog walks
+  title_pt: Passeios de cão em tempo frio
+  title_es: Paseos con perro en tiempo frío
+  description_en: Warm layers and safety items to keep your dog walks comfortable
+    in cold months.
+  description_pt: Camadas quentes e artigos de segurança para tornar os passeios com
+    o seu cão mais confortáveis nos meses frios.
+  description_es: Capas cálidas y artículos de seguridad para que los paseos con tu
+    perro sean más cómodos en los meses fríos.
+  tags:
+  - pets
+  - outdoor
+  category: pets
+  audience: all
+  seasons:
+  - winter
+  search_queries:
+  - dog winter coat
+  - reflective dog leash
+  - dog booties waterproof
+  product_ids:
+  - '831136'
+  - '832545'
+  - '829236'
+  - '401062'
+  - '961715'
+  - '953522'
+  - '953843'
+  - '951490'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:28:08.422661Z'
+- id: desk-declutter-starters
+  title_en: Desk declutter starters
+  title_pt: Iniciadores para desentupir a secretária
+  title_es: Iniciadores para desordenar el escritorio
+  description_en: Simple organisers and tech fixes to clear desk clutter and boost
+    focus.
+  description_pt: Organizadores simples e soluções tecnológicas para reduzir a desordem
+    na secretária e aumentar a concentração.
+  description_es: Organizadores sencillos y soluciones tecnológicas para reducir el
+    desorden en el escritorio y aumentar la concentración.
+  tags:
+  - home
+  - tech
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - desk cable organizer
+  - desktop monitor stand with storage
+  - wireless charger pad
+  - desk drawer organizer
+  product_ids:
+  - '912884'
+  - '1103565'
+  - '1103632'
+  - '762029'
+  - '762964'
+  - '343084'
+  - '340743'
+  - '205443'
+  - '205438'
+  - '341274'
+  - '205344'
+  - '1121465'
+  - '761282'
+  - '1064295'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:28:17.658585Z'
+- id: backyard-pizza-night
+  title_en: Backyard pizza night
+  title_pt: Noite de pizza no quintal
+  title_es: Noche de pizza en el jardín
+  description_en: Tools, toppings and outdoor ovens for an easy backyard pizza evening
+    with friends.
+  description_pt: Utensílios, toppings e fornos exteriores para uma noite de pizza
+    fácil no quintal com amigos.
+  description_es: Utensilios, toppings y hornos exteriores para una noche de pizza
+    fácil en el jardín con amigos.
+  tags:
+  - food
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - outdoor pizza oven
+  - pizza peel set
+  - backyard pizza toppings kit
+  product_ids:
+  - '348762'
+  - '1005846'
+  - '412024'
+  - '1005835'
+  - '951492'
+  - '724134'
+  - '991459'
+  - '1006141'
+  - '368176'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:28:27.188346Z'
+- id: on-the-go-sunscreen-essentials
+  title_en: On-the-go sunscreen essentials
+  title_pt: Protetor solar essencial para levar
+  title_es: Esenciales de protector solar para llevar
+  description_en: Portable sunscreens and protective accessories to stay sun-safe
+    during active days outside.
+  description_pt: Protetores solares portáteis e acessórios de proteção para ficar
+    protegido nos dias ativos ao ar livre.
+  description_es: Protectores solares portátiles y accesorios protectores para mantenerte
+    seguro bajo el sol durante días activos al aire libre.
+  tags:
+  - health
+  - outdoor
+  category: health
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - travel sunscreen spray
+  - spf face stick
+  - sunscreen roll-on
+  - portable sun hat
+  product_ids:
+  - '671659'
+  - '665363'
+  - '1086377'
+  - '986512'
+  - '673390'
+  - '672927'
+  - '1006626'
+  - '1006755'
+  - '1006765'
+  - '1006758'
+  - '892769'
+  - '766663'
+  - '399936'
+  - '677959'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:28:36.198644Z'
+- id: cycling-to-work-kit
+  title_en: Cycling to Work Kit
+  title_pt: Kit para ir de bicicleta ao trabalho
+  title_es: Kit para ir en bici al trabajo
+  description_en: Everything you need for a comfortable, safe and stylish bike commute.
+  description_pt: Tudo o que precisa para um trajeto de bicicleta confortável, seguro
+    e com estilo.
+  description_es: Todo lo que necesitas para un trayecto en bici cómodo, seguro y
+    con estilo.
+  tags:
+  - commute
+  - cycling
+  - outdoors
+  category: travel
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - commuter bike accessories
+  - bike commuter helmet
+  - bicycle panniers
+  - reflective cycling jacket
+  product_ids:
+  - '969112'
+  - '953565'
+  - '353188'
+  - '628915'
+  - '360890'
+  - '1115760'
+  - '1117651'
+  - '1046177'
+  - '1046157'
+  - '353534'
+  - '969114'
+  - '1042418'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:28:56.705624Z'
+- id: fresh-scented-bedding-picks
+  title_en: Fresh Scented Bedding Picks
+  title_pt: Peças de roupa de cama com aroma fresco
+  title_es: Selección de ropa de cama con aroma fresco
+  description_en: Linens and products that keep your bed smelling and feeling fresh
+    night after night.
+  description_pt: Lençóis e produtos que mantêm a sua cama com cheiro e sensação de
+    frescura noite após noite.
+  description_es: Ropa de cama y productos que mantienen tu cama con olor y sensación
+    fresca noche tras noche.
+  tags:
+  - bedroom
+  - home
+  - comfort
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - scented bed sheets
+  - linen spray for bedding
+  - aromatic pillow mist
+  product_ids:
+  - '399963'
+  - '833162'
+  - '979400'
+  - '987204'
+  - '766127'
+  - '846767'
+  - '1035965'
+  - '993243'
+  - '251244'
+  - '252749'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:04.244020Z'
+- id: first-apartment-kitchen-basics
+  title_en: First Apartment Kitchen Basics
+  title_pt: Básicos de cozinha para primeiro apartamento
+  title_es: Básicos de cocina para el primer piso
+  description_en: Starter cookware and tools every new home needs to cook everyday
+    meals.
+  description_pt: Panelas e utensílios básicos que toda nova casa precisa para cozinhar
+    no dia a dia.
+  description_es: Utensilios y menaje básicos que todo hogar nuevo necesita para cocinar
+    a diario.
+  tags:
+  - kitchen
+  - starter
+  - home
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - starter cookware set
+  - essential kitchen utensils
+  - nonstick frying pan
+  - cutlery set for apartment
+  product_ids:
+  - '697402'
+  - '818022'
+  - '817935'
+  - '983230'
+  - '690250'
+  - '952604'
+  - '1006590'
+  - '991416'
+  - '930427'
+  - '953962'
+  - '960063'
+  - '670130'
+  - '671115'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:11.428045Z'
+- id: back-to-school-bento-lunches
+  title_en: Back-to-school Bento Lunches
+  title_pt: Marmitas Bento para regresso às aulas
+  title_es: Comidas Bento para la vuelta al cole
+  description_en: Compact lunchboxes and accessories to pack varied, balanced school
+    meals.
+  description_pt: Caixas de almoço compactas e acessórios para preparar refeições
+    escolares variadas e equilibradas.
+  description_es: Fiambreras y accesorios compactos para preparar comidas escolares
+    variadas y equilibradas.
+  tags:
+  - kids
+  - lunch
+  - school
+  category: kids
+  audience: kids
+  seasons:
+  - autumn
+  search_queries:
+  - bento lunch box kids
+  - compartmentalized lunchbox
+  - insulated kids lunch bag
+  - reusable snack containers
+  product_ids:
+  - '892462'
+  - '892512'
+  - '1117626'
+  - '204947'
+  - '807790'
+  - '807789'
+  - '892692'
+  - '892622'
+  - '1042406'
+  - '1042360'
+  - '1093429'
+  - '1093432'
+  - '892537'
+  - '892548'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:19.715422Z'
+- id: weekend-diy-home-fixes
+  title_en: Weekend DIY Home Fixes
+  title_pt: Pequenas reparações DIY para o fim de semana
+  title_es: Pequeñas reparaciones DIY para el fin de semana
+  description_en: Handy tools and quick-fix products for common small home repairs
+    and updates.
+  description_pt: Ferramentas práticas e produtos para pequenas reparações e atualizações
+    domésticas comuns.
+  description_es: Herramientas útiles y productos para pequeñas reparaciones y mejoras
+    domésticas comunes.
+  tags:
+  - home
+  - tools
+  - DIY
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - multi tool kit
+  - home repair tools
+  - quick fix adhesive
+  - patch and repair kit
+  product_ids:
+  - '669831'
+  - '671326'
+  - '1019698'
+  - '353527'
+  - '358879'
+  - '404859'
+  - '367720'
+  - '959382'
+  - '959774'
+  - '1047121'
+  - '670446'
+  - '348102'
+  - '341383'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:28.104951Z'
+- id: sunscreen-after-sun-musts
+  title_en: Sunscreen & After-Sun Musts
+  title_pt: 'Essenciais: protetor solar e pós-sol'
+  title_es: 'Imprescindibles: protector solar y after-sun'
+  description_en: Sun care products to protect skin during the day and soothe it after
+    beach or pool time.
+  description_pt: Produtos de proteção solar para proteger a pele durante o dia e
+    suavizá‑la após praia ou piscina.
+  description_es: Productos de protección solar para proteger la piel durante el día
+    y calmarla tras la playa o la piscina.
+  tags:
+  - beauty
+  - summer
+  - skincare
+  category: beauty
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - sunscreen SPF 50
+  - broad spectrum sunscreen
+  - after sun lotion
+  - aloe vera gel sunburn
+  product_ids:
+  - '751633'
+  - '673317'
+  - '672930'
+  - '883024'
+  - '1006661'
+  - '950100'
+  - '950046'
+  - '664451'
+  - '1006742'
+  - '1006684'
+  - '766564'
+  - '677828'
+  - '1086572'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:36.171252Z'
+- id: portable-picnic-coffee-gear
+  title_en: Portable Picnic Coffee Gear
+  title_pt: Café portátil para piqueniques
+  title_es: Café portátil para picnics
+  description_en: Compact coffee makers and accessories to brew a great cup outdoors.
+  description_pt: Cafeteiras compactas e acessórios para preparar um café excelente
+    ao ar livre.
+  description_es: Cafeteras compactas y accesorios para preparar un buen café al aire
+    libre.
+  tags:
+  - outdoors
+  - coffee
+  - travel
+  category: kitchen
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - portable coffee maker
+  - travel french press
+  - camping espresso maker
+  product_ids:
+  - '689945'
+  - '205389'
+  - '946765'
+  - '996491'
+  - '1096227'
+  - '1096223'
+  - '1096216'
+  - '1117596'
+  - '349660'
+  - '690291'
+  - '1003461'
+  - '1129609'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:43.904801Z'
+- id: eco-friendly-laundry-swaps
+  title_en: Eco-Friendly Laundry Swaps
+  title_pt: Alternativas ecológicas para a roupa
+  title_es: Alternativas ecológicas para la colada
+  description_en: Low-waste detergents and tools to make laundry greener and gentler
+    on clothes.
+  description_pt: Detergentes de baixo desperdício e ferramentas para tornar a lavagem
+    mais ecológica e suave para as roupas.
+  description_es: Detergentes de bajo impacto y accesorios para hacer la colada más
+    ecológica y suave con la ropa.
+  tags:
+  - home
+  - sustainable
+  - laundry
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - eco laundry detergent
+  - laundry detergent strips
+  - wool dryer balls
+  - zero waste laundry kits
+  product_ids:
+  - '1129575'
+  - '375285'
+  - '671202'
+  - '951208'
+  - '986829'
+  - '370826'
+  - '676475'
+  - '1006135'
+  - '1006110'
+  - '724043'
+  - '952323'
+  - '124309'
+  - '68426'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:51.764359Z'
+- id: stylish-rainy-day-outerwear
+  title_en: Stylish Rainy-Day Outerwear
+  title_pt: Casacos elegantes para dias de chuva
+  title_es: Prendas exteriores elegantes para días de lluvia
+  description_en: Waterproof coats, boots and accessories that keep you dry without
+    sacrificing style.
+  description_pt: Casacos impermeáveis, botas e acessórios que o mantêm seco sem perder
+    o estilo.
+  description_es: Abrigos impermeables, botas y accesorios que te mantienen seco sin
+    perder estilo.
+  tags:
+  - fashion
+  - outerwear
+  - rain
+  category: fashion
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - waterproof trench coat
+  - rain boots women
+  - waterproof rain jacket
+  - umbrella compact travel
+  product_ids:
+  - '1108856'
+  - '1108309'
+  - '1129439'
+  - '1108772'
+  - '1108421'
+  - '900200'
+  - '1026504'
+  - '354507'
+  - '354263'
+  - '354447'
+  - '396787'
+  - '875789'
+  - '1108709'
+  - '657016'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:29:59.213095Z'
+- id: home-office-ergonomic-upgrades
+  title_en: Home office ergonomic upgrades
+  title_pt: Melhorias ergonómicas para o escritório em casa
+  title_es: Mejoras ergonómicas para la oficina en casa
+  description_en: Small items to make your work-from-home setup comfier and healthier.
+  description_pt: Pequenos artigos para tornar o seu espaço de trabalho em casa mais
+    confortável e saudável.
+  description_es: Pequeños artículos para que tu espacio de trabajo en casa sea más
+    cómodo y saludable.
+  tags:
+  - home
+  - office
+  - comfort
+  category: tech
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - ergonomic office accessories
+  - standing desk converter
+  - adjustable monitor stand
+  - lumbar support cushion
+  product_ids:
+  - '989776'
+  - '989514'
+  - '990159'
+  - '968022'
+  - '333201'
+  - '351554'
+  - '1026448'
+  - '1103636'
+  - '1006981'
+  - '824543'
+  - '351898'
+  - '343896'
+  - '960214'
+  - '1103565'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:30:34.164440Z'
+- id: street-to-gym-outfits
+  title_en: Street-to-gym outfits
+  title_pt: Looks do dia para o ginásio
+  title_es: Outfits de calle al gimnasio
+  description_en: Versatile pieces that look good on the street and work for a quick
+    workout.
+  description_pt: Peças versáteis que ficam bem na rua e servem para um treino rápido.
+  description_es: Prendas versátiles que sirven tanto para la calle como para un entrenamiento
+    rápido.
+  tags:
+  - fashion
+  - active
+  - everyday
+  category: fashion
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - athleisure outfits women
+  - men's track jackets
+  - versatile leggings streetwear
+  product_ids:
+  - '901966'
+  - '900199'
+  - '901731'
+  - '900577'
+  - '901298'
+  - '901254'
+  - '901422'
+  - '656658'
+  - '899777'
+  - '899953'
+  - '864881'
+  - '354507'
+  - '931627'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:30:43.505793Z'
+- id: compact-picnic-beach-baskets
+  title_en: Compact picnic & beach baskets
+  title_pt: Cestos compactos para piquenique e praia
+  title_es: Cestas compactas para picnic y playa
+  description_en: Portable baskets and organizers that pack food and essentials neatly.
+  description_pt: Cestos e organizadores portáteis que arrumam comida e essenciais
+    com ordem.
+  description_es: Cestas y organizadores portátiles que guardan comida y esenciales
+    con orden.
+  tags:
+  - picnic
+  - travel
+  - outdoor
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - compact picnic basket
+  - portable beach basket
+  - insulated picnic tote
+  product_ids:
+  - '690243'
+  - '1047408'
+  - '1047021'
+  - '251041'
+  - '251319'
+  - '251110'
+  - '952021'
+  - '951106'
+  - '960185'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:30:51.769992Z'
+- id: student-desk-lighting-fixes
+  title_en: Student desk lighting fixes
+  title_pt: Soluções de iluminação para secretária de estudante
+  title_es: Soluciones de iluminación para escritorio de estudiante
+  description_en: Affordable lighting and accessories to reduce eye strain and boost
+    focus.
+  description_pt: Iluminação e acessórios acessíveis para reduzir a tensão ocular
+    e melhorar a concentração.
+  description_es: Iluminación y accesorios económicos para reducir la fatiga ocular
+    y aumentar la concentración.
+  tags:
+  - study
+  - home
+  - tech
+  category: home
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - desk lamp adjustable LED
+  - study table lighting kit
+  - clip-on reading light
+  product_ids:
+  - '358849'
+  - '1009165'
+  - '824486'
+  - '327187'
+  - '939903'
+  - '689967'
+  - '1042062'
+  - '1042058'
+  - '970453'
+  - '937401'
+  - '990378'
+  - '992510'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:30:59.600000Z'
+- id: low-effort-garden-gifts
+  title_en: Low-effort garden gifts
+  title_pt: Presentes fáceis para quem tem jardim
+  title_es: Regalos de bajo mantenimiento para jardín
+  description_en: Plants and tools that are beautiful but need minimal care, ideal
+    as gifts.
+  description_pt: Plantas e ferramentas bonitas que exigem poucos cuidados, perfeitas
+    para oferecer.
+  description_es: Plantas y herramientas bonitas que requieren poco mantenimiento,
+    ideales para regalar.
+  tags:
+  - garden
+  - gifts
+  - plants
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - low maintenance plants
+  - easy care garden tools
+  - succulent gift set
+  product_ids:
+  - '353000'
+  - '670499'
+  - '672696'
+  - '205266'
+  - '990388'
+  - '369039'
+  - '187230'
+  - '295084'
+  - '125261'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:31:09.112835Z'
+- id: scented-bedroom-refreshers
+  title_en: Scented bedroom refreshers
+  title_pt: Aromas para renovar o quarto
+  title_es: Ambientadores para renovar el dormitorio
+  description_en: Small scent upgrades to make your bedroom smell fresh and inviting.
+  description_pt: Pequenas melhorias aromáticas para deixar o quarto cheiroso e acolhedor.
+  description_es: Pequeñas mejoras aromáticas para que tu dormitorio huela fresco
+    y acogedor.
+  tags:
+  - home
+  - bedding
+  - scent
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bedroom air fresheners
+  - linen spray for bed
+  - scented sachets bedroom
+  product_ids:
+  - '833154'
+  - '698373'
+  - '750867'
+  - '979400'
+  - '846767'
+  - '766127'
+  - '882698'
+  - '882721'
+  - '882733'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:31:17.196400Z'
+- id: quick-fix-shoe-care-kit
+  title_en: Quick-fix shoe care kit
+  title_pt: Kit rápido de cuidados para calçado
+  title_es: Kit rápido de cuidado del calzado
+  description_en: Essential products to clean, protect, and revive shoes in minutes.
+  description_pt: Produtos essenciais para limpar, proteger e revitalizar calçado
+    em minutos.
+  description_es: Productos esenciales para limpiar, proteger y rejuvenecer zapatos
+    en minutos.
+  tags:
+  - fashion
+  - care
+  - maintenance
+  category: fashion
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - shoe cleaning kit
+  - shoe care kit
+  - shoe polish kit
+  - sneaker cleaning kit
+  product_ids:
+  - '862784'
+  - '355080'
+  - '354847'
+  - '354891'
+  - '1111521'
+  - '1109155'
+  - '833028'
+  - '278901'
+  - '909819'
+  - '690082'
+  - '690237'
+  - '826006'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:31:24.590713Z'
+- id: family-picnic-safety-pack
+  title_en: Family picnic safety pack
+  title_pt: Kit de segurança para piquenique em família
+  title_es: Pack de seguridad para picnic familiar
+  description_en: Practical safety and comfort items for picnics with kids and pets.
+  description_pt: Itens práticos de segurança e conforto para piqueniques com crianças
+    e animais de estimação.
+  description_es: Artículos prácticos de seguridad y comodidad para picnics con niños
+    y mascotas.
+  tags:
+  - family
+  - outdoor
+  - safety
+  category: kids
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - portable first aid kit
+  - picnic blanket waterproof
+  - child safety harness
+  - outdoor insect repellent spray
+  product_ids:
+  - '1047326'
+  - '257417'
+  - '690243'
+  - '252045'
+  - '251319'
+  - '670706'
+  - '371831'
+  - '352644'
+  - '399442'
+  - '672609'
+  - '830234'
+  - '829465'
+  - '962642'
+  - '963760'
+  - '1129609'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:31:33.138224Z'
+- id: no-fuss-outdoor-grilling-tools
+  title_en: No-fuss outdoor grilling tools
+  title_pt: Ferramentas simples para grelhados ao ar livre
+  title_es: Utensilios sin complicaciones para barbacoa exterior
+  description_en: Durable and easy-to-clean tools that make backyard grilling effortless.
+  description_pt: Ferramentas duráveis e fáceis de limpar que tornam o churrasco no
+    quintal simples.
+  description_es: Herramientas duraderas y fáciles de limpiar para que la barbacoa
+    sea sencilla.
+  tags:
+  - outdoor
+  - cooking
+  - bbq
+  category: kitchen
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - bbq grilling tools set
+  - stainless steel grill utensils
+  - outdoor barbecue accessories
+  product_ids:
+  - '944223'
+  - '689929'
+  - '344807'
+  - '347978'
+  - '232672'
+  - '943413'
+  - '671424'
+  - '959030'
+  - '944531'
+  - '672712'
+  - '1027620'
+  - '670497'
+  - '347256'
+  - '672375'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:31:41.887723Z'
+- id: picnic-friendly-portable-grills
+  title_en: Picnic-friendly portable grills
+  title_pt: Grelhas portáteis para piqueniques
+  title_es: Parrillas portátiles para picnic
+  description_en: Compact and easy grills and accessories for outdoor cooking on the
+    go.
+  description_pt: Grelhas compactas e acessórios fáceis para cozinhar ao ar livre.
+  description_es: Parrillas compactas y accesorios fáciles para cocinar al aire libre.
+  tags:
+  - outdoor
+  - bbq
+  - picnic
+  category: home
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - portable charcoal grill
+  - mini propane grill
+  - travel bbq accessories
+  product_ids:
+  - '944531'
+  - '959030'
+  - '347256'
+  - '991305'
+  - '990210'
+  - '990872'
+  - '690226'
+  - '689929'
+  - '862061'
+  - '697278'
+  - '1129609'
+  - '1003461'
+  - '311069'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:40:51.733017Z'
+- id: compact-weekend-hiking-snacks
+  title_en: Compact weekend hiking snacks
+  title_pt: Lanches compactos para caminhadas de fim de semana
+  title_es: Snacks compactos para rutas de fin de semana
+  description_en: Nutritious, lightweight snacks and containers to fuel short hikes.
+  description_pt: Lanches nutritivos e leves e recipientes para alimentar pequenas
+    caminhadas.
+  description_es: Snacks nutritivos, ligeros y recipientes para rutas cortas.
+  tags:
+  - hiking
+  - snacks
+  - outdoor
+  category: fitness
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - trail mix packets
+  - energy bars single serve
+  - reusable snack container
+  - lightweight hiking snacks
+  product_ids:
+  - '814383'
+  - '1008701'
+  - '814635'
+  - '814666'
+  - '814013'
+  - '880044'
+  - '400354'
+  - '678063'
+  - '670420'
+  - '204881'
+  - '1042406'
+  - '892692'
+  - '400688'
+  - '830074'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:41:01.241276Z'
+- id: one-bag-beach-getaway
+  title_en: One-bag beach getaway
+  title_pt: Escapadinha de praia numa mala só
+  title_es: Escapada a la playa con una sola bolsa
+  description_en: Everything you need for a short beach trip that fits in one bag.
+  description_pt: Tudo o que precisa para uma curta ida à praia que cabe numa mala.
+  description_es: Todo lo necesario para una escapada corta a la playa en una sola
+    bolsa.
+  tags:
+  - travel
+  - beach
+  - lightweight
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - lightweight beach bag
+  - carry-on beach outfit
+  - compact swimwear set
+  product_ids:
+  - '1081631'
+  - '1041979'
+  - '952762'
+  - '958331'
+  - '962406'
+  - '849327'
+  - '1046356'
+  - '926762'
+  - '900433'
+  - '959312'
+  - '672490'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:41:12.189610Z'
+- id: calm-bedtime-for-toddlers
+  title_en: Calm bedtime for toddlers
+  title_pt: Rotina de sono calma para bebés
+  title_es: Rutina de sueño tranquila para bebés
+  description_en: Soothing bedtime products and rituals to help toddlers wind down.
+  description_pt: Produtos e rituais calmantes para ajudar os bebés a adormecer.
+  description_es: Productos y rituales calmantes para ayudar a los niños pequeños
+    a dormir.
+  tags:
+  - kids
+  - sleep
+  - routine
+  category: kids
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - toddler sleep aids
+  - bedtime night light for kids
+  - kids sleepwear pajama set
+  product_ids:
+  - '1042359'
+  - '1042368'
+  - '1042047'
+  - '1042062'
+  - '743423'
+  - '973554'
+  - '971058'
+  - '1053579'
+  - '889488'
+  - '751387'
+  - '1041957'
+  - '158991'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:41:18.787260Z'
+- id: small-balcony-herb-garden
+  title_en: Small balcony herb garden
+  title_pt: Horta de ervas para terraços pequenos
+  title_es: Huerto de hierbas para balcones pequeños
+  description_en: Pots, tools and seeds to grow fresh herbs on tiny balconies.
+  description_pt: Vasos, ferramentas e sementes para cultivar ervas frescas em pequenos
+    terraços.
+  description_es: Macetas, herramientas y semillas para cultivar hierbas en balcones
+    pequeños.
+  tags:
+  - gardening
+  - balcony
+  - herbs
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - balcony herb pots
+  - herb planter kit
+  - compact herb seeds
+  - vertical planter for herbs
+  product_ids:
+  - '670764'
+  - '1047015'
+  - '671808'
+  - '671356'
+  - '671373'
+  - '363579'
+  - '384231'
+  - '205266'
+  - '205268'
+  - '205265'
+  - '313630'
+  - '301417'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:41:57.652569Z'
+- id: after-work-unwind-kit
+  title_en: After-work unwind kit
+  title_pt: Kit para relaxar depois do trabalho
+  title_es: Kit para desconectar después del trabajo
+  description_en: Simple products to help you relax and transition from work to home
+    time.
+  description_pt: Produtos simples para ajudar a relaxar e fazer a transição do trabalho
+    para casa.
+  description_es: Productos sencillos para ayudar a relajarse y pasar del trabajo
+    al hogar.
+  tags:
+  - wellness
+  - relax
+  - home
+  category: health
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - aromatherapy diffuser
+  - weighted blanket
+  - sleep mask
+  product_ids:
+  - '690185'
+  - '467516'
+  - '656899'
+  - '628262'
+  - '857203'
+  - '690110'
+  - '767318'
+  - '809543'
+  - '748645'
+  - '673082'
+  - '987640'
+  - '1085993'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:42:07.742942Z'
+- id: urban-cycling-essentials
+  title_en: Urban cycling essentials
+  title_pt: Essenciais para ciclistas urbanos
+  title_es: Esenciales para ciclismo urbano
+  description_en: Practical gear and accessories for safe and comfy city rides.
+  description_pt: Equipamento prático e acessórios para passeios urbanos seguros e
+    confortáveis.
+  description_es: Equipo práctico y accesorios para paseos urbanos seguros y cómodos.
+  tags:
+  - cycling
+  - commute
+  - gear
+  category: fitness
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - bike commuter helmet
+  - urban bike lights
+  - pannier bags
+  - bike lock cable
+  product_ids:
+  - '352068'
+  - '351793'
+  - '350742'
+  - '969112'
+  - '969085'
+  - '1042418'
+  - '953565'
+  - '830451'
+  - '354359'
+  - '350974'
+  - '824572'
+  - '926115'
+  - '932445'
+  - '969114'
+  - '963939'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:42:15.428334Z'
+- id: back-to-campus-dorm-decor
+  title_en: Back-to-campus dorm decor
+  title_pt: Decoração prática para residência
+  title_es: Deco práctica para residencia
+  description_en: Small, stylish items to personalize a student dorm without breaking
+    the bank.
+  description_pt: Pequenos artigos com estilo para personalizar uma residência estudantil
+    sem gastar muito.
+  description_es: Artículos pequeños y con estilo para personalizar una residencia
+    universitaria sin gastar mucho.
+  tags:
+  - students
+  - home
+  - college
+  category: home
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - dorm room decor
+  - compact storage bins
+  - wall tapestry for dorm
+  - bedside caddy organizer
+  product_ids:
+  - '250874'
+  - '251093'
+  - '992513'
+  - '850470'
+  - '759299'
+  - '759359'
+  - '333887'
+  - '950594'
+  - '395638'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:42:41.611547Z'
+- id: picnic-snacks-for-picky-kids
+  title_en: Picnic snacks for picky kids
+  title_pt: Lanches de piquenique para miúdos exigentes
+  title_es: Snacks de picnic para niños quisquillosos
+  description_en: Easy, packable snack ideas kids will actually eat on outdoor trips.
+  description_pt: Ideias de lanches fáceis e fáceis de levar que as crianças realmente
+    comem em saídas ao ar livre.
+  description_es: Ideas de snacks fáciles y plegables que los niños realmente comerán
+    en salidas al aire libre.
+  tags:
+  - kids
+  - snacks
+  - outdoors
+  category: kids
+  audience: kids
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - kid snack packs
+  - portable fruit snacks
+  - kids sandwich bites
+  product_ids:
+  - '1042360'
+  - '892692'
+  - '975369'
+  - '399859'
+  - '399171'
+  - '399479'
+  - '399031'
+  - '398930'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:42:50.411980Z'
+- id: minimal-beach-bag-essentials
+  title_en: Minimal beach bag essentials
+  title_pt: Essenciais minimalistas para a praia
+  title_es: Esenciales minimalistas para la playa
+  description_en: What to pack in a compact beach bag for a hassle-free day by the
+    sea.
+  description_pt: O que levar numa bolsa de praia compacta para um dia sem complicações
+    junto ao mar.
+  description_es: Qué llevar en un bolso de playa compacto para un día sin complicaciones
+    junto al mar.
+  tags:
+  - beach
+  - travel
+  - summer
+  category: travel
+  audience: all
+  seasons:
+  - summer
+  search_queries:
+  - small beach tote
+  - compact sunscreen stick
+  - foldable sun hat
+  - waterproof phone pouch
+  product_ids:
+  - '1081631'
+  - '1081661'
+  - '1081635'
+  - '951106'
+  - '673846'
+  - '665717'
+  - '70022'
+  - '959002'
+  - '908601'
+  - '70075'
+  - '1129588'
+  - '1006765'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:42:59.264809Z'
+- id: one-pan-dinner-upgrades
+  title_en: One-pan dinner upgrades
+  title_pt: Melhorias para pratos numa só frigideira
+  title_es: Mejoras para cenas de una sola sartén
+  description_en: Ingredients and tools that make one-pan dinners tastier and faster.
+  description_pt: Ingredientes e utensílios que tornam os pratos numa só frigideira
+    mais saborosos e rápidos.
+  description_es: Ingredientes y utensilios que hacen las cenas de una sola sartén
+    más sabrosas y rápidas.
+  tags:
+  - kitchen
+  - dinner
+  - easy
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - one pan skillet
+  - sheet pan dinner kit
+  - cast iron skillet
+  - one pan meal seasoning
+  product_ids:
+  - '876508'
+  - '876505'
+  - '1035569'
+  - '1042925'
+  - '663699'
+  - '679258'
+  - '700186'
+  - '671287'
+  - '357235'
+  - '960641'
+  - '670130'
+  - '959961'
+  - '164382'
+  - '121566'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:43:08.751151Z'
+- id: weekend-pottery-starter-kit
+  title_en: Weekend pottery starter kit
+  title_pt: Kit inicial de olaria para fins de semana
+  title_es: Kit inicial de cerámica para fines de semana
+  description_en: Basic tools and clay picks for trying pottery as a relaxed weekend
+    hobby.
+  description_pt: Ferramentas básicas e opções de barro para experimentar olaria como
+    hobby descontraído ao fim de semana.
+  description_es: Herramientas básicas y opciones de arcilla para probar la cerámica
+    como hobby relajado de fin de semana.
+  tags:
+  - hobbies
+  - home
+  - crafts
+  category: home
+  audience: all
+  seasons:
+  - autumn
+  - spring
+  search_queries:
+  - pottery starter kit
+  - pottery clay tools
+  - handbuilding clay set
+  product_ids:
+  - '892332'
+  - '1046787'
+  - '1046810'
+  - '961725'
+  - '357179'
+  - '410735'
+  - '249991'
+  - '251170'
+  - '988748'
+  - '189009'
+  - '175693'
+  - '303983'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:43:17.444056Z'
+- id: compact-picnic-cookware-sets
+  title_en: Compact picnic cookware sets
+  title_pt: Conjuntos compactos de cozinha para piquenique
+  title_es: Sets compactos de cocina para picnic
+  description_en: Space-saving pots, pans and utensils perfect for outdoor meals.
+  description_pt: Panelas, frigideiras e utensílios que poupam espaço, perfeitos para
+    refeições ao ar livre.
+  description_es: Ollas, sartenes y utensilios que ahorran espacio, perfectos para
+    comidas al aire libre.
+  tags:
+  - picnic
+  - outdoors
+  - kitchen
+  category: kitchen
+  audience: all
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - compact camping cookware
+  - nesting cookware set
+  - portable picnic pots pans
+  product_ids:
+  - '349660'
+  - '944531'
+  - '690243'
+  - '252045'
+  - '690226'
+  - '690261'
+  - '1003461'
+  - '410495'
+  - '410486'
+  - '954324'
+  - '572325'
+  - '1129609'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:43:27.507661Z'
+- id: lightweight-urban-bike-kit
+  title_en: Lightweight urban bike kit
+  title_pt: Kit leve para ciclismo urbano
+  title_es: Kit ligero para bici urbana
+  description_en: Compact accessories to make daily city cycling safer and more convenient.
+  description_pt: Acessórios compactos para tornar o ciclismo urbano diário mais seguro
+    e prático.
+  description_es: Accesorios compactos para que el ciclismo urbano diario sea más
+    seguro y cómodo.
+  tags:
+  - cycling
+  - commute
+  - urban
+  category: fitness
+  audience: all
+  seasons:
+  - spring
+  - autumn
+  search_queries:
+  - urban bike lights
+  - commuter bike fenders
+  - compact bike lock
+  - bike saddle bag
+  product_ids:
+  - '1009138'
+  - '689961'
+  - '830451'
+  - '829612'
+  - '628915'
+  - '360890'
+  - '350742'
+  - '352068'
+  - '670908'
+  - '829387'
+  - '1009163'
+  - '1087643'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:43:34.852158Z'
+- id: backyard-herb-salad-patch
+  title_en: Backyard Herb & Salad Patch
+  title_pt: Cantinho de Ervas e Saladas
+  title_es: Rincón de Hierbas y Ensaladas
+  description_en: Essentials to grow and harvest fresh herbs and salad greens on a
+    balcony or small backyard.
+  description_pt: Essenciais para cultivar e colher ervas frescas e folhas de salada
+    numa varanda ou pequeno quintal.
+  description_es: Esenciales para cultivar y cosechar hierbas frescas y hojas de ensalada
+    en una terraza o pequeño jardín.
+  tags:
+  - gardening
+  - outdoor
+  - kitchen
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  search_queries:
+  - container herb seeds
+  - salad greens starter kit
+  - raised garden bed planters
+  product_ids:
+  - '670671'
+  - '205268'
+  - '205266'
+  - '205265'
+  - '313630'
+  - '177124'
+  - '175004'
+  - '670137'
+  - '671036'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:07.343012Z'
+- id: compact-commute-snack-pack
+  title_en: Compact Commute Snack Pack
+  title_pt: Lanche Compacto para o Trajeto
+  title_es: Pack de Snacks Compacto para el Trayecto
+  description_en: Small, non-perishable snacks and reusable containers perfect for
+    daily commutes.
+  description_pt: Lanches pequenos e não perecíveis e recipientes reutilizáveis perfeitos
+    para deslocações diárias.
+  description_es: Snacks pequeños no perecederos y recipientes reutilizables perfectos
+    para desplazamientos diarios.
+  tags:
+  - commute
+  - food
+  - eco
+  category: travel
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - portable snack containers
+  - non-perishable snack pack
+  - commuter snack box
+  product_ids:
+  - '678063'
+  - '670420'
+  - '892462'
+  - '1042366'
+  - '400688'
+  - '1042402'
+  - '1003461'
+  - '1003461'
+  - '628915'
+  - '360890'
+  - '628915'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:14.578710Z'
+- id: weekend-film-night-setup
+  title_en: Weekend Film Night Setup
+  title_pt: Noite de Cinema em Casa
+  title_es: Noche de Cine en Casa
+  description_en: Items to turn your living room into a cosy movie night—snacks, lighting,
+    and comfy throws.
+  description_pt: Artigos para transformar a sala numa noite de cinema acolhedora
+    — snacks, iluminação e mantas confortáveis.
+  description_es: 'Artículos para convertir tu salón en una noche de cine acogedora:
+    snacks, iluminación y mantas cómodas.'
+  tags:
+  - home
+  - entertainment
+  - cozy
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - throw blanket
+  - LED floor lamp
+  - popcorn maker
+  - movie projector screen
+  product_ids:
+  - '952042'
+  - '674413'
+  - '962168'
+  - '953910'
+  - '1019749'
+  - '250431'
+  - '252478'
+  - '256186'
+  - '676355'
+  - '950854'
+  - '349303'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:22.232867Z'
+- id: easy-zero-waste-gift-wraps
+  title_en: Easy Zero-Waste Gift Wraps
+  title_pt: Embalagens de Presente Zero-Waste
+  title_es: Envoltorios de Regalo Zero-Waste
+  description_en: Reusable and low-waste wrapping ideas for presents that look great
+    and reduce trash.
+  description_pt: Ideias de embrulho reutilizáveis e de baixo desperdício para prendas
+    bonitas que reduzem o lixo.
+  description_es: Ideas de envoltorios reutilizables y de bajo desperdicio para regalos
+    bonitos que reducen residuos.
+  tags:
+  - sustainable
+  - gifts
+  - decor
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - reusable gift wrap
+  - fabric gift wrap
+  - cloth wrapping set
+  - eco gift packaging
+  product_ids:
+  - '220698'
+  - '205489'
+  - '424081'
+  - '1046419'
+  - '220652'
+  - '832960'
+  - '832947'
+  - '989062'
+  - '424081'
+  - '981111'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:29.101486Z'
+- id: breezy-summer-workwear-staples
+  title_en: Breezy Summer Workwear Staples
+  title_pt: Peças Frescas para o Trabalho no Verão
+  title_es: Prendas Frescas para el Trabajo en Verano
+  description_en: Lightweight, breathable outfits that keep you polished in hot office
+    or client meetings.
+  description_pt: Conjuntos leves e respiráveis que o mantêm apresentável em escritórios
+    quentes ou reuniões com clientes.
+  description_es: Outfits ligeros y transpirables que te mantienen elegante en oficinas
+    calurosas o reuniones con clientes.
+  tags:
+  - fashion
+  - summer
+  - office
+  category: fashion
+  audience: women
+  seasons:
+  - summer
+  search_queries:
+  - Lightweight work blouses
+  - Breathable office dresses
+  - Linen work trousers
+  product_ids:
+  - '904172'
+  - '1038725'
+  - '1038778'
+  - '1002700'
+  - '263013'
+  - '354276'
+  - '1006515'
+  - '1006300'
+  - '900347'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:35.939027Z'
+- id: first-aid-kit-for-family-days-out
+  title_en: First-Aid Kit for Family Days Out
+  title_pt: Kit de Primeiros Socorros para Saídas em Família
+  title_es: Botiquín de Primeros Auxilios para Salidas en Familia
+  description_en: Compact medical and comfort items to handle common bumps and scrapes
+    on family outings.
+  description_pt: Itens médicos compactos e de conforto para tratar pequenos acidentes
+    em saídas em família.
+  description_es: Artículos médicos compactos y de confort para atender golpes y rasguños
+    comunes en salidas familiares.
+  tags:
+  - health
+  - family
+  - outdoor
+  category: health
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - family first aid kit
+  - compact first aid kit
+  - kids outdoor first aid
+  - travel medical kit
+  product_ids:
+  - '670706'
+  - '371831'
+  - '987311'
+  - '374456'
+  - '748605'
+  - '673197'
+  - '672277'
+  - '668385'
+  - '1086458'
+  - '748528'
+  - '399441'
+  - '152849'
+  - '167168'
+  - '108231'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:44.338682Z'
+- id: easy-bake-weeknight-desserts
+  title_en: Easy-Bake Weeknight Desserts
+  title_pt: Sobremesas de Semana Fáceis
+  title_es: Postres Semanales Fáciles
+  description_en: No-fuss baking mixes and tools for quick desserts after a busy day.
+  description_pt: Misturas e utensílios de pastelaria sem complicações para sobremesas
+    rápidas após um dia atarefado.
+  description_es: Mezclas y utensilios de repostería sin complicaciones para postres
+    rápidos tras un día ajetreado.
+  tags:
+  - baking
+  - quick
+  - kitchen
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - baking mix brownies
+  - ready-made cake mix
+  - mini dessert pans
+  - instant mug cake mix
+  product_ids:
+  - '353449'
+  - '817935'
+  - '1019744'
+  - '1019779'
+  - '948390'
+  - '822643'
+  - '822638'
+  - '723859'
+  - '358787'
+  - '358150'
+  - '948390'
+  - '1019744'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:44:52.046274Z'
+- id: kid-friendly-picnic-games
+  title_en: Kid-Friendly Picnic Games
+  title_pt: Jogos para Piqueniques com Crianças
+  title_es: Juegos de Picnic para Niños
+  description_en: Portable, safe games and activities to keep kids entertained during
+    outdoor picnics.
+  description_pt: Jogos e atividades portáteis e seguros para entreter as crianças
+    durante piqueniques ao ar livre.
+  description_es: Juegos y actividades portátiles y seguros para mantener a los niños
+    entretenidos en picnics al aire libre.
+  tags:
+  - kids
+  - outdoor
+  - games
+  category: kids
+  audience: kids
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - portable outdoor games
+  - kids picnic toys
+  - travel board games
+  - bubble toys for kids
+  product_ids:
+  - '955017'
+  - '1051790'
+  - '972163'
+  - '974825'
+  - '973047'
+  - '972819'
+  - '973089'
+  - '973091'
+  - '1042360'
+  - '252045'
+  - '251110'
+  - '1041996'
+  - '892660'
+  - '1019640'
+  - '949122'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:45:02.070934Z'
+- id: mini-balcony-brunch-setup
+  title_en: Mini Balcony Brunch Setup
+  title_pt: Pequeno brunch na varanda
+  title_es: Brunch en mini balcón
+  description_en: Everything you need for a relaxed breakfast or brunch on a small
+    balcony.
+  description_pt: Tudo o que precisa para um pequeno e relaxado pequeno-almoço ou
+    brunch na varanda.
+  description_es: Todo lo que necesitas para un desayuno o brunch relajado en un balcón
+    pequeño.
+  tags:
+  - balcony
+  - breakfast
+  - outdoor
+  category: home
+  audience: all
+  seasons:
+  - spring
+  - summer
+  - evergreen
+  search_queries:
+  - bistro bistro table set
+  - compact outdoor bistro set
+  - folding balcony table
+  - small outdoor cushion set
+  product_ids:
+  - '384113'
+  - '385614'
+  - '384514'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:45:24.033013Z'
+- id: after-work-dinner-shortcuts
+  title_en: After-Work Dinner Shortcuts
+  title_pt: Atalhos para jantar depois do trabalho
+  title_es: Atajos para cenar después del trabajo
+  description_en: Simple tools and pantry staples to turn weeknights into quick satisfying
+    dinners.
+  description_pt: Ferramentas simples e ingredientes essenciais para transformar as
+    noites de semana em jantares rápidos e satisfatórios.
+  description_es: Herramientas sencillas e ingredientes básicos para convertir las
+    noches entre semana en cenas rápidas y satisfactorias.
+  tags:
+  - dinner
+  - kitchen
+  - weeknight
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - meal prep containers
+  - quick weeknight dinner kits
+  - one-pan cookware
+  - pantry staples for dinner
+  product_ids:
+  - '724230'
+  - '663699'
+  - '671287'
+  - '357238'
+  - '930427'
+  - '929783'
+  - '400688'
+  - '399912'
+  - '1026490'
+  - '945763'
+  - '316400'
+  - '139807'
+  - '302669'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:45:31.294907Z'
+- id: cozy-study-corner-for-teens
+  title_en: Cozy Study Corner for Teens
+  title_pt: Cantinho de estudo acolhedor para adolescentes
+  title_es: Rincón de estudio acogedor para adolescentes
+  description_en: Affordable desk, lighting and organizers to help teens focus and
+    feel comfy.
+  description_pt: Secretária acessível, iluminação e organizadores para ajudar adolescentes
+    a concentrar-se com conforto.
+  description_es: Escritorio asequible, iluminación y organizadores para ayudar a
+    los adolescentes a concentrarse y estar cómodos.
+  tags:
+  - study
+  - kids
+  - home
+  category: kids
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - teen study desk
+  - desk lamp for study
+  - desk organizer for kids
+  product_ids:
+  - '974038'
+  - '973872'
+  - '991780'
+  - '824486'
+  - '1009165'
+  - '358849'
+  - '993110'
+  - '913022'
+  - '972106'
+  - '988983'
+  - '911967'
+  - '690039'
+  - '136283'
+  - '188846'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:45:39.572897Z'
+- id: tasteful-housewarming-gifts
+  title_en: Tasteful Housewarming Gifts
+  title_pt: Presentes elegantes para inauguração de casa
+  title_es: Regalos con gusto para inauguración de casa
+  description_en: Small, thoughtful items that make a new home feel warm and personal.
+  description_pt: Pequenos artigos pensados que tornam uma casa nova acolhedora e
+    pessoal.
+  description_es: Pequeños artículos pensados que hacen que una casa nueva se sienta
+    cálida y personal.
+  tags:
+  - gifts
+  - home
+  - hosting
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - housewarming gifts
+  - kitchen gift sets
+  - decorative candles
+  - entryway decor
+  product_ids:
+  - '256853'
+  - '279041'
+  - '276495'
+  - '975327'
+  - '975182'
+  - '252589'
+  - '255775'
+  - '689936'
+  - '930427'
+  - '130749'
+  - '1019649'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:45:47.026192Z'
+- id: sundress-and-sandal-combos
+  title_en: Sundress and Sandal Combos
+  title_pt: Conjuntos de vestido leve e sandálias
+  title_es: Combinaciones de vestido veraniego y sandalias
+  description_en: Light outfits and shoes perfect for wandering markets or seaside
+    cafes.
+  description_pt: Pequenos looks leves e sapatos perfeitos para passear em mercados
+    ou cafés à beira-mar.
+  description_es: Looks ligeros y zapatos perfectos para pasear por mercados o cafés
+    junto al mar.
+  tags:
+  - summer
+  - fashion
+  - outfits
+  category: fashion
+  audience: women
+  seasons:
+  - summer
+  search_queries:
+  - sundress womens summer
+  - women's leather sandals
+  - summer maxi dress
+  - casual summer outfit dress
+  product_ids:
+  - '355073'
+  - '896652'
+  - '896912'
+  - '1002764'
+  - '899738'
+  - '355147'
+  - '1117594'
+  - '1108921'
+  - '899894'
+  - '900197'
+  - '901867'
+  - '900288'
+  - '904335'
+  - '263837'
+  - '766687'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:45:55.144253Z'
+- id: easy-host-cheese-board-staples
+  title_en: Easy-Host Cheese Board Staples
+  title_pt: Essenciais para uma tábua de queijos fácil
+  title_es: Básicos para una tabla de quesos fácil
+  description_en: Put-together cheeses, tools and accoutrements for stress-free entertaining.
+  description_pt: Queijos, acessórios e ferramentas para receber sem stress.
+  description_es: Quesos, accesorios y utensilios para recibir sin estrés.
+  tags:
+  - entertaining
+  - kitchen
+  - cheese
+  category: home
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - cheese board set
+  - charcuterie board accessories
+  - cheese knives set
+  product_ids:
+  - '989890'
+  - '989998'
+  - '255906'
+  - '205310'
+  - '205324'
+  - '854278'
+  - '184169'
+  - '307182'
+  - '116275'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:46:02.058216Z'
+- id: sleep-reset-nighttime-kit
+  title_en: Sleep-Reset Nighttime Kit
+  title_pt: Kit noturno para reequilibrar o sono
+  title_es: Kit nocturno para recuperar el sueño
+  description_en: Calming extras and bedside helpers to wind down faster and sleep
+    better.
+  description_pt: Extras calmantes e ajudantes de mesa de cabeceira para adormecer
+    mais rápido e dormir melhor.
+  description_es: Extras calmantes y accesorios de mesita de noche para relajarte
+    antes y dormir mejor.
+  tags:
+  - sleep
+  - wellness
+  - bedroom
+  category: health
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - bedtime diffuser
+  - weighted sleep blanket
+  - sleep mask lavender
+  - bedside white noise machine
+  product_ids:
+  - '220715'
+  - '690110'
+  - '467516'
+  - '850470'
+  - '857415'
+  - '400077'
+  - '979345'
+  - '667936'
+  - '1085993'
+  - '809543'
+  - '845115'
+  - '249235'
+  - '973203'
+  - '972151'
+  - '887498'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:46:09.689180Z'
+- id: kid-friendly-road-trip-gear
+  title_en: Kid-Friendly Road Trip Gear
+  title_pt: Equipamento amigo das crianças para viagens de carro
+  title_es: Equipamiento para viajes por carretera con niños
+  description_en: Entertainment, safety and comfort items to keep kids happy on long
+    drives.
+  description_pt: Artigos de entretenimento, segurança e conforto para manter as crianças
+    felizes em viagens longas de carro.
+  description_es: Artículos de entretenimiento, seguridad y confort para mantener
+    a los niños felices en viajes largos en coche.
+  tags:
+  - travel
+  - kids
+  - roadtrip
+  category: travel
+  audience: kids
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - children car seat organizer
+  - portable DVD player for car
+  - travel activity kit kids
+  product_ids:
+  - '972918'
+  - '972974'
+  - '973030'
+  - '972910'
+  - '972916'
+  - '972451'
+  - '972429'
+  - '964976'
+  - '964769'
+  - '964424'
+  - '572713'
+  - '341387'
+  - '173078'
+  - '273484'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:46:16.859012Z'
+- id: al-fresco-dinner-essentials
+  title_en: Al Fresco Dinner Essentials
+  title_pt: Essenciais para jantares ao ar livre
+  title_es: Esenciales para cenas al aire libre
+  description_en: Everything you need to set a relaxed, stylish outdoor dinner at
+    home or on the terrace.
+  description_pt: Tudo o que precisa para montar um jantar descontraído e elegante
+    ao ar livre, em casa ou na varanda.
+  description_es: Todo lo necesario para montar una cena relajada y con estilo al
+    aire libre en casa o en la terraza.
+  tags:
+  - dining
+  - outdoor
+  - home
+  category: home
+  audience: all
+  seasons:
+  - summer
+  - spring
+  search_queries:
+  - outdoor dining set
+  - patio tableware
+  - tabletop lanterns
+  - picnic servingware
+  product_ids:
+  - '329629'
+  - '255711'
+  - '988354'
+  - '690243'
+  status: insufficient_products
+  version: 1
+  updated_at: '2026-07-13T15:46:45.918632Z'
+- id: host-proven-cheese-board-picks
+  title_en: Host-Proven Cheese Board Picks
+  title_pt: Escolhas de tábua de queijos aprovadas por anfitriões
+  title_es: Selecciones para tabla de quesos avaladas por anfitriones
+  description_en: Small tools, serving boards and pairings that make assembling a
+    stylish cheese board effortless.
+  description_pt: Pequenas ferramentas, tábuas e combinações que tornam a montagem
+    de uma tábua de queijos elegante e simples.
+  description_es: Utensilios pequeños, tablas y combinaciones que facilitan montar
+    una tabla de quesos con estilo.
+  tags:
+  - kitchen
+  - entertaining
+  - food
+  category: kitchen
+  audience: all
+  seasons:
+  - evergreen
+  search_queries:
+  - cheese board tools
+  - charcuterie serving board
+  - cheese knives set
+  product_ids:
+  - '1047387'
+  - '252253'
+  - '205310'
+  - '205324'
+  - '854278'
+  - '854585'
+  - '854279'
+  - '989890'
+  - '989998'
+  - '307182'
+  - '116275'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:46:54.137126Z'
+- id: kid-friendly-baking-activities
+  title_en: Kid-Friendly Baking Activities
+  title_pt: Atividades de pastelaria para crianças
+  title_es: Actividades de repostería aptas para niños
+  description_en: Tools, mixes and simple recipes to bake together and keep little
+    hands busy and safe.
+  description_pt: Ferramentas, misturas e receitas simples para cozinhar em conjunto,
+    mantendo as mãos pequenas ocupadas e seguras.
+  description_es: Utensilios, preparaciones y recetas fáciles para hornear juntos
+    y mantener a los niños entretenidos de forma segura.
+  tags:
+  - kids
+  - kitchen
+  - activities
+  category: kids
+  audience: kids
+  seasons:
+  - evergreen
+  search_queries:
+  - kids baking kit
+  - child safe baking tools
+  - baking mixes for kids
+  product_ids:
+  - '291602'
+  - '285187'
+  - '172053'
+  - '953780'
+  - '1019496'
+  - '1019506'
+  - '1019445'
+  - '963337'
+  - '970595'
+  - '970826'
+  - '955190'
+  - '958961'
+  - '962924'
+  - '962902'
+  - '974724'
+  status: active
+  version: 1
+  updated_at: '2026-07-13T15:47:02.985068Z'

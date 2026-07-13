@@ -1,15 +1,20 @@
 from __future__ import annotations
 
+import logging
 import os
 from datetime import date, datetime
 from typing import Any, Iterator
 from uuid import uuid4
 
+import httpx
 from dotenv import load_dotenv
 from gql import Client, gql
 from gql.transport.requests import RequestsHTTPTransport
+from tenacity import retry, stop_after_attempt, wait_fixed, before_sleep_log
 
-from src.data_models import Product
+from src.also_buy.data_models import Product
+
+logger = logging.getLogger(__name__)
 
 GOLDEN_PRODUCTS_QUERY = """
 query goldenProducts($after: String, $first: Int!, $createdSince: ISO8601DateTime, $createdUntil: ISO8601DateTime) {
@@ -125,7 +130,7 @@ class MarketplacerGateway:
         self,
         token: str | None = None,
         page_size: int = 100,
-        timeout_seconds: int = 15,
+        timeout_seconds: int = 5,
     ) -> None:
         self.endpoint = os.getenv("MARKETPLACER_URL")
         if not self.endpoint:
@@ -151,6 +156,12 @@ class MarketplacerGateway:
         )
         self.field_id = self.get_complmentary_queries_field_id()
 
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_fixed(2),
+        before_sleep=before_sleep_log(logger, logging.WARNING),
+        reraise=True,
+    )
     def get_complmentary_queries_field_id(self) -> str:
         query = gql(
             """
@@ -220,7 +231,7 @@ class MarketplacerGateway:
         payload = self._run_query_by_id(node_id=node_id)
         return self._map_product(payload)
 
-    def update_product_with_complementary_queries(
+    def _build_update_variables(
         self,
         product: Product,
         complementary_queries: list[str],
@@ -256,16 +267,61 @@ class MarketplacerGateway:
         if option_values_array:
             attributes["optionValues"] = option_values_array
 
-        mutation = gql(GOLDEN_PRODUCT_UPDATE_MUTATION)
-        variables = {
+        return {
             "input": {
                 "clientMutationId": f"catalog-cleaner-{uuid4().hex}",
                 "goldenProductId": product.id,
                 "attributes": attributes,
             }
         }
+
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_fixed(2),
+        before_sleep=before_sleep_log(logger, logging.WARNING),
+        reraise=True,
+    )
+    def update_product_with_complementary_queries(
+        self,
+        product: Product,
+        complementary_queries: list[str],
+    ) -> dict[str, Any]:
+        variables = self._build_update_variables(product, complementary_queries)
+        mutation = gql(GOLDEN_PRODUCT_UPDATE_MUTATION)
         return self._client.execute(mutation, variable_values=variables)
 
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_fixed(2),
+        before_sleep=before_sleep_log(logger, logging.WARNING),
+        reraise=True,
+    )
+    async def async_update_product_with_complementary_queries(
+        self,
+        product: Product,
+        complementary_queries: list[str],
+        http_client: httpx.AsyncClient,
+    ) -> dict[str, Any]:
+        assert self.endpoint is not None
+        variables = self._build_update_variables(product, complementary_queries)
+        headers = {"Content-Type": "application/json"}
+        if self.token:
+            headers["Authorization"] = f"Bearer {self.token}"
+        response = await http_client.post(
+            self.endpoint,
+            json={"query": GOLDEN_PRODUCT_UPDATE_MUTATION, "variables": variables},
+            headers=headers,
+            timeout=self.timeout_seconds,
+        )
+        response.raise_for_status()
+        return response.json()
+
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_fixed(2),
+        before_sleep=before_sleep_log(logger, logging.WARNING),
+        reraise=True,
+    )
     def _run_query(
         self,
         after: str | None,
@@ -288,6 +344,12 @@ class MarketplacerGateway:
             raise RuntimeError("GraphQL response missing 'goldenProducts' payload")
         return products_payload
 
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_fixed(2),
+        before_sleep=before_sleep_log(logger, logging.WARNING),
+        reraise=True,
+    )
     def _run_query_by_id(self, node_id: str) -> dict[str, Any]:
         variables = {
             "id": node_id,
@@ -366,7 +428,10 @@ class MarketplacerGateway:
 if __name__ == "__main__":
     load_dotenv()
     fetcher = MarketplacerGateway()
-    print(fetcher.fetch_product_by_id("R29sZGVuUHJvZHVjdC00Mjc2NTg="))
+    from src.common.logging_config import setup_logging
+
+    setup_logging()
+    logger.info(fetcher.fetch_product_by_id("R29sZGVuUHJvZHVjdC00Mjc2NTg="))
     for batch in fetcher.fetch_products(
         datetime(2025, 10, 1), datetime(2025, 11, 1), limit=2
     ):

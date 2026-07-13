@@ -1,13 +1,17 @@
 from __future__ import annotations
 
+import logging
 import os
 from abc import ABC
 from typing import Any, Self
 
 from dotenv import load_dotenv
 
-from src.embeddings import EmbeddingsClient
-from src.typesense_connector import BaseTypesense
+from src.common.embeddings import EmbeddingsClient
+from src.common.typesense_connector import BaseTypesense
+from src.exploration_themes.runtime_config import get_runtime_config
+
+logger = logging.getLogger(__name__)
 
 
 class SearchService(ABC):
@@ -30,7 +34,7 @@ class SearchService(ABC):
     def build(
         cls,
         *,
-        collection_name: str = "products_v2",
+        collection_name: str | None = None,
         per_page: int = 30,
         result_limit: int = 10,
     ) -> Self:
@@ -45,7 +49,7 @@ class SearchService(ABC):
         return cls(
             embeddings_client=embeddings_client,
             typesense_connector=typesense_connector,
-            collection_name=collection_name,
+            collection_name=collection_name or get_runtime_config().products_collection,
             per_page=per_page,
             result_limit=result_limit,
         )
@@ -99,8 +103,11 @@ class SearchService(ABC):
 
 
 if __name__ == "__main__":
+    from src.common.logging_config import setup_logging
+
+    setup_logging()
     load_dotenv()
     search = SearchService.build()
-    a = search.compute_search_results("Socks")
-    for x in a:
-        print(x)
+    hits = search.compute_search_results("Socks")
+    for hit in hits:
+        logger.info(hit)

@@ -10,3 +10,6 @@ wheels/
 *.xlsx
 # Virtual environments
 .venv
+.env
+.env.dev
+.env.prod

@@ -3,19 +3,22 @@ from __future__ import annotations
 import json
 import logging
 import os
+from typing import TypeVar
 
 from azure.core.exceptions import ResourceExistsError, ResourceNotFoundError
 from azure.storage.blob import BlobServiceClient, ContentSettings
+from pydantic import BaseModel
 
-from src.data_models import PipelineBlobStatus
+from src.also_buy.data_models import PipelineBlobStatus
+
+logger = logging.getLogger(__name__)
 
 CONTAINER_NAME = "users-also-buy"
+T = TypeVar("T", bound=BaseModel)
 
 
 class AzureBlobClient:
-    def __init__(
-        self,
-    ) -> None:
+    def __init__(self) -> None:
         self.connection_string = os.getenv("AZURE_STORAGE_CONNECTION_STRING")
         if not self.connection_string:
             raise ValueError(
@@ -32,16 +35,13 @@ class AzureBlobClient:
         self._ensure_container()
 
     def _ensure_container(self) -> None:
-        """Create the container if it does not yet exist."""
         try:
             self._container_client.create_container()
         except ResourceExistsError:
             return
 
-    def write_pipeline_status(
-        self, blob_name: str, pipeline_status: PipelineBlobStatus
-    ) -> None:
-        body = pipeline_status.model_dump_json()
+    def write_json(self, blob_name: str, model: BaseModel) -> None:
+        body = model.model_dump_json()
         self._container_client.upload_blob(
             name=blob_name,
             data=body,
@@ -49,15 +49,24 @@ class AzureBlobClient:
             content_settings=ContentSettings(content_type="application/json"),
         )
 
-    def read_json(self, blob_name: str) -> PipelineBlobStatus | None:
+    def read_json(self, blob_name: str, model_type: type[T]) -> T | None:
         try:
             data = self._container_client.download_blob(blob_name).readall()
         except ResourceNotFoundError:
-            logging.warning(
-                f"Blob '{blob_name}' not found in container "
-                f"'{self._container_client.container_name}'."
+            logger.warning(
+                "Blob '%s' not found in container '%s'.",
+                blob_name,
+                self._container_client.container_name,
             )
             return None
         if not isinstance(data, bytes):
             raise ValueError(f"Blob '{blob_name}' has no data.")
-        return PipelineBlobStatus(**json.loads(data.decode("utf-8")))
+        return model_type(**json.loads(data.decode("utf-8")))
+
+    def write_pipeline_status(
+        self, blob_name: str, pipeline_status: PipelineBlobStatus
+    ) -> None:
+        self.write_json(blob_name, pipeline_status)
+
+    def read_pipeline_status(self, blob_name: str) -> PipelineBlobStatus | None:
+        return self.read_json(blob_name, PipelineBlobStatus)

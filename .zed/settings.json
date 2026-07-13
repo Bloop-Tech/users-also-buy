@@ -1,0 +1,13 @@
+{
+  "debug": {
+    "adapters": {
+      "python": {
+        "type": "stdio",
+        "command": {
+          "program": ".venv/bin/python",
+          "arguments": ["-m", "debugpy.adapter"],
+        },
+      },
+    },
+  },
+}
