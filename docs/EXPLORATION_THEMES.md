@@ -32,8 +32,8 @@ THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION
 1. Load theme from `THEMES_FILE` (or generate new themes in `expand` mode)
 2. LLM generates 2–4 keyword search queries
 3. Hybrid Typesense search per query; merge and dedupe candidates (~50 max)
-4. LLM selects 8–15 matching products from candidates
-5. Quality gates (min/max products, valid IDs, brand diversity)
+4. LLM selects 8–15 matching products from candidates and returns them in recommended display order
+5. Quality gates (min/max products, valid IDs, brand diversity) while preserving the LLM-recommended order of surviving products
 6. Embed `title_en + description_en + tags` for personalization
 7. Upsert to Typesense `exploration_themes`; write back yaml
 
@@ -45,6 +45,8 @@ THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION
 2. Dedup against existing `title_en` values (embedding similarity)
 3. Append to `THEMES_FILE` with `status: pending`
 4. Run full pipeline for pending themes
+
+Theme generation is batched in groups of at most 10 per LLM call. Larger expand runs, such as `--expand-count 50`, are split into multiple sequential requests.
 
 ### `refresh` — re-curate existing themes
 
@@ -67,6 +69,8 @@ THEMES_FILE (.env)  →  LLM queries  →  Typesense search (PRODUCTS_COLLECTION
 | `description_en`, `description_pt`, `description_es` | yes | yes |
 | `tags`, `category`, `audience`, `seasons` | yes | yes |
 | `search_queries`, `product_ids` | yes | yes |
+
+`product_ids` is an ordered list. The pipeline persists the LLM-recommended display order so downstream consumers can render the strongest, most theme-defining products first. When the selected set supports it, the first few products should also show visible variety across product types or subcategories so users can quickly understand the breadth of the collection.
 | `status`, `version`, `updated_at` | yes | yes |
 | `embedding` | no | yes |
 
@@ -136,7 +140,7 @@ Create manually or via `scripts/create_exploration_themes_collection.py`:
 
 1. Vector-search `exploration_themes` by user interest embedding
 2. Display localized title and description (`title_*` + `description_*` based on locale)
-3. Hydrate `product_ids` from `products_v2`
+3. Hydrate `product_ids` from `products_v2` while preserving the stored order
 4. Filter products by user locale at serve time
 
 ## Running locally

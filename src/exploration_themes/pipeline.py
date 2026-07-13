@@ -13,6 +13,7 @@ from src.exploration_themes.agents import (
 )
 from src.exploration_themes.data_models import (
     ExplorationTheme,
+    GeneratedTheme,
     ThemesPipelineRunConfig,
 )
 from src.exploration_themes.quality_gates import apply_quality_gates
@@ -24,6 +25,7 @@ logger = logging.getLogger(__name__)
 CANDIDATE_LIMIT = 50
 SEARCH_PER_PAGE = 30
 SEARCH_RESULT_LIMIT = 15
+MAX_THEME_GENERATION_BATCH_SIZE = 10
 
 
 class ExplorationThemesPipeline:
@@ -54,24 +56,44 @@ class ExplorationThemesPipeline:
 
     async def _expand(self, config: ThemesPipelineRunConfig) -> None:
         existing_titles = self.theme_store.existing_title_en_values()
-        prompt = (
-            f"Generate {config.expand_count} new unique themes.\n"
-            f"Existing themes to avoid duplicating:\n"
-            f"{json.dumps(existing_titles, ensure_ascii=False, indent=2)}"
-        )
-        async with self.llm_semaphore:
-            result = await self.theme_generator.run(prompt)
-        if config.dry_run:
-            logger.info("Dry run — generated themes: %s", result.output.themes)
-            return
+        generated_themes: list[GeneratedTheme] = []
 
-        added = self.theme_store.append_generated_themes(
-            result.output.themes,
-            self.typesense_writer.embeddings_client,
-        )
-        logger.info("Added %d new themes to %s", len(added), self.theme_store.path)
-        for theme in added:
-            await self.process_theme(theme, dry_run=config.dry_run)
+        while len(generated_themes) < config.expand_count:
+            remaining = config.expand_count - len(generated_themes)
+            batch_size = min(remaining, MAX_THEME_GENERATION_BATCH_SIZE)
+            prompt = (
+                f"Generate {batch_size} new unique themes.\n"
+                f"Existing themes to avoid duplicating:\n"
+                f"{json.dumps(existing_titles, ensure_ascii=False, indent=2)}"
+            )
+            async with self.llm_semaphore:
+                result = await self.theme_generator.run(prompt)
+
+            batch_themes = result.output.themes[:batch_size]
+            if not batch_themes:
+                logger.warning(
+                    "Theme generator returned no themes for a batch of %d; stopping early.",
+                    batch_size,
+                )
+                break
+
+            generated_themes.extend(batch_themes)
+            existing_titles.extend(theme.title_en for theme in batch_themes)
+
+            if config.dry_run:
+                continue
+
+            added = self.theme_store.append_generated_themes(
+                batch_themes,
+                self.typesense_writer.embeddings_client,
+            )
+            logger.info("Added %d new themes to %s", len(added), self.theme_store.path)
+            for theme in added:
+                await self.process_theme(theme, dry_run=config.dry_run)
+
+        if config.dry_run:
+            logger.info("Dry run — generated themes: %s", generated_themes)
+            return
 
     async def _refresh(self, config: ThemesPipelineRunConfig) -> None:
         themes = self.theme_store.list_themes(theme_ids=config.theme_ids)
@@ -185,7 +207,7 @@ class ExplorationThemesPipeline:
             for hit in candidates
         ]
         return (
-            "Select products for this theme:\n"
+            "Select products for this theme and return product_ids in recommended display order:\n"
             f"{json.dumps(theme.model_dump(exclude={'product_ids', 'search_queries'}), indent=2, ensure_ascii=False)}\n\n"
             "Candidate products:\n"
             f"{json.dumps(simplified, indent=2, ensure_ascii=False)}"

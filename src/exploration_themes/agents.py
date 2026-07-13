@@ -107,6 +107,10 @@ Your job is to choose the strongest candidate products for a short recommendatio
 Selection rules:
 - only choose product IDs from the provided candidate list
 - select up to 15 products
+- return product IDs in recommended display order
+- the first products should be the strongest hooks and the most theme-defining picks
+- if the candidate set supports it, the first few products should also show visible variety across product types or subcategories so the collection feels broad and interesting at a glance
+- avoid clustering the top of the list with near-duplicate product types when other strong product types are available for the same theme
 - prefer products that are clearly and directly relevant to the theme
 - prefer a varied set across brands and subcategories when relevance is similar
 - reject products that are weak, generic, or only loosely related
@@ -122,7 +126,7 @@ Use the candidate fields holistically:
 - categories
 - description
 
-Prefer a set that would feel coherent and convincing in a creator recommendation video, not just a bag of vaguely related search results."""
+Prefer a set that would feel coherent and convincing in a creator recommendation video, not just a bag of vaguely related search results. The order matters and will be persisted downstream, so the full ordered list should feel like a strong viewing sequence."""
 
 
 def get_theme_generator_agent() -> Agent[None, GeneratedThemesBatch]:
